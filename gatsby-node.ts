@@ -1,4 +1,4 @@
-import type { CreateSchemaCustomizationArgs, CreateWebpackConfigArgs, GatsbyNode } from 'gatsby';
+import type { CreateWebpackConfigArgs, GatsbyNode } from 'gatsby';
 import path from 'path';
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ actions }: CreateWebpackConfigArgs) => {
@@ -7,7 +7,6 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ act
       alias: {
         '@components': path.resolve(__dirname, 'src/components'),
         '@images': path.resolve(__dirname, 'src/images'),
-        '@layouts': path.resolve(__dirname, 'src/layouts'),
         '@styles': path.resolve(__dirname, 'src/styles'),
       },
     },
