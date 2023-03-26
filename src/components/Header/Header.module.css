@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  min-width: 260px;
+}
+
+.headingLink {
+  text-decoration: none;
+}
+
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heading {
+  font-family: 'Tenada';
+  font-weight: 800;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: var(--primary-c1);
+}
+
+.headerButtons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon path {
+  fill: var(--icon-color);
+  stroke: var(--icon-color);
+}
+
+@media screen and (min-width: 31.25rem) {
+  .header {
+    padding: 20px 60px;
+  }
+
+  .headerButtons {
+    gap: 28px;
+  }
+}
