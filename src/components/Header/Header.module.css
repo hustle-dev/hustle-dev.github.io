@@ -29,6 +29,11 @@
   gap: 14px;
 }
 
+.iconButton {
+  all: unset;
+  cursor: pointer;
+}
+
 .icon path {
   fill: var(--icon-color);
   stroke: var(--icon-color);
