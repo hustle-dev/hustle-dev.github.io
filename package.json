@@ -17,9 +17,15 @@
   "dependencies": {
     "gatsby": "^5.8.0",
     "gatsby-plugin-google-gtag": "^5.8.0",
+    "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-react-svg": "^3.3.0",
+    "gatsby-plugin-sharp": "^5.8.0",
     "gatsby-plugin-sitemap": "^6.8.0",
+    "gatsby-source-filesystem": "^5.8.0",
+    "gatsby-transformer-sharp": "^5.8.0",
+    "install": "^0.13.0",
+    "npm": "^9.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "svg-react-loader": "^0.4.6"
