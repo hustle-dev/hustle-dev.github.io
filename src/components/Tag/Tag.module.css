@@ -5,7 +5,7 @@
   border: 1px solid var(--gray-2);
   border-radius: 30px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .tagButton:hover {
