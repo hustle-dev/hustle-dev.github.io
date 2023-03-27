@@ -24,16 +24,16 @@ export const ProfileCard = () => {
           width={100}
           height={100}
         ></StaticImage>
-        <a href="mailto:dlwoabsdk@gmail.com" target="_blank">
+        <a href="mailto:dlwoabsdk@gmail.com" target="_blank" className={styles.profileIcon}>
           <Mail />
         </a>
-        <a href="https://www.linkedin.com/in/jeongmin-lee-5ab898202/" target="_blank">
-          <Linkedin />
-        </a>
-        <a href="https://www.facebook.com/jeongminiminimini/" target="_blank">
+        <a href="https://www.facebook.com/jeongminiminimini/" target="_blank" className={styles.profileIcon}>
           <Facebook />
         </a>
-        <a href="https://github.com/hustle-dev" target="_blank">
+        <a href="https://www.linkedin.com/in/jeongmin-lee-5ab898202/" target="_blank" className={styles.profileIcon}>
+          <Linkedin />
+        </a>
+        <a href="https://github.com/hustle-dev" target="_blank" className={styles.profileIcon}>
           <Github />
         </a>
       </div>

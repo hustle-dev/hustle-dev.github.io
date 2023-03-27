@@ -14,13 +14,27 @@
 .info {
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 5px;
   margin-top: 25px;
 }
 
 .profileImage {
   border-radius: 50%;
-  margin-right: 5px;
+  margin-right: 10px;
+}
+
+.profileIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  transition: 0.1s;
+}
+
+.profileIcon:hover {
+  background-color: rgba(21, 175, 115, 0.1);
 }
 
 @media screen and (min-width: 31.25rem) and (max-width: 56.1875rem) {
@@ -29,7 +43,6 @@
   }
 }
 
-/* TODO: 화면 사이즈 보고, 500px보다 높은 특정 경우에만 보이도록 만들기! */
 @media screen and (min-width: 56.25rem) {
   .card {
     display: block;
