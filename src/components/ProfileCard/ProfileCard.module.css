@@ -1,13 +1,8 @@
 .card {
   min-width: 300px;
-  padding: 20px;
 }
 
 .name {
-  font-family: 'Tenada';
-  font-weight: 800;
-  font-size: 2.1875rem;
-  line-height: 1.125rem;
   color: var(--primary-c1);
 }
 
@@ -28,9 +23,18 @@
   margin-right: 5px;
 }
 
-/* TODO: 화면 사이즈 보고, 500px보다 높은 특정 경우에만 보이도록 만들기! */
-@media screen and (min-width: 31.25rem) {
+@media screen and (min-width: 31.25rem) and (max-width: 56.1875rem) {
   .card {
-    max-width: 300px;
+    display: none;
+  }
+}
+
+/* TODO: 화면 사이즈 보고, 500px보다 높은 특정 경우에만 보이도록 만들기! */
+@media screen and (min-width: 56.25rem) {
+  .card {
+    display: block;
+    margin-top: 150px;
+    max-width: 260px;
+    min-width: 0;
   }
 }

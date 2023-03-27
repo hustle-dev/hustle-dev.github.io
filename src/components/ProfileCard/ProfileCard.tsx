@@ -10,9 +10,11 @@ import Github from '@images/github.svg';
 export const ProfileCard = () => {
   return (
     <div className={styles.card}>
-      <h1 className={styles.name}>Hustle-devlog</h1>
-      <p style={TYPO.B5} className={styles.description}>
-        It is possible for ordianry people to choose to be extraordinary.
+      <h1 style={TYPO.D1} className={styles.name}>
+        Hustle-devlog
+      </h1>
+      <p style={TYPO.B3} className={styles.description}>
+        It is possible for ordinary people to choose to be extraordinary.
       </p>
       <div className={styles.info}>
         <StaticImage
@@ -22,16 +24,16 @@ export const ProfileCard = () => {
           width={100}
           height={100}
         ></StaticImage>
-        <a href="mailto:dlwoabsdk@gmail.com">
+        <a href="mailto:dlwoabsdk@gmail.com" target="_blank">
           <Mail />
         </a>
-        <a href="https://www.linkedin.com/in/jeongmin-lee-5ab898202/">
+        <a href="https://www.linkedin.com/in/jeongmin-lee-5ab898202/" target="_blank">
           <Linkedin />
         </a>
-        <a href="https://www.facebook.com/jeongminiminimini/">
+        <a href="https://www.facebook.com/jeongminiminimini/" target="_blank">
           <Facebook />
         </a>
-        <a href="https://github.com/hustle-dev">
+        <a href="https://github.com/hustle-dev" target="_blank">
           <Github />
         </a>
       </div>
