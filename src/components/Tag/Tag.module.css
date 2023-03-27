@@ -1,0 +1,14 @@
+.tagButton {
+  padding: 3px 12.5px 4px;
+  background-color: transparent;
+  color: var(--gray-2);
+  border: 1px solid var(--gray-2);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tagButton:hover {
+  border-color: var(--primary-c1);
+  color: var(--primary-c1);
+}
