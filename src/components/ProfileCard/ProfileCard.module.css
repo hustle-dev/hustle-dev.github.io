@@ -1,5 +1,19 @@
 .card {
-  min-width: 300px;
+  min-width: 260px;
+}
+
+@media screen and (min-width: 31.25rem) and (max-width: 56.1875rem) {
+  .card {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 56.25rem) {
+  .card {
+    display: block;
+    margin-top: 150px;
+    max-width: 260px;
+  }
 }
 
 .name {
@@ -35,19 +49,4 @@
 
 .profileIcon:hover {
   background-color: rgba(21, 175, 115, 0.1);
-}
-
-@media screen and (min-width: 31.25rem) and (max-width: 56.1875rem) {
-  .card {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 56.25rem) {
-  .card {
-    display: block;
-    margin-top: 150px;
-    max-width: 260px;
-    min-width: 0;
-  }
 }
