@@ -2,16 +2,8 @@
   min-width: 260px;
 }
 
-@media screen and (min-width: 31.25rem) and (max-width: 56.1875rem) {
-  .card {
-    display: none;
-  }
-}
-
 @media screen and (min-width: 56.25rem) {
   .card {
-    display: block;
-    margin-top: 150px;
     max-width: 260px;
   }
 }
