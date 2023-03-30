@@ -1,4 +1,51 @@
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Tenada';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/Tenada.woff2') format('woff2');
+}
+
 :root {
-  --background: orange;
-  --hoho: red;
+  --primary-c1: #15af73;
+  --primary-c2: #f7f2ef;
+}
+
+[data-theme='light'] {
+  --background: #ffffff;
+  --black: #151414;
+  --gray-1: #f6f6f6;
+  --gray-2: #c5c5c5;
+  --gray-3: #9e9e9e;
+  --gray-4: #747474;
+  --gray-5: #2f2f2f;
+  --gray-6: #232323;
+  --icon-color: #000000;
+}
+
+[data-theme='dark'] {
+  --background: #232323;
+  --black: #151414;
+  /* --gray-1: #f6f6f6; */
+  --gray-2: #747474;
+  --gray-3: #aaaaaa;
+  /* --gray-4: #747474; */
+  --gray-5: #f6f6f6;
+  /* --gray-6: #232323; */
+  --icon-color: #ffffff;
+}
+
+body {
+  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    sans-serif;
+  background-color: var(--background);
+  transition: 0.1s;
 }

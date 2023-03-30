@@ -4,10 +4,10 @@ import Rss from '@images/rss.svg';
 import DarkMode from '@images/darkmode.svg';
 import * as styles from './Header.module.css';
 import { Link } from 'gatsby';
+import { useTheme } from '@hooks';
 
 export const Header = () => {
-  // TODO: 다크모드일때, 아닐때 icon 색상
-  const color = '#000000'; // #ffffff
+  const toggleHandler = useTheme();
 
   return (
     <header className={styles.header}>
@@ -22,7 +22,7 @@ export const Header = () => {
         <Link to="/">
           <Rss className={styles.icon} />
         </Link>
-        <button className={styles.iconButton}>
+        <button className={styles.iconButton} onClick={toggleHandler}>
           <DarkMode className={styles.icon} />
         </button>
       </div>
