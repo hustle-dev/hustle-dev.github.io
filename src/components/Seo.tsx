@@ -17,7 +17,6 @@ type SeoQuery = {
       title: string;
       description: string;
       siteUrl: string;
-      keywords: string[];
     };
   };
 };
@@ -41,7 +40,6 @@ export const Seo = ({ title, description, heroImage, pathname, children }: Props
   );
 
   const { title: defaultTitle, description: defaultDescription, siteUrl } = data.site.siteMetadata;
-
   const { publicURL: defaultImage } = data.file;
 
   const seo = {
@@ -63,7 +61,7 @@ export const Seo = ({ title, description, heroImage, pathname, children }: Props
       <meta property="og:type" content="blog" />
       <meta property="og:url" content={seo.url}></meta>
       <meta property="og:image" content={seo.image}></meta>
-      {/* Twiiter */}
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
