@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 const isBrowser = typeof window !== 'undefined';
+const isDarkMode = (theme: string) => theme === 'dark';
 
 const getInitialTheme = () => {
   const prefersColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -9,7 +10,7 @@ const getInitialTheme = () => {
 };
 
 const setThemeAttribute = (theme: string) => {
-  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.toggleAttribute('dark-mode', isDarkMode(theme));
   localStorage.setItem('theme', theme);
 };
 
@@ -20,7 +21,7 @@ export const useTheme = () => {
   setThemeAttribute(theme);
 
   const toggleDarkMode = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    const newTheme = isDarkMode(theme) ? 'light' : 'dark';
     setTheme(newTheme);
   };
 

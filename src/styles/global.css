@@ -16,9 +16,6 @@
 :root {
   --primary-c1: #15af73;
   --primary-c2: #f7f2ef;
-}
-
-[data-theme='light'] {
   --background: #ffffff;
   --black: #151414;
   --gray-1: #f6f6f6;
@@ -30,7 +27,7 @@
   --icon-color: #000000;
 }
 
-[data-theme='dark'] {
+[dark-mode] {
   --background: #232323;
   --black: #151414;
   /* --gray-1: #f6f6f6; */
