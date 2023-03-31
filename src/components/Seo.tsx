@@ -5,7 +5,6 @@ type SeoProps = {
   title?: string;
   description?: string;
   heroImage?: string;
-  tags?: readonly string[];
   pathname: string;
 };
 
@@ -23,7 +22,7 @@ type SeoQuery = {
   };
 };
 
-export const Seo = ({ title, description, heroImage, tags, pathname, children }: PropsWithChildren<SeoProps>) => {
+export const Seo = ({ title, description, heroImage, pathname, children }: PropsWithChildren<SeoProps>) => {
   const data = useStaticQuery<SeoQuery>(
     graphql`
       query SeoQuery {
@@ -32,7 +31,6 @@ export const Seo = ({ title, description, heroImage, tags, pathname, children }:
             title
             description
             siteUrl
-            keywords
           }
         }
         file(relativePath: { eq: "blogImage.png" }) {
@@ -42,12 +40,7 @@ export const Seo = ({ title, description, heroImage, tags, pathname, children }:
     `
   );
 
-  const {
-    title: defaultTitle,
-    description: defaultDescription,
-    siteUrl,
-    keywords: defaultTags,
-  } = data.site.siteMetadata;
+  const { title: defaultTitle, description: defaultDescription, siteUrl } = data.site.siteMetadata;
 
   const { publicURL: defaultImage } = data.file;
 
@@ -55,35 +48,26 @@ export const Seo = ({ title, description, heroImage, tags, pathname, children }:
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
-    tags: tags || defaultTags,
-    image: `https://hustle-dev.github.io${heroImage || defaultImage}`,
+    image: `${siteUrl}${heroImage || defaultImage}`,
   };
 
   return (
     <>
       <title>{seo.title}</title>
+      <link rel="canonical" href={seo.url}></link>
       <meta name="description" content={seo.description} />
-      {/* TODO: 태그 관련 작업 */}
-      {/* <meta name="keywords" content={seo.tags} /> */}
-      {/* TODO: image 관련 작업 */}
-      {/* <meta name="image" content={seo.image} /> */}
+      <meta name="image" content={seo.image} />
       {/* Open Graph / Facebook */}
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:type" content="blog" />
-      <meta property="og:url" content="{seo.url}"></meta>
-      {/* <meta property="og:image" content="{seo.image}"></meta> */}
-      {/* TODO: 트위터 관련 작업 */}
+      <meta property="og:url" content={seo.url}></meta>
+      <meta property="og:image" content={seo.image}></meta>
       {/* Twiiter */}
-      {/* <meta name="twitter:card" content="summary" />
-      <meta
-        name="twitter:creator"
-        content={site.siteMetadata?.social?.twitter || ``}
-      />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
-      <meta name="twitter:description" content={seo.description} /> */}
-      {/* <meta property="twitter:image" content={seo.image}></meta> */}
-      {/* <meta property="twitter:url" content={seo.url}></meta> */}
+      <meta name="twitter:description" content={seo.description} />
+      <meta property="twitter:image" content={seo.image}></meta>
       {children}
     </>
   );
