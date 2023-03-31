@@ -1,4 +1,4 @@
-import type { CreateWebpackConfigArgs, GatsbyNode } from 'gatsby';
+import type { CreateSchemaCustomizationArgs, CreateWebpackConfigArgs, GatsbyNode } from 'gatsby';
 import path from 'path';
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ actions }: CreateWebpackConfigArgs) => {
@@ -12,4 +12,36 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ act
       },
     },
   });
+};
+
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
+  actions,
+}: CreateSchemaCustomizationArgs) => {
+  const { createTypes } = actions;
+
+  createTypes(`
+    type SiteSiteMetadata {
+      title: String!
+      siteUrl: String!
+      description: String!
+      heroImage: String!
+      keywords: [String!]!
+    }
+
+    type Site implements Node {
+      siteMetadata: SiteSiteMetadata!
+    }
+
+    type Frontmatter {
+      title: String!
+      description: String!
+      slug: String!
+    }
+
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter!
+      id: String!
+      html: String!
+    }
+  `);
 };

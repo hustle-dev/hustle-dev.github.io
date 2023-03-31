@@ -8,6 +8,8 @@ const config: GatsbyConfig = {
     title: `hustle-dev blog`,
     description: `hustle-dev의 기술 블로그 입니다.`,
     siteUrl: `https://hustle-dev.github.io`,
+    keywords: ['hustle-dev', 'blog', 'tech', 'frontend'],
+    heroImage: './src/images/blogImage.png',
   },
   graphqlTypegen: true,
   plugins: [
