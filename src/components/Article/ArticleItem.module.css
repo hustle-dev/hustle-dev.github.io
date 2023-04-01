@@ -1,0 +1,62 @@
+.articleLink {
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 675px;
+  min-height: 165px;
+  padding: 20px;
+  background-color: var(--article-background);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 23px;
+}
+
+.figure {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gatsbyImage {
+  width: 190px;
+  height: 120px;
+  border-radius: 15px;
+}
+
+.figcaption {
+  flex: 1;
+  order: -1;
+}
+
+.tagList {
+  display: flex;
+  gap: 5px;
+  padding: 0;
+}
+
+.title {
+  margin-top: 7px;
+  color: var(--gray-5);
+  word-break: keep-all;
+}
+
+.description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-top: 1px;
+  width: 80%;
+  height: 2.5rem;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  word-break: keep-all;
+  color: var(--gray-3);
+}
+
+.date {
+  position: absolute;
+  bottom: 14px;
+  color: var(--gray-4);
+}
