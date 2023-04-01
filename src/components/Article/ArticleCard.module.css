@@ -55,7 +55,6 @@
 
 .title {
   margin-top: 12px;
-  width: 70%;
   color: var(--gray-5);
   word-break: keep-all;
 }
@@ -65,7 +64,6 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   margin-top: 11px;
-  width: 80%;
   height: 2.5rem;
   text-overflow: ellipsis;
   word-wrap: break-word;
