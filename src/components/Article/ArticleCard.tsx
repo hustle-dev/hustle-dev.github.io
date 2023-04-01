@@ -1,21 +1,12 @@
 import { TYPO } from '@styles';
 import { Tag } from '@components';
 import { Link } from 'gatsby';
-import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, type IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
 import * as styles from './ArticleCard.module.css';
+import type { ArticleProps } from './types';
 
-type ArticleCardProps = {
-  title: string;
-  description: string;
-  date: string;
-  tags: readonly string[];
-  slug: string;
-  heroImage: IGatsbyImageData;
-  heroImageAlt: string;
-};
-
-export const ArticleCard = ({ title, description, date, tags, slug, heroImage, heroImageAlt }: ArticleCardProps) => {
+export const ArticleCard = ({ title, description, date, tags, slug, heroImage, heroImageAlt }: ArticleProps) => {
   const image = getImage(heroImage) as IGatsbyImageData;
 
   return (
