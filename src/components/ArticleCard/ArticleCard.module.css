@@ -1,17 +1,22 @@
 .articleLink {
+  text-decoration: none;
+}
+
+.articleLink .title,
+.articleLink .description,
+.articleLink .date {
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: 0.1s;
 }
 
-.articleLink:focus,
-.articleLink:hover {
-  text-decoration-color: var(--gray-5);
-}
-
+.articleLink:focus .title,
+.articleLink:hover .title,
+.articleLink:focus .description,
+.articleLink:hover .description,
 .articleLink:focus .date,
 .articleLink:hover .date {
-  text-decoration: underline;
+  text-decoration-color: var(--gray-5);
 }
 
 .wrapper {
