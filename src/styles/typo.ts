@@ -97,7 +97,7 @@ export const TYPO = {
     lineHeight: '1.25rem',
   },
   B7: {
-    fontFamily: 'Pretendard-Bold',
+    fontFamily: 'Pretendard-SemiBold',
     fontStyle: 'normal',
     fontWeight: 600,
     fontSize: '0.8125rem',
