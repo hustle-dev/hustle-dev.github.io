@@ -61,8 +61,15 @@
 }
 
 .description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   margin-top: 11px;
   width: 80%;
-  color: var(--gray-3);
+  height: 2.5rem;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
   word-break: keep-all;
+  color: var(--gray-3);
 }
