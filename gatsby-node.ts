@@ -36,6 +36,9 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       title: String!
       description: String!
       slug: String!
+      date: Date! @dateformat
+      tags: [String!]!
+      heroImageAlt: String!
     }
 
     type MarkdownRemark implements Node {
