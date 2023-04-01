@@ -2,7 +2,7 @@
   min-width: 260px;
 }
 
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 62.5rem) {
   .card {
     max-width: 260px;
   }
