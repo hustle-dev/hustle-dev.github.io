@@ -4,3 +4,4 @@ export * from './Tag';
 export * from './Seo';
 export * from './Footer';
 export * from './Article';
+export * from './FloatingButton';
