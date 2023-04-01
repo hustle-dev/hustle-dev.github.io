@@ -1,4 +1,5 @@
 import { TYPO } from '@styles';
+import { Tag } from '@components';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
@@ -17,8 +18,6 @@ type ArticleCardProps = {
 export const ArticleCard = ({ title, description, date, tags, slug, heroImage, heroImageAlt }: ArticleCardProps) => {
   const image = getImage(heroImage) as IGatsbyImageData;
 
-  console.log(tags);
-
   return (
     <Link to={`/posts${slug}`} className={styles.articleLink}>
       <article className={styles.wrapper}>
@@ -28,6 +27,11 @@ export const ArticleCard = ({ title, description, date, tags, slug, heroImage, h
             <span style={TYPO.B7} className={styles.date}>
               {date}
             </span>
+            <ul className={styles.tagList}>
+              {tags.map((tag) => (
+                <Tag key={tag} isButton={false} name={tag}></Tag>
+              ))}
+            </ul>
             <h3 style={TYPO.H1} className={styles.title}>
               {title}
             </h3>

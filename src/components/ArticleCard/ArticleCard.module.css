@@ -9,12 +9,17 @@
   text-decoration-color: var(--gray-5);
 }
 
+.articleLink:focus .date,
+.articleLink:hover .date {
+  text-decoration: underline;
+}
+
 .wrapper {
   flex: 1 1 420px;
   overflow: hidden;
   max-width: 420px;
   min-width: 325px;
-  height: 400px;
+  height: 420px;
   border-radius: 24px;
 
   background-color: var(--article-background);
@@ -26,18 +31,26 @@
 }
 
 .figcaption {
+  position: relative;
   padding: 0px 18px;
 }
 
 .date {
-  display: block;
-  margin-top: 6px;
-  margin-right: 2px;
-  text-align: right;
+  position: absolute;
+  right: 20px;
   color: var(--gray-4);
 }
 
+.tagList {
+  width: 80%;
+  margin-top: 6px;
+  display: flex;
+  gap: 5px;
+  padding: 0;
+}
+
 .title {
+  margin-top: 6px;
   width: 70%;
   color: var(--gray-5);
   word-break: keep-all;
