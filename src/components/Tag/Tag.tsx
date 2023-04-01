@@ -7,11 +7,12 @@ type TagProps = {
   name: string;
   count?: number;
   onClick?: () => void;
+  isSelected?: boolean;
 };
 
-export const Tag = ({ isButton = true, name, count, onClick }: TagProps) => {
+export const Tag = ({ isButton = true, name, count, onClick, isSelected = false }: TagProps) => {
   return isButton ? (
-    <button onClick={onClick} className={styles.tagButton}>
+    <button onClick={onClick} className={`${styles.tagButton} ${isSelected ? styles.active : ''}`}>
       <span style={TYPO.B5}>
         {name} ({count})
       </span>

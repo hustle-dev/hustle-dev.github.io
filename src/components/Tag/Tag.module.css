@@ -8,6 +8,11 @@
   transition: 0.1s;
 }
 
+.active {
+  border-color: var(--primary-c1);
+  color: var(--primary-c1);
+}
+
 .tagButton:hover {
   border-color: var(--primary-c1);
   color: var(--primary-c1);
