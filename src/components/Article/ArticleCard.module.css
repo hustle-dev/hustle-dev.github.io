@@ -32,37 +32,36 @@
 }
 
 .gatsbyImage {
-  height: 235px;
+  height: 200px;
 }
 
 .figcaption {
-  position: relative;
-  padding: 0px 18px;
+  padding: 0px 18px 28px;
 }
 
 .date {
-  position: absolute;
-  right: 20px;
+  display: inline-block;
+  margin-top: 11px;
   color: var(--gray-4);
 }
 
 .tagList {
   width: 80%;
-  margin-top: 6px;
+  margin-top: 16px;
   display: flex;
   gap: 5px;
   padding: 0;
 }
 
 .title {
-  margin-top: 6px;
+  margin-top: 12px;
   width: 70%;
   color: var(--gray-5);
   word-break: keep-all;
 }
 
 .description {
-  margin-top: 14px;
+  margin-top: 11px;
   width: 80%;
   color: var(--gray-3);
   word-break: keep-all;
