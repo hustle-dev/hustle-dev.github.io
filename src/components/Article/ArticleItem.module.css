@@ -22,7 +22,6 @@
 .wrapper {
   position: relative;
   flex: 1;
-  min-width: 675px;
   min-height: 165px;
   padding: 20px;
   background-color: var(--article-background);
@@ -36,13 +35,22 @@
 }
 
 .gatsbyImage {
+  display: none;
   width: 190px;
   height: 120px;
+  min-width: 190px;
   border-radius: 15px;
+}
+
+@media screen and (min-width: 48.75rem) {
+  .gatsbyImage {
+    display: block;
+  }
 }
 
 .figcaption {
   flex: 1;
+  flex-shrink: 100000;
   order: -1;
 }
 
@@ -56,6 +64,10 @@
   margin-top: 7px;
   width: 80%;
   color: var(--gray-5);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
   word-break: keep-all;
 }
 
