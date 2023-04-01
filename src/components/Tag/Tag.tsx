@@ -3,18 +3,22 @@ import React from 'react';
 import * as styles from './Tag.module.css';
 
 type TagProps = {
+  isButton?: boolean;
   name: string;
-  count: number;
-  onClick: () => void;
+  count?: number;
+  onClick?: () => void;
 };
 
-// TODO: 버튼인지 아닌지 구별 필요할듯
-export const Tag = ({ name, count, onClick }: TagProps) => {
-  return (
+export const Tag = ({ isButton = true, name, count, onClick }: TagProps) => {
+  return isButton ? (
     <button onClick={onClick} className={styles.tagButton}>
       <span style={TYPO.B5}>
         {name} ({count})
       </span>
     </button>
+  ) : (
+    <div className={styles.tag}>
+      <span style={TYPO.B7}>{name}</span>
+    </div>
   );
 };

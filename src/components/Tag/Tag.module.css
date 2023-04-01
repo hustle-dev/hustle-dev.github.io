@@ -12,3 +12,11 @@
   border-color: var(--primary-c1);
   color: var(--primary-c1);
 }
+
+.tag {
+  padding: 0px 10px 1px;
+  border: 1px solid var(--primary-c1);
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: var(--primary-c1);
+}
