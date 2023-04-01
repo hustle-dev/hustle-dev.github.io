@@ -1,0 +1,51 @@
+.articleLink {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.1s;
+}
+
+.articleLink:focus,
+.articleLink:hover {
+  text-decoration-color: var(--gray-5);
+}
+
+.wrapper {
+  flex: 1 1 420px;
+  overflow: hidden;
+  max-width: 420px;
+  min-width: 325px;
+  height: 400px;
+  border-radius: 24px;
+
+  background-color: var(--article-background);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gatsbyImage {
+  height: 235px;
+}
+
+.figcaption {
+  padding: 0px 18px;
+}
+
+.date {
+  display: block;
+  margin-top: 6px;
+  margin-right: 2px;
+  text-align: right;
+  color: var(--gray-4);
+}
+
+.title {
+  width: 70%;
+  color: var(--gray-5);
+  word-break: keep-all;
+}
+
+.description {
+  margin-top: 14px;
+  width: 80%;
+  color: var(--gray-3);
+  word-break: keep-all;
+}
