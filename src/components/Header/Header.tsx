@@ -22,7 +22,7 @@ export const Header = () => {
         <Link to="/">
           <Rss className={styles.icon} />
         </Link>
-        <button className={styles.iconButton} onClick={toggleHandler}>
+        <button className={styles.iconButton} onClick={toggleHandler} tabIndex={0}>
           <DarkMode className={styles.icon} />
         </button>
       </div>

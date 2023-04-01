@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 20px;
+  max-width: 1396px;
   min-width: 260px;
 }
 
@@ -32,6 +33,12 @@
 .iconButton {
   all: unset;
   cursor: pointer;
+}
+
+.iconButton:focus {
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: 1px;
+  border-radius: 2px;
 }
 
 .icon path {
