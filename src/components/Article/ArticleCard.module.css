@@ -32,29 +32,34 @@
 }
 
 .gatsbyImage {
-  height: 200px;
+  height: 208px;
 }
 
 .figcaption {
-  padding: 0px 18px 28px;
+  position: relative;
+  padding: 0px 20px 28px;
 }
 
 .date {
+  position: absolute;
   display: inline-block;
-  margin-top: 11px;
+  top: 4px;
+  right: 20px;
   color: var(--gray-4);
 }
 
 .tagList {
   width: 80%;
-  margin-top: 16px;
+  margin-top: 23px;
   display: flex;
   gap: 5px;
   padding: 0;
 }
 
 .title {
-  margin-top: 12px;
+  margin-top: 20px;
+  margin-left: 4px;
+  width: 90%;
   color: var(--gray-5);
   word-break: keep-all;
 }
@@ -63,7 +68,9 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  margin-top: 11px;
+  margin-top: 20px;
+  margin-left: 4px;
+  width: 90%;
   height: 2.5rem;
   text-overflow: ellipsis;
   word-wrap: break-word;

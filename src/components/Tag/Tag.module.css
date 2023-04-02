@@ -19,9 +19,9 @@
 }
 
 .tag {
-  padding: 0px 12px 1px;
+  padding: 0px 12px;
   border: 1px solid var(--primary-c1);
   border-radius: 30px;
-  background-color: #ffffff;
+  background-color: var(--tag-background);
   color: var(--primary-c1);
 }

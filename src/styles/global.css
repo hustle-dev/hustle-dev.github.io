@@ -17,6 +17,7 @@
   --primary-c1: #15af73;
   --primary-c2: #f7f2ef;
   --background: #ffffff;
+  --tag-background: #ffffff;
   --article-background: #ffffff;
   --black: #151414;
   --gray-1: #f6f6f6;
@@ -29,8 +30,9 @@
 }
 
 [dark-mode] {
-  --background: #232323;
-  --article-background: #000000;
+  --background: #2f2f2f;
+  --tag-background: transparent;
+  --article-background: #232323;
   --black: #151414;
   /* --gray-1: #f6f6f6; */
   --gray-2: #747474;

@@ -15,6 +15,9 @@ export const ArticleCard = ({ title, description, date, tags, slug, heroImage, h
         <figure>
           <GatsbyImage image={image} alt={heroImageAlt} className={styles.gatsbyImage} />
           <figcaption className={styles.figcaption}>
+            <span style={TYPO.B7} className={styles.date}>
+              {date}
+            </span>
             <ul className={styles.tagList}>
               {tags.map((tag) => (
                 <Tag key={tag} isButton={false} name={tag}></Tag>
@@ -26,9 +29,6 @@ export const ArticleCard = ({ title, description, date, tags, slug, heroImage, h
             <p style={TYPO.B5} className={styles.description}>
               {description}
             </p>
-            <span style={TYPO.B7} className={styles.date}>
-              {date}
-            </span>
           </figcaption>
         </figure>
       </article>

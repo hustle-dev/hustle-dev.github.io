@@ -20,13 +20,13 @@ export const ArticleItem = ({ title, description, date, tags, slug, heroImage, h
                 <Tag key={tag} isButton={false} name={tag}></Tag>
               ))}
             </ul>
-            <h3 style={TYPO.H1} className={styles.title}>
+            <h3 style={TYPO.T1} className={styles.title}>
               {title}
             </h3>
             <p style={TYPO.B5} className={styles.description}>
               {description}
             </p>
-            <span style={TYPO.B7} className={styles.date}>
+            <span style={TYPO.B6} className={styles.date}>
               {date}
             </span>
           </figcaption>
