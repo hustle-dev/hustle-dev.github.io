@@ -20,7 +20,7 @@ export const ArticleCard = ({ title, description, date, tags, slug, heroImage, h
             </span>
             <ul className={styles.tagList}>
               {tags.map((tag) => (
-                <Tag key={tag} isButton={false} name={tag}></Tag>
+                <Tag key={tag} name={tag}></Tag>
               ))}
             </ul>
             <h3 style={TYPO.H1} className={styles.title}>

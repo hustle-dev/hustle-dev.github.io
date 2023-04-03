@@ -17,7 +17,7 @@ export const ArticleItem = ({ title, description, date, tags, slug, heroImage, h
           <figcaption className={styles.figcaption}>
             <ul className={styles.tagList}>
               {tags.map((tag) => (
-                <Tag key={tag} isButton={false} name={tag}></Tag>
+                <Tag key={tag} name={tag}></Tag>
               ))}
             </ul>
             <h3 style={TYPO.T1} className={styles.title}>
