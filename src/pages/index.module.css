@@ -1,0 +1,111 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px;
+  max-width: 1400px;
+}
+
+.shrinkSpace {
+  display: block;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+.heading {
+  display: none;
+}
+
+.articleRowList {
+  display: none;
+}
+
+.divider {
+  display: none;
+}
+
+.tagList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+}
+
+.tagItem {
+  margin-top: 15px;
+}
+
+.articleList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 35px;
+  padding: 0;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .aside {
+    padding: 0px 40px;
+  }
+
+  .wrapper {
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (min-width: 48.75rem) {
+  .shrinkSpace {
+    height: 30px;
+  }
+
+  .heading {
+    display: block;
+    color: var(--gray-5);
+  }
+
+  .articleRowList {
+    margin-top: 25px;
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .divider {
+    display: block;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 0.5px;
+    border: 0;
+    background-color: var(--gray-2);
+  }
+}
+
+@media screen and (min-width: 62.5rem) {
+  .main {
+    flex-direction: row;
+    padding: 0px 60px;
+  }
+
+  .aside {
+    margin-top: 150px;
+    padding: 0px;
+  }
+
+  .shrinkSpace {
+    display: block;
+    flex: 1;
+    min-width: 20px;
+    max-width: 150px;
+  }
+
+  .wrapper {
+    padding: 0px;
+  }
+}
