@@ -17,7 +17,27 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 680,
+              linkImagesToOriginal: false,
+              wrapperStyle: 'border-radius: 10px; overflow: hidden;',
+            },
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
