@@ -1,0 +1,39 @@
+.tableOfContents {
+  width: 320px;
+  max-height: calc(100vh - 360px);
+  position: fixed;
+  top: 280px;
+  right: 90px;
+  overflow-y: auto;
+}
+
+.tableOfContents > ul {
+  width: 240px;
+  margin-left: auto;
+  border-left: 2px solid #c5c5c5;
+}
+
+.tableOfContents ul {
+  list-style: none;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.tableOfContents li {
+  margin-bottom: 3px;
+}
+
+.tableOfContents a {
+  text-decoration: none;
+  color: #9e9e9e;
+}
+
+.tableOfContents a,
+.tableOfContents p,
+.tableOfContents code {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
