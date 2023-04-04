@@ -52,7 +52,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'] {
   margin: 0 0.2em;
-  padding: 0.2em 0.4em;
+  padding: 0.1em 0.4em;
   border-radius: 0.2em;
   background-color: var(--tag-background);
   border: 1px solid var(--primary-c1);

@@ -10,7 +10,7 @@
 .tableOfContents > ul {
   width: 240px;
   margin-left: auto;
-  border-left: 2px solid #c5c5c5;
+  border-left: 2px solid var(--gray-2);
 }
 
 .tableOfContents ul {
@@ -25,7 +25,12 @@
 
 .tableOfContents a {
   text-decoration: none;
-  color: #9e9e9e;
+  color: var(--gray-3);
+  transition: 0.1s;
+}
+
+.tableOfContents a:hover {
+  color: var(--primary-c1);
 }
 
 .tableOfContents a,
@@ -36,4 +41,8 @@
   font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+.tableOfContents code[class*='language-'] {
+  all: unset;
 }
