@@ -35,6 +35,12 @@ const config: GatsbyConfig = {
               icon: false,
             },
           },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: `>`,
+            },
+          },
         ],
       },
     },

@@ -40,11 +40,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-plugin-sitemap", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:6.8.0"],\
             ["gatsby-remark-autolink-headers", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:6.8.0"],\
             ["gatsby-remark-images", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:7.8.0"],\
+            ["gatsby-remark-prismjs", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:7.8.0"],\
             ["gatsby-source-filesystem", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.8.0"],\
             ["gatsby-transformer-remark", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:6.8.0"],\
             ["gatsby-transformer-sharp", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.8.0"],\
             ["install", "npm:0.13.0"],\
             ["npm", "npm:9.6.2"],\
+            ["prismjs", "npm:1.29.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
             ["svg-react-loader", "npm:0.4.6"],\
@@ -10746,6 +10748,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["gatsby-remark-prismjs", [\
+        ["npm:7.8.0", {\
+          "packageLocation": "./.yarn/cache/gatsby-remark-prismjs-npm-7.8.0-a43a4cb903-f81f5b0476.zip/node_modules/gatsby-remark-prismjs/",\
+          "packageDependencies": [\
+            ["gatsby-remark-prismjs", "npm:7.8.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:7.8.0", {\
+          "packageLocation": "./.yarn/__virtual__/gatsby-remark-prismjs-virtual-7dfd2dcece/0/cache/gatsby-remark-prismjs-npm-7.8.0-a43a4cb903-f81f5b0476.zip/node_modules/gatsby-remark-prismjs/",\
+          "packageDependencies": [\
+            ["gatsby-remark-prismjs", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:7.8.0"],\
+            ["@babel/runtime", "npm:7.21.0"],\
+            ["@types/gatsby", null],\
+            ["@types/prismjs", null],\
+            ["gatsby", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.8.0"],\
+            ["parse-numeric-range", "npm:1.3.0"],\
+            ["prismjs", "npm:1.29.0"],\
+            ["unist-util-visit", "npm:2.0.3"]\
+          ],\
+          "packagePeers": [\
+            "@types/gatsby",\
+            "@types/prismjs",\
+            "gatsby",\
+            "prismjs"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["gatsby-script", [\
         ["npm:2.8.0", {\
           "packageLocation": "./.yarn/cache/gatsby-script-npm-2.8.0-eea35a0573-d8f6987aca.zip/node_modules/gatsby-script/",\
@@ -11809,11 +11840,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-plugin-sitemap", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:6.8.0"],\
             ["gatsby-remark-autolink-headers", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:6.8.0"],\
             ["gatsby-remark-images", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:7.8.0"],\
+            ["gatsby-remark-prismjs", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:7.8.0"],\
             ["gatsby-source-filesystem", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.8.0"],\
             ["gatsby-transformer-remark", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:6.8.0"],\
             ["gatsby-transformer-sharp", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.8.0"],\
             ["install", "npm:0.13.0"],\
             ["npm", "npm:9.6.2"],\
+            ["prismjs", "npm:1.29.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
             ["svg-react-loader", "npm:0.4.6"],\
@@ -15403,6 +15436,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["parse-numeric-range", [\
+        ["npm:1.3.0", {\
+          "packageLocation": "./.yarn/cache/parse-numeric-range-npm-1.3.0-71baf377a4-289ca126d5.zip/node_modules/parse-numeric-range/",\
+          "packageDependencies": [\
+            ["parse-numeric-range", "npm:1.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["parse-path", [\
         ["npm:7.0.0", {\
           "packageLocation": "./.yarn/cache/parse-path-npm-7.0.0-ceda41e594-244b46523a.zip/node_modules/parse-path/",\
@@ -16521,6 +16563,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pretty-error", "npm:2.1.2"],\
             ["lodash", "npm:4.17.21"],\
             ["renderkid", "npm:2.0.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["prismjs", [\
+        ["npm:1.29.0", {\
+          "packageLocation": "./.yarn/cache/prismjs-npm-1.29.0-6faa5b04b8-007a8869d4.zip/node_modules/prismjs/",\
+          "packageDependencies": [\
+            ["prismjs", "npm:1.29.0"]\
           ],\
           "linkType": "HARD"\
         }]\

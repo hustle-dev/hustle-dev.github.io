@@ -1,5 +1,7 @@
+import 'prismjs/themes/prism-tomorrow.css';
 import './src/styles/reset.css';
 import './src/styles/global.css';
+import './src/styles/code.css';
 
 import React from 'react';
 import Layout from './src/layouts/Layout';
