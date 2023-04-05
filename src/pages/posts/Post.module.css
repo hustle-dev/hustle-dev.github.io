@@ -1,0 +1,119 @@
+.pseudoHeader {
+  height: 73px;
+}
+
+.wrapper {
+  max-width: 800px;
+  min-width: 350px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0px 20px;
+}
+
+.title {
+  color: var(--gray-5);
+}
+
+.date {
+  margin-top: 15px;
+  color: var(--gray-4);
+}
+
+.tagList {
+  display: flex;
+  gap: 5px;
+  margin-top: 25px;
+  padding: 0;
+}
+
+.heroImage {
+  margin-top: 20px;
+  border-radius: 11px;
+  width: 100%;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: auto;
+}
+
+@media screen and (min-width: 1300px) {
+  .contentWrapper {
+    width: auto;
+    width: 940px;
+  }
+}
+
+.mainText {
+  flex: 1;
+  margin-top: 30px;
+  max-width: 680px;
+  min-width: 350px;
+  word-break: keep-all;
+  color: var(--gray-5);
+}
+
+.mainText a {
+  color: var(--primary-c1);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.1s;
+}
+
+.mainText a:hover {
+  text-decoration-color: var(--primary-c1);
+}
+
+.mainText blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-left: 4px solid var(--primary-c1);
+  background-color: var(--primary-c2);
+  color: #2f2f2f;
+}
+
+.mainText blockquote p {
+  margin: 0;
+}
+
+.mainText p {
+  display: block;
+  margin-block-start: 0.7em;
+  margin-block-end: 0.7em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 1.6;
+}
+
+.mainText h1 {
+  margin-top: 2em;
+}
+
+.mainText h2 {
+  margin-top: 1.5em;
+}
+
+.mainText h3 {
+  margin-top: 1rem;
+}
+
+.bio {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .wrapper {
+    margin-top: 60px;
+    padding: 0px 60px;
+  }
+}
+
+@media screen and (min-width: 48.75rem) {
+  .wrapper {
+    margin-top: 90px;
+  }
+}
