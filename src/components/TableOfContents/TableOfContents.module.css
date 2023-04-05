@@ -1,21 +1,36 @@
-.tableOfContents {
-  width: 320px;
+.wrapper {
+  display: none;
+  position: sticky;
+  top: 90px;
+  max-width: 320px;
   max-height: calc(100vh - 360px);
-  position: fixed;
-  top: 280px;
-  right: 90px;
-  overflow-y: auto;
+  margin-right: -80px;
+  overflow: none auto;
+  padding: 0px 10px;
+  border-left: 2px solid var(--gray-2);
+}
+
+@media screen and (min-width: 75rem) {
+  .wrapper {
+    display: block;
+  }
+}
+
+.pen {
+  margin-bottom: 6px;
 }
 
 .tableOfContents > ul {
   width: 240px;
   margin-left: auto;
-  border-left: 2px solid var(--gray-2);
 }
 
 .tableOfContents ul {
   list-style: none;
   padding: 0;
+}
+
+.tableOfContents ul ul {
   padding-left: 10px;
 }
 
@@ -45,4 +60,9 @@
 
 .tableOfContents code[class*='language-'] {
   all: unset;
+}
+
+.tableOfContents a.active {
+  display: inline-block;
+  color: var(--primary-c1);
 }
