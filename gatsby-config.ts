@@ -1,9 +1,9 @@
 import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
-  flags: {
-    DEV_SSR: true,
-  },
+  // flags: {
+  //   DEV_SSR: true,
+  // },
   siteMetadata: {
     title: `hustle-dev blog`,
     description: `hustle-dev의 기술 블로그 입니다.`,
