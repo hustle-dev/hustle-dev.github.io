@@ -37,24 +37,11 @@
   --gray-1: #ffffff;
   --gray-2: #c5c5c5;
   --gray-3: #aaaaaa;
-  /* --gray-4: #747474; */
+  --gray-4: #c5c5c5;
   --gray-5: #ffffff;
   /* --gray-6: #232323; */
   --icon-color: #ffffff;
 }
-/* [dark-mode] {
-  --background: #2f2f2f;
-  --tag-background: transparent;
-  --article-background: #232323;
-  --black: #151414;
-  --gray-1: #ffffff;
-  --gray-2: #f6f6f6;
-  --gray-3: #c5c5c5;
-  --gray-4: #9e9e9e;
-  --gray-5: #747474;
-  --gray-6: #2f2f2f;
-  --icon-color: #ffffff;
-} */
 
 body {
   font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
