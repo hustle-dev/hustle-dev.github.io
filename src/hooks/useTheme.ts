@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-const isBrowser = typeof window !== 'undefined';
 const isDarkMode = (theme: string) => theme === 'dark';
 
 const getInitialTheme = () => {
@@ -15,8 +14,6 @@ const setThemeAttribute = (theme: string) => {
 };
 
 export const useTheme = () => {
-  if (!isBrowser) return;
-
   const [theme, setTheme] = useState<string>(getInitialTheme());
   setThemeAttribute(theme);
 
