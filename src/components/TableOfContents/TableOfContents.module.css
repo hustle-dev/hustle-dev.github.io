@@ -10,7 +10,7 @@
   border-left: 2px solid var(--gray-2);
 }
 
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 81.25rem) {
   .wrapper {
     display: block;
   }
