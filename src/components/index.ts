@@ -6,3 +6,4 @@ export * from './Footer';
 export * from './Article';
 export * from './FloatingButton';
 export * from './TableOfContents';
+export * from './Giscus';
