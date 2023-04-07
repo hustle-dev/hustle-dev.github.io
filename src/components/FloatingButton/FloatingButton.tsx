@@ -25,7 +25,7 @@ export const FloatingButton = () => {
 
   return (
     <button className={`${styles.floatingButton} ${isVisible ? styles.visible : ''}`} onClick={scrollToTop}>
-      <Arrow className={styles.icon} />
+      <Arrow />
     </button>
   );
 };

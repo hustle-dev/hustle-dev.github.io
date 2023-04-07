@@ -25,7 +25,7 @@ export const ProfileCard = ({ pathname }: ProfileCardProps) => {
           width={100}
           height={100}
         ></StaticImage>
-        <div className={styles.infoContainer}>
+        <div>
           <h1 style={TYPO.D1} className={styles.name}>
             Hustle-dev
           </h1>
