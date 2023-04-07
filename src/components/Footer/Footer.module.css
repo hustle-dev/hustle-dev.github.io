@@ -17,7 +17,7 @@
   text-align: right;
   font-size: 0.5rem;
   transition: 0.1s;
-  color: var(--background);
+  color: var(--gray-2);
 }
 
 @media screen and (min-width: 31.25rem) {

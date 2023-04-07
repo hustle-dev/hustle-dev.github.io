@@ -5,7 +5,7 @@ import { Giscus, ProfileCard, Seo, TableOfContents, Tag } from '@components';
 import * as styles from './Post.module.css';
 import { TYPO } from '@styles';
 
-const BlogPostTemplate = ({ data }: PageProps<Queries.PostQuery>) => {
+const BlogPostTemplate = ({ data, location: { pathname } }: PageProps<Queries.PostQuery>) => {
   const { title, date, tags, heroImage, heroImageAlt } = data.markdownRemark?.frontmatter!;
 
   return (
@@ -42,8 +42,9 @@ const BlogPostTemplate = ({ data }: PageProps<Queries.PostQuery>) => {
           ></section>
           <TableOfContents html={data.markdownRemark?.tableOfContents!}></TableOfContents>
         </div>
+        <hr />
         <section className={styles.bio}>
-          <ProfileCard />
+          <ProfileCard pathname={pathname} />
         </section>
         <Giscus />
       </main>
