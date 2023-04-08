@@ -2,7 +2,7 @@
 title: 순수 TS 개발환경 설정하기
 description: ESLint, Prettier, Webpack을 활용한 개발환경 설정
 date: 2022-06-14
-slug: /know-about-web-component
+slug: /setting-pure-ts-dev
 tags: [개발]
 heroImage: ./heroImage.png
 heroImageAlt: 도구 목록
