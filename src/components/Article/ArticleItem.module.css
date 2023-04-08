@@ -23,6 +23,7 @@
   position: relative;
   flex: 1;
   min-height: 165px;
+  min-width: 300px;
   padding: 20px;
   background-color: var(--article-background);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -32,6 +33,7 @@
 .figure {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .gatsbyImage {
@@ -50,6 +52,7 @@
 
 .figcaption {
   flex: 1;
+  width: 100%;
   flex-shrink: 100000;
   order: -1;
 }
