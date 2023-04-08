@@ -1,5 +1,6 @@
 .pseudoHeader {
   height: 73px;
+  min-width: 350px;
 }
 
 .wrapper {
