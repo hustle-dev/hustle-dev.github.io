@@ -77,6 +77,55 @@ const config: GatsbyConfig = {
         path: './src/images/',
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }: any) => {
+              return allMarkdownRemark.nodes.map((node: any) => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.frontmatter.description,
+                  date: new Date(node.frontmatter.date),
+                  url: `${site.siteMetadata.siteUrl}/posts/${node.frontmatter.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}/posts/${node.frontmatter.slug}`,
+                  custom_elements: [{ 'content:encoded': node.html }],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(sort: { frontmatter: { date: DESC }}) {
+                  nodes {
+                    frontmatter {
+                      date
+                      description
+                      slug
+                      title
+                    }
+                    html
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'Hustle-dev Blog RSS Feed',
+          },
+        ],
+      },
+    },
   ],
 };
 

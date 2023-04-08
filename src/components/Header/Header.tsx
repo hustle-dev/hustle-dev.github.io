@@ -55,8 +55,7 @@ export const Header = ({ pathname }: HeaderProps) => {
           </h1>
         </Link>
         <div className={styles.headerButtons}>
-          {/* TODO: RSS 피드 달면 링크 수정하기 */}
-          <Link to="/">
+          <Link to="/rss.xml">
             <Rss className={styles.icon} />
           </Link>
           <button className={styles.iconButton} onClick={toggleHandler} tabIndex={0}>
