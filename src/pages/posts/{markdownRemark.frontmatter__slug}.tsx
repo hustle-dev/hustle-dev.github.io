@@ -34,6 +34,7 @@ const BlogPostTemplate = ({ data, location: { pathname } }: PageProps<Queries.Po
           image={getImage(heroImage?.childImageSharp?.gatsbyImageData!) as IGatsbyImageData}
           alt={heroImageAlt}
           className={styles.heroImage}
+          objectFit="contain"
         />
         <div className={styles.contentWrapper}>
           <section
@@ -42,7 +43,7 @@ const BlogPostTemplate = ({ data, location: { pathname } }: PageProps<Queries.Po
           ></section>
           <TableOfContents html={data.markdownRemark?.tableOfContents!}></TableOfContents>
         </div>
-        <hr />
+        <hr className={styles.divider} />
         <section className={styles.bio}>
           <ProfileCard pathname={pathname} />
         </section>

@@ -30,6 +30,7 @@
   margin-top: 20px;
   border-radius: 11px;
   width: 100%;
+  max-height: 400px;
 }
 
 .contentWrapper {
@@ -47,6 +48,8 @@
 }
 
 .mainText {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   margin-top: 30px;
   max-width: 680px;
@@ -79,7 +82,7 @@
   background-color: var(--blockquote-bgColor);
   color: var(--blockquote-color);
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+  border-radius: 11px;
 }
 
 .mainText blockquote::before {
@@ -94,29 +97,77 @@
   font-style: normal;
   font-weight: 600;
   font-size: 0.875rem;
-  line-height: 1.25rem;
+  line-height: 1.6;
   word-break: break-all;
 }
 
 .mainText p {
   display: block;
-  margin-block-start: 0.7em;
-  margin-block-end: 0.7em;
+  margin-block-start: 0.4em;
+  margin-block-end: 0.4em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   line-height: 1.6;
 }
 
 .mainText h1 {
-  margin-top: 2em;
+  margin-top: 1.8em;
 }
 
 .mainText h2 {
   margin-top: 1.5em;
 }
 
-.mainText h3 {
-  margin-top: 1rem;
+.mainText h3,
+.mainText h4,
+.mainText h5 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.mainText img {
+  display: block;
+  margin: 0 auto;
+}
+
+.mainText ol,
+.mainText ul {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.mainText ol > li,
+.mainText ul > li {
+  line-height: 1.6;
+}
+
+.mainText table {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  min-width: 40%;
+  max-width: 100%;
+  border: 1px solid var(--primary-c1);
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.mainText table tbody tr:nth-child(2n) {
+  background-color: rgba(21, 175, 115, 0.1);
+}
+
+.mainText table th,
+.mainText table td {
+  word-break: break-all;
+  padding: 0.5em;
+  border: 1px solid var(--primary-c1);
+}
+
+.mainText tr > th {
+  border-bottom: 3px solid var(--primary-c1);
+}
+
+.divider {
+  margin-top: 60px;
 }
 
 .bio {
