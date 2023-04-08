@@ -27,8 +27,11 @@
   margin: 0;
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   margin-right: 10px;
+}
+
+.postProfileImage img {
+  border-radius: 50%;
 }
 
 .iconWrapper {
@@ -52,9 +55,8 @@
   margin-top: 25px;
 }
 
-.profileImage {
+.profileImage img {
   border-radius: 50%;
-  margin-right: 10px;
 }
 
 .profileIcon {

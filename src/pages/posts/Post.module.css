@@ -29,10 +29,13 @@
 
 .heroImage {
   margin-top: 20px;
-  border-radius: 11px;
   width: 100%;
   min-width: 300px;
   max-height: 400px;
+}
+
+.heroImage img {
+  border-radius: 11px;
 }
 
 .contentWrapper {

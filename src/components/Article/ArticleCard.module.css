@@ -35,6 +35,12 @@
   height: 208px;
 }
 
+/* for safari */
+.gatsbyImage img {
+  border-top-right-radius: 24px;
+  border-top-left-radius: 24px;
+}
+
 .figcaption {
   position: relative;
   padding: 0px 20px 28px;
