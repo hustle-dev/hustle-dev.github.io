@@ -61,7 +61,6 @@
   margin-left: 4px;
   width: 90%;
   color: var(--gray-5);
-  word-break: keep-all;
 }
 
 .description {
@@ -75,6 +74,5 @@
   text-overflow: ellipsis;
   word-wrap: break-word;
   -webkit-line-clamp: 2;
-  word-break: keep-all;
   color: var(--gray-3);
 }
