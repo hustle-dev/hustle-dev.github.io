@@ -13,7 +13,7 @@ const config: GatsbyConfig = {
   },
   graphqlTypegen: true,
   plugins: [
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -124,6 +124,14 @@ const config: GatsbyConfig = {
             title: 'Hustle-dev Blog RSS Feed',
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://hustle-dev.github.io',
+        sitemap: 'https://hustle-dev.github.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],
