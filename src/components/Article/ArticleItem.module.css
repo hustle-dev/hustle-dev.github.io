@@ -35,7 +35,7 @@
 }
 
 .gatsbyImage {
-  display: none;
+  display: none !important;
   width: 190px;
   height: 120px;
   min-width: 190px;
@@ -44,7 +44,7 @@
 
 @media screen and (min-width: 48.75rem) {
   .gatsbyImage {
-    display: block;
+    display: block !important;
   }
 }
 
