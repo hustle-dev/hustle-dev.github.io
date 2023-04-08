@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { HeadProps, PageProps } from 'gatsby';
 import { graphql } from 'gatsby';
 import * as styles from './index.module.css';
@@ -14,10 +14,29 @@ const IndexPage = ({ data }: PageProps<Queries.IndexQuery>) => {
   ].sort((a, b) => b.totalCount - a.totalCount);
 
   const [selectedTag, setSelectedTag] = useState<string>('All');
-
   const filteredPosts = allPosts.filter(
     ({ frontmatter: { tags } }) => selectedTag === 'All' || tags.includes(selectedTag)
   );
+
+  const [displayedItems, setDisplayedItems] = useState(8);
+  const visiblePosts = filteredPosts.slice(0, displayedItems);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting) return;
+
+        if (displayedItems <= data.allMarkdownRemark.totalCount) {
+          setDisplayedItems((prev) => prev + 8);
+        } else {
+          observer.disconnect();
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(document.querySelector('footer') as HTMLElement);
+    return () => observer.disconnect();
+  }, [displayedItems]);
 
   return (
     <>
@@ -62,7 +81,7 @@ const IndexPage = ({ data }: PageProps<Queries.IndexQuery>) => {
             ))}
           </ul>
           <ul className={styles.articleList}>
-            {filteredPosts.map(
+            {visiblePosts.map(
               ({ frontmatter: { title, description, date, tags, slug, heroImage, heroImageAlt }, id }) => (
                 <ArticleItem
                   key={id}
