@@ -9,6 +9,7 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ act
         '@images': path.resolve(__dirname, 'src/images'),
         '@styles': path.resolve(__dirname, 'src/styles'),
         '@hooks': path.resolve(__dirname, 'src/hooks'),
+        '@utils': path.resolve(__dirname, 'src/utils'),
       },
     },
   });

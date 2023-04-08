@@ -5,6 +5,7 @@ import DarkMode from '@images/darkmode.svg';
 import * as styles from './Header.module.css';
 import { Link } from 'gatsby';
 import { useTheme } from '@hooks';
+import { optimizedScroll } from '@utils';
 
 type HeaderProps = {
   pathname: string;
@@ -14,32 +15,20 @@ export const Header = ({ pathname }: HeaderProps) => {
   const toggleHandler = useTheme();
   const [progressWidth, setProgressWidth] = useState<number>(0);
 
+  const updateProgress = () => {
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPosition = window.scrollY;
+    const scrollProgress = (scrollPosition / scrollHeight) * 100;
+    setProgressWidth(scrollProgress);
+  };
+
   useEffect(() => {
     if (pathname === '/') return;
 
-    let animationFrameId: number | null = null;
-
-    const handleScroll = () => {
-      const updateProgress = () => {
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPosition = window.scrollY;
-        const scrollProgress = (scrollPosition / scrollHeight) * 100;
-        setProgressWidth(scrollProgress);
-        animationFrameId = null;
-      };
-
-      if (!animationFrameId) {
-        animationFrameId = window.requestAnimationFrame(updateProgress);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', optimizedScroll(updateProgress));
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (animationFrameId) {
-        window.cancelAnimationFrame(animationFrameId);
-      }
+      window.removeEventListener('scroll', optimizedScroll(updateProgress));
     };
   }, [pathname]);
 
