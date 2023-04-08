@@ -13,6 +13,15 @@ const config: GatsbyConfig = {
   },
   graphqlTypegen: true,
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-LDKTNNPSGB'],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
