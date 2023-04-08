@@ -22,6 +22,14 @@ const config: GatsbyConfig = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://hustle-dev.github.io',
+        sitemap: 'https://hustle-dev.github.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -133,14 +141,6 @@ const config: GatsbyConfig = {
             title: 'Hustle-dev Blog RSS Feed',
           },
         ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://hustle-dev.github.io',
-        sitemap: 'https://hustle-dev.github.io/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],
