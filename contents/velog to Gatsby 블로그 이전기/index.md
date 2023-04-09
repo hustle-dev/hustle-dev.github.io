@@ -1,7 +1,7 @@
 ---
 title: velog to Gatsby 블로그 이전기
 description: velog를 떠나 나만의 블로그로..
-date: 203-04-09
+date: 2023-04-09
 slug: /velog-to-gatsby-blog
 tags: [개발, 회고]
 heroImage: ./heroImage.png
