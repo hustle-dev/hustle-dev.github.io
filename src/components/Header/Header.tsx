@@ -44,9 +44,9 @@ export const Header = ({ pathname }: HeaderProps) => {
           </h1>
         </Link>
         <div className={styles.headerButtons}>
-          <Link to="/rss.xml">
+          <a href="/rss.xml" rel="noopener noreferrer">
             <Rss className={styles.icon} />
-          </Link>
+          </a>
           <button className={styles.iconButton} onClick={toggleHandler} tabIndex={0}>
             <DarkMode className={styles.icon} />
           </button>
