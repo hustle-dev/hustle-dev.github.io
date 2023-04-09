@@ -98,6 +98,10 @@
   margin: 10px;
 }
 
+.mainText :not(pre) > code[class*='language-'] {
+  padding: 0em 0.4em;
+}
+
 .mainText blockquote p {
   margin: 0;
   font-style: normal;

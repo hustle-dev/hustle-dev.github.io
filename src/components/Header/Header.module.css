@@ -36,10 +36,12 @@
 }
 
 .heading {
+  display: inline-block;
   font-family: 'Tenada';
   font-weight: 800;
   font-size: 0.8125rem;
   line-height: 1.125rem;
+  margin-top: 2px;
   color: var(--primary-c1);
 }
 
