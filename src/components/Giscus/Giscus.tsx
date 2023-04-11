@@ -24,7 +24,7 @@ export const Giscus = () => {
       'data-theme',
       theme === Theme.LIGHT
         ? 'light'
-        : 'https://cdn.jsdelivr.net/gh/hustle-dev/hustle-dev.github.io@main/src/components/Giscus/giscus.css'
+        : 'https://cdn.jsdelivr.net/gh/hustle-dev/hustle-dev.github.io@main/src/components/Giscus/custom-giscus-theme.css'
     );
     script.setAttribute('data-lang', 'ko');
     script.setAttribute('crossorigin', 'anonymous');
