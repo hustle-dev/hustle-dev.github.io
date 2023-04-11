@@ -18,9 +18,11 @@ export const Giscus = () => {
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
     script.setAttribute('data-input-position', 'bottom');
-    script.setAttribute('data-theme', 'transparent_dark');
+    script.setAttribute(
+      'data-theme',
+      'https://cdn.jsdelivr.net/gh/hustle-dev/hustle-dev.github.io@main/src/styles/giscus.css'
+    );
     script.setAttribute('data-lang', 'ko');
-    script.setAttribute('data-loading', 'lazy');
     script.setAttribute('crossorigin', 'anonymous');
     script.async = true;
     containerRef.current.appendChild(script);
