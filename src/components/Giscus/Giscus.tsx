@@ -1,7 +1,6 @@
 import { Theme, useTheme } from '@contexts';
 import React, { useEffect, useRef } from 'react';
 
-// TODO: 모드 변경에 따른 댓글 테마 변경
 export const Giscus = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
