@@ -5,6 +5,7 @@ import './src/styles/code.css';
 
 import React from 'react';
 import Layout from './src/layouts/Layout';
+import { ThemeProvider } from './src/contexts';
 import type { WrapPageElementBrowserArgs } from 'gatsby';
 
 /**
@@ -12,5 +13,9 @@ import type { WrapPageElementBrowserArgs } from 'gatsby';
  * @link https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/#wrapPageElement
  */
 export const wrapPageElement = ({ element, props }: WrapPageElementBrowserArgs) => {
-  return <Layout {...props}>{element}</Layout>;
+  return (
+    <ThemeProvider>
+      <Layout {...props}>{element}</Layout>
+    </ThemeProvider>
+  );
 };

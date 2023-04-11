@@ -1,8 +1,10 @@
+import { Theme, useTheme } from '@contexts';
 import React, { useEffect, useRef } from 'react';
 
 // TODO: 모드 변경에 따른 댓글 테마 변경
 export const Giscus = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (containerRef.current === null) return;
@@ -20,7 +22,9 @@ export const Giscus = () => {
     script.setAttribute('data-input-position', 'bottom');
     script.setAttribute(
       'data-theme',
-      'https://cdn.jsdelivr.net/gh/hustle-dev/hustle-dev.github.io@main/src/styles/giscus.css'
+      theme === Theme.LIGHT
+        ? 'light'
+        : 'https://cdn.jsdelivr.net/gh/hustle-dev/hustle-dev.github.io@main/src/components/Giscus/giscus.css'
     );
     script.setAttribute('data-lang', 'ko');
     script.setAttribute('crossorigin', 'anonymous');
@@ -31,7 +35,7 @@ export const Giscus = () => {
       if (containerRef.current === null) return;
       containerRef.current.removeChild(script);
     };
-  }, []);
+  }, [theme]);
 
   return <div id="comment" ref={containerRef} />;
 };

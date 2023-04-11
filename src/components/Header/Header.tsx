@@ -4,15 +4,15 @@ import Rss from '@images/rss.svg';
 import DarkMode from '@images/darkmode.svg';
 import * as styles from './Header.module.css';
 import { Link } from 'gatsby';
-import { useTheme } from '@hooks';
 import { optimizedScroll } from '@utils';
+import { useTheme } from '@contexts';
 
 type HeaderProps = {
   pathname: string;
 };
 
 export const Header = ({ pathname }: HeaderProps) => {
-  const toggleHandler = useTheme();
+  const { toggleDarkMode } = useTheme();
   const [progressWidth, setProgressWidth] = useState<number>(0);
 
   const updateProgress = () => {
@@ -47,7 +47,7 @@ export const Header = ({ pathname }: HeaderProps) => {
           <a href="/rss.xml" rel="noopener noreferrer">
             <Rss className={styles.icon} />
           </a>
-          <button className={styles.iconButton} onClick={toggleHandler} tabIndex={0}>
+          <button className={styles.iconButton} onClick={toggleDarkMode} tabIndex={0}>
             <DarkMode className={styles.icon} />
           </button>
         </div>

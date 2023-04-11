@@ -116,16 +116,6 @@ main .gsc-loading-image {
   background-image: url('https://github.githubassets.com/images/mona-loading-dark.gif');
 }
 
-.gsc-comments-count,
-.gsc-comments-count a {
-  color: #15af73;
-}
-
-.gsc-comment-content,
-.gsc-comment-content p {
-  color: rgba(47, 47, 47, 1);
-}
-
 .gsc-tl-line {
   background-color: transparent;
 }
