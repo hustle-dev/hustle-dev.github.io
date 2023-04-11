@@ -1,3 +1,11 @@
+/*! Modified from GitHub's transparent_dark theme in giscus/giscus
+ * MIT License
+ * Copyright (c) 2021 Sage M. Abdullah
+ * Copyright (c) 2018 Jeremy Danyow
+ * Copyright (c) 2018 Chris Veness
+ * https://github.com/giscus/giscus/blob/main/LICENSE
+ */
+
 main {
   --color-prettylights-syntax-comment: #8b949e;
   --color-prettylights-syntax-constant: #79c0ff;
