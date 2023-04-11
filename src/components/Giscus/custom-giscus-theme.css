@@ -38,7 +38,6 @@ main {
   --color-btn-hover-border: #8b949e;
   --color-btn-active-bg: hsl(212deg 12% 18% / 50%);
   --color-btn-active-border: #6e7681;
-  /* --color-btn-selected-bg: rgb(45 51 59 / 50%); */
   --color-btn-selected-bg: rgba(35, 35, 35, 1);
   --color-btn-primary-text: #fff;
   --color-btn-primary-bg: #238636;
