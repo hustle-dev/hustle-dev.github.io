@@ -7,7 +7,6 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build && cp googlefa45382bebc74ed3.html public/",
     "serve": "gatsby serve",
@@ -36,13 +35,24 @@
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "svg-react-loader": "^0.4.6"
+    "svg-react-loader": "^0.4.6",
+    "ts-pattern": "^4.3.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "gh-pages": "^5.0.0",
+    "prettier": "^2.8.8",
     "typescript": "^4.9.5"
   },
   "packageManager": "yarn@3.5.0"
