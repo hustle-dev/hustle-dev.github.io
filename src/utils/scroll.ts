@@ -1,13 +1,13 @@
-export const optimizedScroll = (callback: any) => {
-  let tick = false;
+export const optimizedScroll = (callback: () => void) => {
+  let tick = false
 
   return () => {
-    if (tick) return;
+    if (tick) return
 
-    tick = true;
+    tick = true
     window.requestAnimationFrame(() => {
-      callback();
-      tick = false;
-    });
-  };
-};
+      callback()
+      tick = false
+    })
+  }
+}

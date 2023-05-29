@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import { Link } from 'gatsby'
+import React from 'react'
+import clsx from 'clsx'
+import { match } from 'ts-pattern'
+import { useTheme } from '@/contexts'
+import { useScrollIndicator } from './hooks'
+import { reactCss } from '@/utils'
 import Logo from '@/images/logo.svg'
 import Rss from '@/images/rss.svg'
 import DarkMode from '@/images/darkmode.svg'
 import * as styles from './Header.module.css'
-import { Link } from 'gatsby'
-import { optimizedScroll } from '@/utils'
-import { useTheme } from '@/contexts'
 
 type HeaderProps = {
   pathname: string
@@ -13,29 +16,10 @@ type HeaderProps = {
 
 export const Header = ({ pathname }: HeaderProps) => {
   const { toggleDarkMode } = useTheme()
-  const [progressWidth, setProgressWidth] = useState<number>(0)
-
-  const updateProgress = () => {
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-    const scrollPosition = window.scrollY
-    const scrollProgress = (scrollPosition / scrollHeight) * 100
-    setProgressWidth(scrollProgress)
-  }
-
-  useEffect(() => {
-    if (pathname === '/') return
-
-    window.addEventListener('scroll', optimizedScroll(updateProgress))
-
-    return () => {
-      window.removeEventListener('scroll', optimizedScroll(updateProgress))
-    }
-  }, [pathname])
-
-  const isMainPage = pathname === '/'
+  const { isHome, progressWidth } = useScrollIndicator(pathname)
 
   return (
-    <header className={`${styles.header} ${!isMainPage ? styles.fixed : ''}`}>
+    <header className={clsx(styles.header, { [styles.fixed]: !isHome })}>
       <div className={styles.wrapper}>
         <Link to="/" className={styles.headingLink}>
           <h1 className={styles.headingWrapper}>
@@ -52,7 +36,11 @@ export const Header = ({ pathname }: HeaderProps) => {
           </button>
         </div>
       </div>
-      {pathname !== '/' && <div className={styles.progressBar} style={{ width: `${progressWidth}%` }} />}
+      {match(isHome)
+        .with(false, () => (
+          <div style={reactCss({ '--progress-width': `${progressWidth}%` })} className={styles.progressBar} />
+        ))
+        .otherwise(() => null)}
     </header>
   )
 }

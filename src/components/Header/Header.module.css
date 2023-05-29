@@ -5,8 +5,6 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
   padding: 20px;
 }
 
@@ -21,6 +19,7 @@
 }
 
 .progressBar {
+  width: var(--progress-width);
   height: 2px;
   background-color: var(--primary-c1);
 }
