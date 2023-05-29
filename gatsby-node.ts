@@ -1,25 +1,25 @@
-import type { CreateSchemaCustomizationArgs, CreateWebpackConfigArgs, GatsbyNode } from 'gatsby';
-import path from 'path';
+import type { CreateSchemaCustomizationArgs, CreateWebpackConfigArgs, GatsbyNode } from 'gatsby'
+import path from 'path'
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ actions }: CreateWebpackConfigArgs) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        '@components': path.resolve(__dirname, 'src/components'),
-        '@images': path.resolve(__dirname, 'src/images'),
-        '@styles': path.resolve(__dirname, 'src/styles'),
-        '@hooks': path.resolve(__dirname, 'src/hooks'),
-        '@utils': path.resolve(__dirname, 'src/utils'),
-        '@contexts': path.resolve(__dirname, 'src/contexts'),
+        '@/components': path.resolve(__dirname, 'src/components'),
+        '@/images': path.resolve(__dirname, 'src/images'),
+        '@/styles': path.resolve(__dirname, 'src/styles'),
+        '@/hooks': path.resolve(__dirname, 'src/hooks'),
+        '@/utils': path.resolve(__dirname, 'src/utils'),
+        '@/contexts': path.resolve(__dirname, 'src/contexts'),
       },
     },
-  });
-};
+  })
+}
 
 export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
   actions,
 }: CreateSchemaCustomizationArgs) => {
-  const { createTypes } = actions;
+  const { createTypes } = actions
 
   createTypes(`
     type SiteSiteMetadata {
@@ -48,5 +48,5 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       id: String!
       html: String!
     }
-  `);
-};
+  `)
+}

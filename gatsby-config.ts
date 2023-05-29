@@ -1,9 +1,6 @@
-import type { GatsbyConfig } from 'gatsby';
+import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
-  flags: {
-    DEV_SSR: true,
-  },
   siteMetadata: {
     title: `hustle-dev blog`,
     description: `hustle-dev의 기술 블로그 입니다.`,
@@ -119,8 +116,8 @@ const config: GatsbyConfig = {
                   url: `${site.siteMetadata.siteUrl}/posts${node.frontmatter.slug}`,
                   guid: `${site.siteMetadata.siteUrl}/posts${node.frontmatter.slug}`,
                   custom_elements: [{ 'content:encoded': node.html }],
-                });
-              });
+                })
+              })
             },
             query: `
               {
@@ -144,6 +141,6 @@ const config: GatsbyConfig = {
       },
     },
   ],
-};
+}
 
-export default config;
+export default config
