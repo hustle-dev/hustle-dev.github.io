@@ -1,2 +1,1 @@
-export * from './scroll';
-export * from './env';
+export * from './scroll'
