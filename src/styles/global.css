@@ -1,17 +1,4 @@
-@font-face {
-  font-family: 'Pretendard Variable';
-  font-weight: 45 920;
-  font-style: normal;
-  font-display: swap;
-  src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');
-}
-
-@font-face {
-  font-family: 'Tenada';
-  font-weight: normal;
-  font-style: normal;
-  src: url('/fonts/Tenada.woff2') format('woff2');
-}
+@import url('font.css');
 
 :root {
   --primary-c1: #15af73;
@@ -44,7 +31,7 @@
 }
 
 body {
-  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
     'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     sans-serif;
   background-color: var(--background);

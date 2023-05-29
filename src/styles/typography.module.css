@@ -1,0 +1,104 @@
+.D1 {
+  font-family: 'Tenada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.1875rem;
+}
+
+.D2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6875rem;
+  line-height: 2.125rem;
+}
+
+.D3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.125rem;
+}
+
+.H1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+
+.H2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.T1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.1875rem;
+  line-height: 1.75rem;
+}
+
+.T2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.T3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.B1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.5625rem;
+}
+
+.B2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
+}
+
+.B3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
+}
+
+.B4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
+}
+
+.B5 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.B6 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+}
+
+.B7 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+}
