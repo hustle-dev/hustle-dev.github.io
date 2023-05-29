@@ -23,6 +23,7 @@
     ]
   },
   "dependencies": {
+    "clsx": "^1.2.1",
     "gatsby": "^5.8.0",
     "gatsby-plugin-advanced-sitemap": "^2.1.0",
     "gatsby-plugin-feed": "^5.8.0",
