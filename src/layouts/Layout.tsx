@@ -1,10 +1,10 @@
-import React, { type ReactNode } from 'react';
-import { Footer, Header } from '@components';
-import { PageProps } from 'gatsby';
+import React, { type ReactNode } from 'react'
+import { Footer, Header } from '@/components'
+import { PageProps } from 'gatsby'
 
 type LayoutProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 const Layout = ({ location, children }: Omit<PageProps, 'children'> & LayoutProps) => {
   return (
@@ -13,7 +13,7 @@ const Layout = ({ location, children }: Omit<PageProps, 'children'> & LayoutProp
       {children}
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

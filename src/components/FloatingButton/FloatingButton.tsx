@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import Arrow from '@images/arrow.svg';
-import * as styles from './FloatingButton.module.css';
+import React, { useEffect, useState } from 'react'
+import Arrow from '@/images/arrow.svg'
+import * as styles from './FloatingButton.module.css'
 
-const SCROLL_THRESHOLD = 200;
+const SCROLL_THRESHOLD = 200
 
 export const FloatingButton = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false)
 
   const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    setIsVisible(currentScrollY > SCROLL_THRESHOLD);
-  };
+    const currentScrollY = window.scrollY
+    setIsVisible(currentScrollY > SCROLL_THRESHOLD)
+  }
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <button className={`${styles.floatingButton} ${isVisible ? styles.visible : ''}`} onClick={scrollToTop}>
       <Arrow />
     </button>
-  );
-};
+  )
+}

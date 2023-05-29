@@ -1,4 +1,4 @@
 export type TagProps = {
-  name: string;
-  style?: React.CSSProperties;
-};
+  name: string
+  style?: React.CSSProperties
+}

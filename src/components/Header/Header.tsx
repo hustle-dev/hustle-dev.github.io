@@ -1,38 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import Logo from '@images/logo.svg';
-import Rss from '@images/rss.svg';
-import DarkMode from '@images/darkmode.svg';
-import * as styles from './Header.module.css';
-import { Link } from 'gatsby';
-import { optimizedScroll } from '@utils';
-import { useTheme } from '@contexts';
+import React, { useEffect, useState } from 'react'
+import Logo from '@/images/logo.svg'
+import Rss from '@/images/rss.svg'
+import DarkMode from '@/images/darkmode.svg'
+import * as styles from './Header.module.css'
+import { Link } from 'gatsby'
+import { optimizedScroll } from '@/utils'
+import { useTheme } from '@/contexts'
 
 type HeaderProps = {
-  pathname: string;
-};
+  pathname: string
+}
 
 export const Header = ({ pathname }: HeaderProps) => {
-  const { toggleDarkMode } = useTheme();
-  const [progressWidth, setProgressWidth] = useState<number>(0);
+  const { toggleDarkMode } = useTheme()
+  const [progressWidth, setProgressWidth] = useState<number>(0)
 
   const updateProgress = () => {
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollPosition = window.scrollY;
-    const scrollProgress = (scrollPosition / scrollHeight) * 100;
-    setProgressWidth(scrollProgress);
-  };
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+    const scrollPosition = window.scrollY
+    const scrollProgress = (scrollPosition / scrollHeight) * 100
+    setProgressWidth(scrollProgress)
+  }
 
   useEffect(() => {
-    if (pathname === '/') return;
+    if (pathname === '/') return
 
-    window.addEventListener('scroll', optimizedScroll(updateProgress));
+    window.addEventListener('scroll', optimizedScroll(updateProgress))
 
     return () => {
-      window.removeEventListener('scroll', optimizedScroll(updateProgress));
-    };
-  }, [pathname]);
+      window.removeEventListener('scroll', optimizedScroll(updateProgress))
+    }
+  }, [pathname])
 
-  const isMainPage = pathname === '/';
+  const isMainPage = pathname === '/'
 
   return (
     <header className={`${styles.header} ${!isMainPage ? styles.fixed : ''}`}>
@@ -54,5 +54,5 @@ export const Header = ({ pathname }: HeaderProps) => {
       </div>
       {pathname !== '/' && <div className={styles.progressBar} style={{ width: `${progressWidth}%` }} />}
     </header>
-  );
-};
+  )
+}
