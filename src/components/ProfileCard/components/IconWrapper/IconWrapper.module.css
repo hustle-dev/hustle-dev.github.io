@@ -1,0 +1,13 @@
+.profileIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  transition: 0.1s;
+}
+
+.profileIcon:hover {
+  background-color: rgba(21, 175, 115, 0.1);
+}

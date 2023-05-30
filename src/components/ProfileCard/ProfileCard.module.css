@@ -1,13 +1,3 @@
-.card {
-  min-width: 260px;
-}
-
-@media screen and (min-width: 62.5rem) {
-  .card {
-    max-width: 260px;
-  }
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -34,18 +24,24 @@
   border-radius: 50%;
 }
 
+.postDescription {
+  margin-top: 0px;
+  height: 46px;
+}
+
 .iconWrapper {
   display: flex;
   margin-top: 16px;
 }
 
-.name {
-  color: var(--primary-c1);
+.card {
+  min-width: 260px;
 }
 
-.description {
-  margin-top: 20px;
-  color: var(--gray-3);
+@media screen and (min-width: 62.5rem) {
+  .card {
+    max-width: 260px;
+  }
 }
 
 .info {
@@ -57,18 +53,4 @@
 
 .profileImage img {
   border-radius: 50%;
-}
-
-.profileIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 30%;
-  transition: 0.1s;
-}
-
-.profileIcon:hover {
-  background-color: rgba(21, 175, 115, 0.1);
 }
