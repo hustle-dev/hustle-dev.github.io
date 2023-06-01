@@ -8,10 +8,6 @@
   max-width: 1400px;
 }
 
-.shrinkSpace {
-  display: block;
-}
-
 .wrapper {
   flex: 1;
 }
