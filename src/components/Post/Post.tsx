@@ -3,8 +3,8 @@ import { GatsbyImage, type IGatsbyImageData } from 'gatsby-plugin-image'
 import React from 'react'
 import clsx from 'clsx'
 import { match } from 'ts-pattern'
+import { getRefinedImage } from '@/utils'
 import { Date, Description, TagList, Title } from './components'
-import { getRefinedImage } from './utils'
 import * as styles from './Post.module.css'
 import * as typo from '@/styles/typography.module.css'
 
@@ -15,7 +15,7 @@ type PostProps = {
   date: string
   tags: readonly string[]
   slug: string
-  heroImage: IGatsbyImageData
+  heroImage: IGatsbyImageData | undefined
   heroImageAlt: string
 }
 
