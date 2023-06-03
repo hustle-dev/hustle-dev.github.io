@@ -1,70 +1,52 @@
-import React, { useEffect, useState } from 'react';
-import type { HeadProps, PageProps } from 'gatsby';
-import { graphql } from 'gatsby';
-import * as styles from './index.module.css';
-import { ArticleCard, ArticleItem, FloatingButton, ProfileCard, Seo, Tag, TagButton } from '@components';
-import { TYPO } from '@styles';
+import { graphql } from 'gatsby'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
+import type { HeadProps, PageProps } from 'gatsby'
+import React, { useEffect, useState } from 'react'
+import { FloatingButton, Post, ProfileCard, RecentPost, Seo, TagButton } from '@/components'
+import * as styles from './Home.module.css'
 
-const IndexPage = ({ data }: PageProps<Queries.IndexQuery>) => {
-  const allPosts = data.allMarkdownRemark.nodes;
-  const recentPosts = allPosts.slice(0, 2);
+const IndexPage = ({ data, location: { pathname } }: PageProps<Queries.IndexQuery>) => {
+  const allPosts = data.allMarkdownRemark.nodes
+  const recentPosts = allPosts.slice(0, 2)
   const sortedTagsWithTotalCount = [
     { fieldValue: 'All', totalCount: data.allMarkdownRemark.totalCount },
     ...data.allMarkdownRemark.group,
-  ].sort((a, b) => b.totalCount - a.totalCount);
+  ].sort((a, b) => b.totalCount - a.totalCount)
 
-  const [selectedTag, setSelectedTag] = useState<string>('All');
+  const [selectedTag, setSelectedTag] = useState<string>('All')
   const filteredPosts = allPosts.filter(
     ({ frontmatter: { tags } }) => selectedTag === 'All' || tags.includes(selectedTag)
-  );
+  )
 
-  const [displayedItems, setDisplayedItems] = useState(8);
-  const visiblePosts = filteredPosts.slice(0, displayedItems);
+  const [displayedItems, setDisplayedItems] = useState(8)
+  const visiblePosts = filteredPosts.slice(0, displayedItems)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (!entries[0].isIntersecting) return;
+        if (!entries[0].isIntersecting) return
 
         if (displayedItems <= data.allMarkdownRemark.totalCount) {
-          setDisplayedItems((prev) => prev + 8);
+          setDisplayedItems((prev) => prev + 8)
         } else {
-          observer.disconnect();
+          observer.disconnect()
         }
       },
       { threshold: 0 }
-    );
-    observer.observe(document.querySelector('footer') as HTMLElement);
-    return () => observer.disconnect();
-  }, [displayedItems]);
+    )
+    observer.observe(document.querySelector('footer') as HTMLElement)
+    return () => observer.disconnect()
+  }, [data.allMarkdownRemark.totalCount, displayedItems])
 
   return (
     <>
       <main className={styles.main}>
         <aside className={styles.aside}>
-          <ProfileCard />
+          <ProfileCard pathname={pathname} />
         </aside>
         <div className={styles.shrinkSpace}></div>
         <section className={styles.wrapper}>
-          <h2 style={TYPO.T2} className={styles.heading}>
-            New posts 📑
-          </h2>
-          <ul className={styles.articleRowList}>
-            {recentPosts.map(
-              ({ frontmatter: { title, description, date, tags, slug, heroImage, heroImageAlt }, id }) => (
-                <ArticleCard
-                  key={id}
-                  title={title}
-                  description={description}
-                  date={date}
-                  tags={tags}
-                  slug={slug}
-                  heroImage={heroImage?.childImageSharp?.gatsbyImageData!}
-                  heroImageAlt={heroImageAlt}
-                />
-              )
-            )}
-          </ul>
+          <RecentPost posts={recentPosts} />
           <hr className={styles.divider}></hr>
           <ul className={styles.tagList}>
             {sortedTagsWithTotalCount.map(({ fieldValue, totalCount }) => (
@@ -73,7 +55,7 @@ const IndexPage = ({ data }: PageProps<Queries.IndexQuery>) => {
                   name={fieldValue!}
                   count={totalCount}
                   onClick={() => {
-                    setSelectedTag(fieldValue!);
+                    setSelectedTag(fieldValue!)
                   }}
                   isSelected={selectedTag === fieldValue!}
                 />
@@ -83,14 +65,15 @@ const IndexPage = ({ data }: PageProps<Queries.IndexQuery>) => {
           <ul className={styles.articleList}>
             {visiblePosts.map(
               ({ frontmatter: { title, description, date, tags, slug, heroImage, heroImageAlt }, id }) => (
-                <ArticleItem
+                <Post
                   key={id}
+                  variants="item"
                   title={title}
                   description={description}
                   date={date}
                   tags={tags}
                   slug={slug}
-                  heroImage={heroImage?.childImageSharp?.gatsbyImageData!}
+                  heroImage={heroImage?.childImageSharp?.gatsbyImageData as IGatsbyImageData}
                   heroImageAlt={heroImageAlt}
                 />
               )
@@ -100,8 +83,8 @@ const IndexPage = ({ data }: PageProps<Queries.IndexQuery>) => {
         <FloatingButton />
       </main>
     </>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query Index {
@@ -140,16 +123,16 @@ export const query = graphql`
       publicURL
     }
   }
-`;
+`
 
-export default IndexPage;
+export default IndexPage
 
 export const Head = ({ location: { pathname }, data: { site, file } }: HeadProps<Queries.IndexQuery>) => {
   const seo = {
     title: site?.siteMetadata.title,
     description: site?.siteMetadata.description,
-    heroImage: file?.publicURL!,
-  };
+    heroImage: file?.publicURL as string,
+  }
 
-  return <Seo title={seo.title} description={seo.description} heroImage={seo.heroImage} pathname={pathname}></Seo>;
-};
+  return <Seo title={seo.title} description={seo.description} heroImage={seo.heroImage} pathname={pathname}></Seo>
+}
