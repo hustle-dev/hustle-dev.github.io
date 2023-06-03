@@ -1,25 +1,25 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import React, { PropsWithChildren } from 'react';
+import { graphql, useStaticQuery } from 'gatsby'
+import React, { PropsWithChildren } from 'react'
 
 type SeoProps = {
-  title?: string;
-  description?: string;
-  heroImage?: string;
-  pathname: string;
-};
+  title?: string
+  description?: string
+  heroImage?: string
+  pathname: string
+}
 
 type SeoQuery = {
   file: {
-    publicURL: string;
-  };
+    publicURL: string
+  }
   site: {
     siteMetadata: {
-      title: string;
-      description: string;
-      siteUrl: string;
-    };
-  };
-};
+      title: string
+      description: string
+      siteUrl: string
+    }
+  }
+}
 
 export const Seo = ({ title, description, heroImage, pathname, children }: PropsWithChildren<SeoProps>) => {
   const data = useStaticQuery<SeoQuery>(
@@ -37,17 +37,17 @@ export const Seo = ({ title, description, heroImage, pathname, children }: Props
         }
       }
     `
-  );
+  )
 
-  const { title: defaultTitle, description: defaultDescription, siteUrl } = data.site.siteMetadata;
-  const { publicURL: defaultImage } = data.file;
+  const { title: defaultTitle, description: defaultDescription, siteUrl } = data.site.siteMetadata
+  const { publicURL: defaultImage } = data.file
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${heroImage || defaultImage}`,
-  };
+  }
 
   return (
     <>
@@ -68,5 +68,5 @@ export const Seo = ({ title, description, heroImage, pathname, children }: Props
       <meta property="twitter:image" content={seo.image}></meta>
       {children}
     </>
-  );
-};
+  )
+}

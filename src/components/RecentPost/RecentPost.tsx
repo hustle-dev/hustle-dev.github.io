@@ -27,7 +27,7 @@ type RecentPostProps = {
 export const RecentPost = ({ posts }: RecentPostProps) => (
   <>
     <h2 className={clsx(styles.heading, typo.T2)}>New posts 📑</h2>
-    <ul className={styles.articleRowList}>
+    <ul className={styles.recentPostList}>
       {posts.map(({ frontmatter: { title, description, date, tags, slug, heroImage, heroImageAlt }, id }) => (
         <Post
           key={id}

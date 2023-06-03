@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
+import clsx from 'clsx'
+import Pen from '@/images/pen.svg'
 import * as styles from './TableOfContents.module.css'
 import * as typo from '@/styles/typography.module.css'
-import Pen from '@/images/pen.svg'
-import clsx from 'clsx'
 
 type TableOfContentsProps = {
   html: string

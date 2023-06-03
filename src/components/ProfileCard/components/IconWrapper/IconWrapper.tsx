@@ -6,10 +6,8 @@ type IconWrapperProps = {
   children: ReactNode
 }
 
-export const IconWrapper = ({ href, children }: IconWrapperProps) => {
-  return (
-    <a href={href} target="_blank" className={styles.profileIcon} rel="noreferrer">
-      {children}
-    </a>
-  )
-}
+export const IconWrapper = ({ href, children }: IconWrapperProps) => (
+  <a href={href} target="_blank" className={styles.profileIcon} rel="noreferrer">
+    {children}
+  </a>
+)

@@ -1,7 +1,7 @@
 import React from 'react'
+import type { TagProps } from './types'
 import * as typo from '@/styles/typography.module.css'
 import * as styles from './Tag.module.css'
-import type { TagProps } from './types'
 
 export const Tag = ({ name, style }: TagProps) => {
   return (

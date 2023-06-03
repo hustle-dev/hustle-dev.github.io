@@ -1,8 +1,8 @@
+import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { match } from 'ts-pattern'
-import * as styles from './ProfileCard.module.css'
-import { StaticImage } from 'gatsby-plugin-image'
 import { Description, Heading, IconList } from './components'
+import * as styles from './ProfileCard.module.css'
 
 type ProfileCardProps = {
   pathname: string

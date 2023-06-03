@@ -1,5 +1,5 @@
-import clsx from 'clsx'
 import React from 'react'
+import clsx from 'clsx'
 import * as styles from './Date.module.css'
 
 type DateProps = {
@@ -7,7 +7,4 @@ type DateProps = {
   className?: string
 }
 
-export const Date = ({ date, className }: DateProps) => {
-  const classNames = clsx(styles.date, className)
-  return <h3 className={classNames}>{date}</h3>
-}
+export const Date = ({ date, className }: DateProps) => <h3 className={clsx(styles.date, className)}>{date}</h3>
