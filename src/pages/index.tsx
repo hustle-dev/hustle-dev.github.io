@@ -1,42 +1,16 @@
 import { graphql } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import type { HeadProps, PageProps } from 'gatsby'
-import React, { useEffect, useState } from 'react'
-import { FloatingButton, Post, ProfileCard, RecentPost, Seo, TagButton } from '@/components'
+import React from 'react'
+import { FloatingButton, Post, ProfileCard, RecentPost, Seo, TagList } from '@/components'
+import { usePostInfiniteScroll, useTag } from '@/hooks'
 import * as styles from './Home.module.css'
 
-const IndexPage = ({ data, location: { pathname } }: PageProps<Queries.IndexQuery>) => {
-  const allPosts = data.allMarkdownRemark.nodes
+const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) => {
+  const { nodes: allPosts, totalCount, group } = data.allMarkdownRemark
   const recentPosts = allPosts.slice(0, 2)
-  const sortedTagsWithTotalCount = [
-    { fieldValue: 'All', totalCount: data.allMarkdownRemark.totalCount },
-    ...data.allMarkdownRemark.group,
-  ].sort((a, b) => b.totalCount - a.totalCount)
-
-  const [selectedTag, setSelectedTag] = useState<string>('All')
-  const filteredPosts = allPosts.filter(
-    ({ frontmatter: { tags } }) => selectedTag === 'All' || tags.includes(selectedTag)
-  )
-
-  const [displayedItems, setDisplayedItems] = useState(8)
-  const visiblePosts = filteredPosts.slice(0, displayedItems)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (!entries[0].isIntersecting) return
-
-        if (displayedItems <= data.allMarkdownRemark.totalCount) {
-          setDisplayedItems((prev) => prev + 8)
-        } else {
-          observer.disconnect()
-        }
-      },
-      { threshold: 0 }
-    )
-    observer.observe(document.querySelector('footer') as HTMLElement)
-    return () => observer.disconnect()
-  }, [data.allMarkdownRemark.totalCount, displayedItems])
+  const { tags, selectedTag, clickTag } = useTag(totalCount, group)
+  const { visiblePosts } = usePostInfiniteScroll(allPosts, selectedTag, totalCount)
 
   return (
     <>
@@ -48,20 +22,7 @@ const IndexPage = ({ data, location: { pathname } }: PageProps<Queries.IndexQuer
         <section className={styles.wrapper}>
           <RecentPost posts={recentPosts} />
           <hr className={styles.divider}></hr>
-          <ul className={styles.tagList}>
-            {sortedTagsWithTotalCount.map(({ fieldValue, totalCount }) => (
-              <li key={fieldValue!} className={styles.tagItem}>
-                <TagButton
-                  name={fieldValue!}
-                  count={totalCount}
-                  onClick={() => {
-                    setSelectedTag(fieldValue!)
-                  }}
-                  isSelected={selectedTag === fieldValue!}
-                />
-              </li>
-            ))}
-          </ul>
+          <TagList tags={tags} selectedTag={selectedTag} clickTag={clickTag} className={styles.tagList} />
           <ul className={styles.articleList}>
             {visiblePosts.map(
               ({ frontmatter: { title, description, date, tags, slug, heroImage, heroImageAlt }, id }) => (
@@ -87,7 +48,7 @@ const IndexPage = ({ data, location: { pathname } }: PageProps<Queries.IndexQuer
 }
 
 export const query = graphql`
-  query Index {
+  query Home {
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       totalCount
       nodes {
@@ -125,9 +86,9 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default Home
 
-export const Head = ({ location: { pathname }, data: { site, file } }: HeadProps<Queries.IndexQuery>) => {
+export const Head = ({ location: { pathname }, data: { site, file } }: HeadProps<Queries.HomeQuery>) => {
   const seo = {
     title: site?.siteMetadata.title,
     description: site?.siteMetadata.description,

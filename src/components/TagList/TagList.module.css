@@ -1,0 +1,11 @@
+.tagList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+}
+
+.tagItem {
+  margin-top: 15px;
+}

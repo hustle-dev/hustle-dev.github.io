@@ -5,7 +5,7 @@ import * as typo from '@/styles/typography.module.css'
 
 type TagButtonProps = TagProps & {
   count: number
-  onClick: () => void
+  onClick?: () => void
   isSelected: boolean
 }
 

@@ -4,9 +4,11 @@ import { Post } from '../Post'
 import * as styles from './RecentPost.module.css'
 import * as typo from '@/styles/typography.module.css'
 
-type RecentPostProps = Queries.HomeQuery['allMarkdownRemark']['nodes']
+type RecentPostProps = {
+  posts: Queries.HomeQuery['allMarkdownRemark']['nodes']
+}
 
-export const RecentPost = (posts: RecentPostProps) => (
+export const RecentPost = ({ posts }: RecentPostProps) => (
   <>
     <h2 className={clsx(styles.heading, typo.T2)}>New posts 📑</h2>
     <ul className={styles.recentPostList}>

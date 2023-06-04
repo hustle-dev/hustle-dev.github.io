@@ -12,21 +12,12 @@
   flex: 1;
 }
 
-.divider {
-  display: none;
-}
-
 .tagList {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding: 0;
   margin-top: 20px;
 }
 
-.tagItem {
-  margin-top: 15px;
+.divider {
+  display: none;
 }
 
 .articleList {
