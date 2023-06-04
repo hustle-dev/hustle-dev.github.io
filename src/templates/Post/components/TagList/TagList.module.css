@@ -1,0 +1,9 @@
+.tagList {
+  display: flex;
+  gap: 5px;
+  padding: 0;
+}
+
+.tag {
+  padding: 3px 12.5px 6px;
+}
