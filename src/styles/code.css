@@ -61,7 +61,7 @@ pre[class*='language-'] {
 }
 
 :not(pre) > code[class*='language-']::selection {
-  background-color: lightblue;
+  background-color: rgba(21, 175, 115, 0.2);
 }
 
 h1 code[class*='language-'],
