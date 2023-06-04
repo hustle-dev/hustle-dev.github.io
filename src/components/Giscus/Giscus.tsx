@@ -1,5 +1,5 @@
-import { Theme, useTheme } from '@/contexts'
 import React, { useEffect, useRef } from 'react'
+import { Theme, useTheme } from '@/contexts'
 
 export const Giscus = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -7,6 +7,8 @@ export const Giscus = () => {
 
   useEffect(() => {
     if (containerRef.current === null) return
+
+    const $div = containerRef.current
 
     const script = document.createElement('script')
     script.src = 'https://giscus.app/client.js'
@@ -28,11 +30,11 @@ export const Giscus = () => {
     script.setAttribute('data-lang', 'ko')
     script.setAttribute('crossorigin', 'anonymous')
     script.async = true
-    containerRef.current.appendChild(script)
+    $div.appendChild(script)
 
     return () => {
-      if (containerRef.current === null) return
-      containerRef.current.removeChild(script)
+      if ($div === null) return
+      $div.removeChild(script)
     }
   }, [theme])
 
