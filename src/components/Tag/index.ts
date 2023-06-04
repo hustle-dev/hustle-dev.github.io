@@ -1,2 +1,2 @@
-export * from './Tag';
-export * from './TagButton';
+export * from './Tag'
+export * from './TagButton'

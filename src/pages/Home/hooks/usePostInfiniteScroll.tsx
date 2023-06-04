@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
+import { TAGS } from '../constants'
 import { $ } from '@/utils'
-import { TAGS } from '@/constants'
 
 export const usePostInfiniteScroll = (
   allPosts: Queries.HomeQuery['allMarkdownRemark']['nodes'],

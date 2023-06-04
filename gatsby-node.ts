@@ -3,7 +3,7 @@ import path from 'path'
 
 export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/templates/Post.tsx`)
+  const blogPostTemplate = path.resolve(`src/templates/Post/Post.tsx`)
 
   const result = await graphql<Queries.PagesQuery>(`
     query Pages {
@@ -61,10 +61,8 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ act
         '@/components': path.resolve(__dirname, 'src/components'),
         '@/images': path.resolve(__dirname, 'src/images'),
         '@/styles': path.resolve(__dirname, 'src/styles'),
-        '@/hooks': path.resolve(__dirname, 'src/hooks'),
         '@/utils': path.resolve(__dirname, 'src/utils'),
         '@/contexts': path.resolve(__dirname, 'src/contexts'),
-        '@/constants': path.resolve(__dirname, 'src/constants'),
       },
     },
   })

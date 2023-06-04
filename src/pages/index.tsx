@@ -1,9 +1,10 @@
 import { graphql } from 'gatsby'
 import type { HeadProps, PageProps } from 'gatsby'
 import React from 'react'
-import { FloatingButton, PostList, ProfileCard, RecentPost, Seo, TagList } from '@/components'
-import { usePostInfiniteScroll, useTag } from '@/hooks'
-import * as styles from './Home.module.css'
+import { PostList, RecentPost, TagList } from './Home/components'
+import { usePostInfiniteScroll, useTag } from './Home/hooks'
+import { FloatingButton, ProfileCard, Seo } from '@/components'
+import * as styles from './Home/Home.module.css'
 
 const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) => {
   const { nodes: allPosts, totalCount, group } = data.allMarkdownRemark
@@ -12,21 +13,19 @@ const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) =>
   const { visiblePosts } = usePostInfiniteScroll(allPosts, selectedTag, totalCount)
 
   return (
-    <>
-      <main className={styles.main}>
-        <aside className={styles.aside}>
-          <ProfileCard pathname={pathname} />
-        </aside>
-        <div className={styles.shrinkSpace}></div>
-        <section className={styles.wrapper}>
-          <RecentPost posts={recentPosts} />
-          <hr className={styles.divider}></hr>
-          <TagList tags={tags} selectedTag={selectedTag} clickTag={clickTag} className={styles.tagList} />
-          <PostList posts={visiblePosts} className={styles.postList} />
-        </section>
-        <FloatingButton />
-      </main>
-    </>
+    <main className={styles.main}>
+      <aside className={styles.aside}>
+        <ProfileCard pathname={pathname} />
+      </aside>
+      <div className={styles.shrinkSpace}></div>
+      <section className={styles.wrapper}>
+        <RecentPost posts={recentPosts} />
+        <hr className={styles.divider}></hr>
+        <TagList tags={tags} selectedTag={selectedTag} clickTag={clickTag} className={styles.tagList} />
+        <PostList posts={visiblePosts} className={styles.postList} />
+      </section>
+      <FloatingButton />
+    </main>
   )
 }
 

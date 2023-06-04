@@ -1,8 +1,8 @@
 import React from 'react'
 import type { KeyboardEvent, MouseEvent } from 'react'
 import clsx from 'clsx'
-import { TagButton } from '../Tag'
-import { getRefinedTagValue } from '@/utils'
+import { TagButton } from '@/components'
+import { getRefinedStringValue } from '@/utils'
 import * as styles from './TagList.module.css'
 
 type TagListProps = {
@@ -20,7 +20,7 @@ export const TagList = ({ tags, selectedTag, clickTag, className }: TagListProps
     role="presentation"
   >
     {tags.map(({ fieldValue, totalCount }) => {
-      const value = getRefinedTagValue(fieldValue)
+      const value = getRefinedStringValue(fieldValue)
 
       return (
         <li key={value} className={styles.tagItem} data-tag={value}>

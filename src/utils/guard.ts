@@ -6,7 +6,7 @@ export const getRefinedImage = (heroImage: IGatsbyImageData | undefined) => {
   return heroImage
 }
 
-export const getRefinedTagValue = (value: string | null) => {
+export const getRefinedStringValue = (value: string | null) => {
   if (value === null) throw new Error('값이 존재하지 않습니다.')
 
   return value

@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react'
 import type { KeyboardEvent, MouseEvent } from 'react'
-import { TAGS } from '@/constants'
+import { TAGS } from '../constants'
 
 export const useTag = (totalCount: number, group: Queries.HomeQuery['allMarkdownRemark']['group']) => {
   const tags = useMemo(
