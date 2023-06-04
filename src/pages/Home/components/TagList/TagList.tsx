@@ -1,7 +1,7 @@
 import React from 'react'
 import type { KeyboardEvent, MouseEvent } from 'react'
 import clsx from 'clsx'
-import { TagButton } from '@/components'
+import { TagButtonWithCount } from '../TagButtonWithCount'
 import { getRefinedStringValue } from '@/utils'
 import * as styles from './TagList.module.css'
 
@@ -24,7 +24,7 @@ export const TagList = ({ tags, selectedTag, clickTag, className }: TagListProps
 
       return (
         <li key={value} className={styles.tagItem} data-tag={value}>
-          <TagButton name={value} count={totalCount} isSelected={selectedTag === value} />
+          <TagButtonWithCount name={value} count={totalCount} isSelected={selectedTag === value} />
         </li>
       )
     })}
