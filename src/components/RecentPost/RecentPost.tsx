@@ -1,30 +1,12 @@
-import type { IGatsbyImageData } from 'gatsby-plugin-image'
 import React from 'react'
 import clsx from 'clsx'
 import { Post } from '../Post'
 import * as styles from './RecentPost.module.css'
 import * as typo from '@/styles/typography.module.css'
 
-type RecentPostProps = {
-  posts: {
-    id: string
-    frontmatter: {
-      tags: readonly string[]
-      slug: string
-      description: string
-      date: string
-      title: string
-      heroImageAlt: string
-      heroImage: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData
-        } | null
-      } | null
-    }
-  }[]
-}
+type RecentPostProps = Queries.HomeQuery['allMarkdownRemark']['nodes']
 
-export const RecentPost = ({ posts }: RecentPostProps) => (
+export const RecentPost = (posts: RecentPostProps) => (
   <>
     <h2 className={clsx(styles.heading, typo.T2)}>New posts 📑</h2>
     <ul className={styles.recentPostList}>
