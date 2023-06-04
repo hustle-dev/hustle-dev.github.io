@@ -10,12 +10,10 @@ type TagButtonWithCountProps = {
   isSelected: boolean
 }
 
-export const TagButtonWithCount = ({ name, count, isSelected, onClick }: TagButtonWithCountProps) => {
-  return (
-    <button onClick={onClick} className={clsx(styles.tagButton, { [styles.active]: isSelected })}>
-      <span className={typo.B5}>
-        {name} ({count})
-      </span>
-    </button>
-  )
-}
+export const TagButtonWithCount = ({ name, count, isSelected, onClick }: TagButtonWithCountProps) => (
+  <button onClick={onClick} className={clsx(styles.tagButton, { [styles.active]: isSelected })}>
+    <span className={typo.B5}>
+      {name} ({count})
+    </span>
+  </button>
+)

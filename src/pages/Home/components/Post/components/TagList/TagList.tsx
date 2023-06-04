@@ -11,7 +11,7 @@ type TagListProps = {
 export const TagList = ({ tags, className }: TagListProps) => (
   <ul className={clsx(styles.tagList, className)}>
     {tags.map((tag) => (
-      <Tag key={tag} name={tag}></Tag>
+      <Tag key={tag} name={tag} />
     ))}
   </ul>
 )
