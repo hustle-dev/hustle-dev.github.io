@@ -1,8 +1,7 @@
 import { graphql } from 'gatsby'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
 import type { HeadProps, PageProps } from 'gatsby'
 import React from 'react'
-import { FloatingButton, Post, ProfileCard, RecentPost, Seo, TagList } from '@/components'
+import { FloatingButton, PostList, ProfileCard, RecentPost, Seo, TagList } from '@/components'
 import { usePostInfiniteScroll, useTag } from '@/hooks'
 import * as styles from './Home.module.css'
 
@@ -23,23 +22,7 @@ const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) =>
           <RecentPost posts={recentPosts} />
           <hr className={styles.divider}></hr>
           <TagList tags={tags} selectedTag={selectedTag} clickTag={clickTag} className={styles.tagList} />
-          <ul className={styles.articleList}>
-            {visiblePosts.map(
-              ({ frontmatter: { title, description, date, tags, slug, heroImage, heroImageAlt }, id }) => (
-                <Post
-                  key={id}
-                  variants="item"
-                  title={title}
-                  description={description}
-                  date={date}
-                  tags={tags}
-                  slug={slug}
-                  heroImage={heroImage?.childImageSharp?.gatsbyImageData as IGatsbyImageData}
-                  heroImageAlt={heroImageAlt}
-                />
-              )
-            )}
-          </ul>
+          <PostList posts={visiblePosts} className={styles.postList} />
         </section>
         <FloatingButton />
       </main>

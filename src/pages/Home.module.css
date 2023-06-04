@@ -12,20 +12,16 @@
   flex: 1;
 }
 
-.tagList {
-  margin-top: 20px;
-}
-
 .divider {
   display: none;
 }
 
-.articleList {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.tagList {
+  margin-top: 20px;
+}
+
+.postList {
   margin-top: 35px;
-  padding: 0;
 }
 
 @media screen and (min-width: 31.25rem) {
