@@ -120,11 +120,15 @@
   margin-top: 1.5em;
 }
 
-.mainText h3,
-.mainText h4,
-.mainText h5 {
+.mainText h3 {
   margin-top: 1em;
   margin-bottom: 0.5em;
+}
+
+.mainText h1,
+.mainText h2,
+.mainText h3 {
+  scroll-margin-top: 73px;
 }
 
 .mainText img {
