@@ -120,21 +120,16 @@ box<span class="token punctuation">.</span>value <span class="token operator">=<
 <p>처음에는 <code class="language-text">get</code> 타입이 <code class="language-text">set</code> 타입의 하위 타입이어야 했다.</p>
 <p>이는 이 아래 코드를 의미했다.</p>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token comment">// 항상 유효함</span>
-box<span class="token punctuation">.</span>value <span class="token operator">=</span> box<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
-<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span>
-
-그러나 기존 <span class="token constant">API</span>와 제안된 <span class="token constant">API</span>에는 Getter와 Setter 사이에 전혀 관련이 없는 유형이 많이 있다<span class="token punctuation">.</span> 예를 들어 가장 일반적인 예 중 하나인 <span class="token constant">DOM</span> 및 CSSStyleRule <span class="token constant">API</span>의 스타일 속성을 생각해 보자<span class="token punctuation">.</span> 모든 스타일 규칙에는 스타일 프로퍼티가 있는데<span class="token punctuation">,</span> 이 프로퍼티에 쓰려고 하면 문자열로만 제대로 작동한다<span class="token punctuation">.</span>
-
-이제 TypeScript <span class="token number">5.1</span>에서는 명시적인 타입 어노테이션이 있는 경우 접근자 속성 <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">get</span><span class="token template-punctuation string">`</span></span> 및 <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">set</span><span class="token template-punctuation string">`</span></span>에 전혀 관련이 없는 유형을 허용한다<span class="token punctuation">.</span> 이 버전의 TypeScript에서는 아직 이러한 내장 인터페이스의 유형이 변경되지는 않았지만<span class="token punctuation">,</span> 이제 다음과 같은 방식으로 <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">CSSStyleRule</span><span class="token template-punctuation string">`</span></span>을 정의할 수 있다<span class="token punctuation">.</span>
-
-<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">ts
-interface CSSStyleRule {
-    // ...
-    /** Always reads as a </span><span class="token template-punctuation string">`</span></span>CSSStyleDeclaration<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string"> */
-    get style(): CSSStyleDeclaration;
-    /** Can only write a </span><span class="token template-punctuation string">`</span></span><span class="token builtin">string</span>` here<span class="token punctuation">.</span> <span class="token operator">*</span><span class="token operator">/</span>
-    <span class="token keyword">set</span> <span class="token function">style</span><span class="token punctuation">(</span>newValue<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// ...</span>
+box<span class="token punctuation">.</span>value <span class="token operator">=</span> box<span class="token punctuation">.</span>value</code></pre></div>
+<p>그러나 기존 API와 제안된 API에는 Getter와 Setter 사이에 전혀 관련이 없는 유형이 많이 있다. 예를 들어 가장 일반적인 예 중 하나인 DOM 및 CSSStyleRule API의 스타일 속성을 생각해 보자. 모든 스타일 규칙에는 스타일 프로퍼티가 있는데, 이 프로퍼티에 쓰려고 하면 문자열로만 제대로 작동한다.</p>
+<p>이제 TypeScript 5.1에서는 명시적인 타입 어노테이션이 있는 경우 접근자 속성 <code class="language-text">get</code> 및 <code class="language-text">set</code>에 전혀 관련이 없는 유형을 허용한다. 이 버전의 TypeScript에서는 아직 이러한 내장 인터페이스의 유형이 변경되지는 않았지만, 이제 다음과 같은 방식으로 <code class="language-text">CSSStyleRule</code>을 정의할 수 있다.</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">CSSStyleRule</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token comment">/** Always reads as a `CSSStyleDeclaration` */</span>
+  <span class="token keyword">get</span> <span class="token function">style</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> CSSStyleDeclaration
+  <span class="token comment">/** Can only write a `string` here. */</span>
+  <span class="token keyword">set</span> <span class="token function">style</span><span class="token punctuation">(</span>newValue<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span>
+  <span class="token comment">// ...</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>또한 <code class="language-text">set</code> 액세서가 "유효한" 데이터만 허용하도록 요구하지만, 일부 기본 상태가 아직 초기화되지 않은 경우 <code class="language-text">get</code> 액세서가 <code class="language-text">undefined</code> 상태로 반환될 수 있도록 지정하는 등의 다른 패턴도 허용한다.</p>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">class</span> <span class="token class-name">SafeBox</span> <span class="token punctuation">{</span>
