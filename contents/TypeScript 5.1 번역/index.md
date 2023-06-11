@@ -135,10 +135,10 @@ console.log(box.value.toUpperCase())
 
 이는 이 아래 코드를 의미했다.
 
-````ts
+```ts
 // 항상 유효함
-box.value = box.value;
-``
+box.value = box.value
+```
 
 그러나 기존 API와 제안된 API에는 Getter와 Setter 사이에 전혀 관련이 없는 유형이 많이 있다. 예를 들어 가장 일반적인 예 중 하나인 DOM 및 CSSStyleRule API의 스타일 속성을 생각해 보자. 모든 스타일 규칙에는 스타일 프로퍼티가 있는데, 이 프로퍼티에 쓰려고 하면 문자열로만 제대로 작동한다.
 
@@ -146,14 +146,14 @@ box.value = box.value;
 
 ```ts
 interface CSSStyleRule {
-    // ...
-    /** Always reads as a `CSSStyleDeclaration` */
-    get style(): CSSStyleDeclaration;
-    /** Can only write a `string` here. */
-    set style(newValue: string);
-    // ...
+  // ...
+  /** Always reads as a `CSSStyleDeclaration` */
+  get style(): CSSStyleDeclaration
+  /** Can only write a `string` here. */
+  set style(newValue: string)
+  // ...
 }
-````
+```
 
 또한 `set` 액세서가 "유효한" 데이터만 허용하도록 요구하지만, 일부 기본 상태가 아직 초기화되지 않은 경우 `get` 액세서가 `undefined` 상태로 반환될 수 있도록 지정하는 등의 다른 패턴도 허용한다.
 
