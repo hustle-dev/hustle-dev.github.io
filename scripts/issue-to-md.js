@@ -29,8 +29,8 @@ const processMarkdown = async (markdownFile) => {
   }
 
   const imgUrl = match[1] || match[2]
-  const fileName = path.basename(new URL(imgUrl).pathname)
-  const localPath = path.join(path.dirname(markdownFile), fileName)
+  const extension = path.extname(new URL(imgUrl).pathname)
+  const localPath = path.join(path.dirname(markdownFile), `heroImage${extension}`)
 
   await downloadImage(imgUrl, localPath)
 
