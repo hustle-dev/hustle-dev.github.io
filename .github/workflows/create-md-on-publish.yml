@@ -28,6 +28,7 @@ jobs:
 
       - name: Create markdown file
         run: |
+          rm -rf "contents/${CONTENT_TITLE}"
           mkdir "contents/${CONTENT_TITLE}"
           cd "contents/${CONTENT_TITLE}"
           echo "${CONTENT_BODY}" > index.md
