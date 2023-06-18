@@ -29,10 +29,9 @@ const processMarkdown = async (markdownFile) => {
   }
 
   const imgUrl = match[1] || match[2]
-  const extension = path.extname(new URL(imgUrl).pathname)
+  const contentType = await downloadImage(imgUrl, localPath)
+  const extension = contentType ? `.${contentType.split('/')[1]}` : ''
   const localPath = path.join(path.dirname(markdownFile), `heroImage${extension}`)
-
-  await downloadImage(imgUrl, localPath)
 
   markdown = markdown.replace(match[0], '')
 
