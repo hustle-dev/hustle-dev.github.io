@@ -29,12 +29,15 @@ const processMarkdown = async (markdownFile) => {
   }
 
   const imgUrl = match[1] || match[2]
+  const filenameWithoutExtension = 'heroImage'
+  const localPath = path.join(path.dirname(markdownFile), filenameWithoutExtension)
   const contentType = await downloadImage(imgUrl, localPath)
   const extension = contentType ? `.${contentType.split('/')[1]}` : ''
-  const localPath = path.join(path.dirname(markdownFile), `heroImage${extension}`)
+
+  const finalLocalPath = `${localPath}${extension}`
+  fs.renameSync(localPath, finalLocalPath)
 
   markdown = markdown.replace(match[0], '')
-
   fs.writeFileSync(markdownFile, markdown, 'utf8')
 }
 
