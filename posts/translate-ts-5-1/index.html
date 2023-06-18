@@ -87,7 +87,7 @@
 <span class="token function">takesFunction</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">undefined</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token comment">// no returns</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
-<p>둘째, 함수에 반환 표현식이 없고 <code class="language-text">undefined</code> 함수를 반환할 것으로 예상되는 함수로 전달되는 경우 TS는 해당 함수의 반환 타입을 <code class="language-text">undefined</code>로 추론한다.</p>
+<p>둘째, 함수에 반환 표현식이 없고 <code class="language-text">undefined</code> 함수를 반환할 것으로 예상되는 함수로 전달되는 경우 TS는 해당 함수의 반환 타입을 <code class="language-text">undefined</code>로 추론한다.</p>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token comment">// ✅ Works in TypeScript 5.1!</span>
 <span class="token function">takesFunction</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">//                 ^ return type is undefined</span>
