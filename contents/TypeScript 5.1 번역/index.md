@@ -88,7 +88,7 @@ takesFunction((): undefined => {
 })
 ```
 
-둘째, 함수에 반환 표현식이 없고 `undefined` 함수를 반환할 것으로 예상되는 함수로 전달되는 경우 TS는 해당 함수의 반환 타입을 `undefined`로 추론한다.
+둘째, 함수에 반환 표현식이 없고 `undefined` 함수를 반환할 것으로 예상되는 함수로 전달되는 경우 TS는 해당 함수의 반환 타입을 `undefined`로 추론한다.
 
 ```ts
 // ✅ Works in TypeScript 5.1!
