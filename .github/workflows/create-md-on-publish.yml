@@ -45,4 +45,5 @@ jobs:
 
       - name: Deploy
         run: |
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}
           yarn deploy
