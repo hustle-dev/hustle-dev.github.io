@@ -1,0 +1,41 @@
+name: Delete the markdown file when the issue is deleted.
+
+on:
+  issues:
+    types: [deleted]
+
+env:
+  CONTENT_TITLE: ${{ github.event.issue.title }}
+  CONTENT_BODY: ${{ github.event.issue.body }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Delete markdown file
+        run: |
+          rm -rf "contents/${CONTENT_TITLE}"
+
+      - name: Push changes
+        run: |
+          git config --local user.email "hustle-dev@webtoonscorp.com"
+          git config --local user.name "hustle-dev"
+          git add .
+          git commit -m "docs: 문서가 삭제되었습니다."
+          git push
+
+      - name: Deploy
+        run: yarn deploy

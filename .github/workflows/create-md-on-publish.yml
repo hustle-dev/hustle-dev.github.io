@@ -1,0 +1,47 @@
+name: Create issue to markdown file when the publish label is attached
+
+on:
+  issues:
+    types: [labeled]
+
+env:
+  CONTENT_TITLE: ${{ github.event.issue.title }}
+  CONTENT_BODY: ${{ github.event.issue.body }}
+
+jobs:
+  publish:
+    if: contains(github.event.label.name, 'publish') && (github.actor == 'hustle-dev')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Create markdown file
+        run: |
+          mkdir "contents/${CONTENT_TITLE}"
+          cd "contents/${CONTENT_TITLE}"
+          echo "${CONTENT_BODY}" > index.md
+          cd "../../"
+          yarn convert "contents/${CONTENT_TITLE}/index.md"
+
+      - name: Push changes
+        run: |
+          git config --local user.email "dlwoabsdk@gmail.com"
+          git config --local user.name hustle-dev
+          git add .
+          git commit -m "docs: 문서가 생성되었습니다."
+          git push
+
+      - name: Deploy
+        run: |
+          yarn deploy

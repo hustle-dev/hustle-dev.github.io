@@ -12,6 +12,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "yarn clean && yarn build && gh-pages -d public",
+    "convert": "node scripts/issue-to-md.js",
     "typecheck": "tsc --noEmit",
     "postinstall": "husky install",
     "lint": "lint-staged"
