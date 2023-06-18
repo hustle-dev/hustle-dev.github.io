@@ -1,8 +1,8 @@
-import type { HeadProps, PageProps } from 'gatsby'
+import type { PageProps } from 'gatsby'
 import React from 'react'
 import { PostList, RecentPost, TagList } from './components'
 import { usePostInfiniteScroll, useTag } from './hooks'
-import { FloatingButton, ProfileCard, Seo } from '@/components'
+import { FloatingButton, ProfileCard } from '@/components'
 import * as styles from './Home.module.css'
 
 const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) => {
@@ -29,13 +29,3 @@ const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) =>
 }
 
 export default Home
-
-export const Head = ({ location: { pathname }, data: { site, file } }: HeadProps<Queries.HomeQuery>) => {
-  const seo = {
-    title: site?.siteMetadata.title,
-    description: site?.siteMetadata.description,
-    heroImage: file?.publicURL as string,
-  }
-
-  return <Seo title={seo.title} description={seo.description} heroImage={seo.heroImage} pathname={pathname}></Seo>
-}
