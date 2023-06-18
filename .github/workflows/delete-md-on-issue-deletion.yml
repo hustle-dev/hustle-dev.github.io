@@ -31,11 +31,13 @@ jobs:
 
       - name: Push changes
         run: |
-          git config --local user.email "hustle-dev@webtoonscorp.com"
-          git config --local user.name "hustle-dev"
+          git config --local user.email "dlwoabsdk@gmail.com"
+          git config --local user.name hustle-dev
           git add .
           git commit -m "docs: 문서가 삭제되었습니다."
           git push
 
       - name: Deploy
-        run: yarn deploy
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}
+          yarn deploy
