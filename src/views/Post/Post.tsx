@@ -1,10 +1,9 @@
-import { graphql } from 'gatsby'
-import type { HeadProps, PageProps } from 'gatsby'
-import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
+import type { PageProps } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import clsx from 'clsx'
 import { TableOfContents, TagList } from './components'
-import { Giscus, ProfileCard, Seo } from '@/components'
+import { Giscus, ProfileCard } from '@/components'
 import { getRefinedImage, getRefinedStringValue } from '@/utils'
 import * as styles from './Post.module.css'
 import * as typo from '@/styles/typography.module.css'
@@ -38,44 +37,6 @@ const Post = ({ data, pageContext, location: { pathname } }: PageProps<Queries.P
         <Giscus />
       </main>
     </>
-  )
-}
-
-export const query = graphql`
-  query Post($id: String) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        date(formatString: "YY.MM.DD")
-        description
-        heroImage {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED)
-          }
-        }
-        heroImageAlt
-        tags
-        title
-      }
-      tableOfContents
-    }
-  }
-`
-
-export const Head = ({ data: { markdownRemark }, location: { pathname } }: HeadProps<Queries.PostQuery>) => {
-  const seo = {
-    title: markdownRemark?.frontmatter.title,
-    description: markdownRemark?.frontmatter.description,
-    heroImage: markdownRemark?.frontmatter.heroImage,
-  }
-
-  return (
-    <Seo
-      title={seo.title}
-      description={seo.description}
-      heroImage={getSrc(getRefinedImage(seo.heroImage?.childImageSharp?.gatsbyImageData))}
-      pathname={pathname}
-    />
   )
 }
 
