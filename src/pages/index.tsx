@@ -1,7 +1,5 @@
-import React from 'react'
-import { Seo } from '@/components'
-import { graphql, type HeadProps } from 'gatsby'
-import { getRefinedStringValue } from '@/utils'
+import { graphql } from 'gatsby'
+
 export const query = graphql`
   query Home {
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
@@ -41,14 +39,5 @@ export const query = graphql`
   }
 `
 
-export const Head = ({ location: { pathname }, data: { site, file } }: HeadProps<Queries.HomeQuery>) => {
-  const seo = {
-    title: site?.siteMetadata.title,
-    description: site?.siteMetadata.description,
-    heroImage: getRefinedStringValue(file?.publicURL),
-  }
-
-  return <Seo title={seo.title} description={seo.description} heroImage={seo.heroImage} pathname={pathname}></Seo>
-}
-
+export { Head } from '../views/Home'
 export { default } from '../views/Home'

@@ -1,8 +1,9 @@
-import type { PageProps } from 'gatsby'
+import type { PageProps, HeadProps } from 'gatsby'
 import React from 'react'
 import { PostList, RecentPost, TagList } from './components'
 import { usePostInfiniteScroll, useTag } from './hooks'
-import { FloatingButton, ProfileCard } from '@/components'
+import { FloatingButton, ProfileCard, Seo } from '@/components'
+import { getRefinedStringValue } from '@/utils'
 import * as styles from './Home.module.css'
 
 const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) => {
@@ -26,6 +27,16 @@ const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) =>
       <FloatingButton />
     </main>
   )
+}
+
+export const Head = ({ location: { pathname }, data: { site, file } }: HeadProps<Queries.HomeQuery>) => {
+  const seo = {
+    title: site?.siteMetadata.title,
+    description: site?.siteMetadata.description,
+    heroImage: getRefinedStringValue(file?.publicURL),
+  }
+
+  return <Seo title={seo.title} description={seo.description} heroImage={seo.heroImage} pathname={pathname}></Seo>
 }
 
 export default Home
