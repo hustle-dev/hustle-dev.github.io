@@ -1,7 +1,7 @@
 ---
 title: 입사 후 지난 1년간의 기록
 description: 2022년 06월부터 2023년 06월까지를 돌아보며..
-date: 2023-06-21
+date: 2023-06-26
 slug: /retrospect-one-year
 tags: [회고]
 heroImage: ./heroImage.png
