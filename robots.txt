@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://hustle-dev.github.io/sitemap.xml
+Sitemap: https://hustle-dev.github.io/sitemap-index.xml
 Host: https://hustle-dev.github.io
