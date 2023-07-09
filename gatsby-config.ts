@@ -26,7 +26,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://hustle-dev.github.io',
-        sitemap: 'https://hustle-dev.github.io/sitemap.xml',
+        sitemap: 'https://hustle-dev.github.io/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
