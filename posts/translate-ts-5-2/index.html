@@ -30,7 +30,7 @@
 <p>원글 링크: <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/">https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/</a></p>
 </blockquote>
 <h2 id="using-선언-및-명시적-리소스-관리-사용"><code class="language-text">using</code> 선언 및 명시적 리소스 관리 사용</h2>
-<p>TS 5.2에는 곧 출시될 ECMAScript의 명시적 리소스 관리 기능이 추가된다. 이 기능이 나오게 된 원인을 사용이점을 이해해보자.</p>
+<p>TS 5.2에는 곧 출시될 ECMAScript의 명시적 리소스 관리 기능이 추가된다. 이 기능이 나오게 된 원인과 사용이점을 이해해보자.</p>
 <p>객체를 생성한 후 일종의 '정리(클린업)'를 해야 하는 경우가 있다. 예를 들어 네트워크 연결을 닫거나 임시 파일을 삭제하거나 메모리를 확보해야 하는 것이다.</p>
 <p>임시 파일을 생성하고 읽고 쓴 파일을 닫은 뒤, 삭제하는 함수를 상상해보자.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> fs <span class="token keyword">from</span> <span class="token string">"fs"</span><span class="token punctuation">;</span>
