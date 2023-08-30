@@ -52,6 +52,7 @@ export const Seo = ({ title, description, heroImage, pathname, children }: Props
   return (
     <>
       <title>{seo.title}</title>
+      <link rel="canonical" href={seo.url} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {/* Open Graph / Facebook */}
