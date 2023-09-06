@@ -17,8 +17,8 @@ const Post = ({ data, pageContext, location: { pathname } }: PageProps<Queries.P
   return (
     <>
       <main className={styles.wrapper}>
-        <h1 className={clsx(styles.title, typo.D2)}>{title}</h1>
-        <p className={clsx(styles.date, typo.B7)}>{date}</p>
+        <h1 className={clsx(typo.D2, styles.title)}>{title}</h1>
+        <p className={clsx(typo.B7, styles.date)}>{date}</p>
         <TagList tags={tags} className={styles.tagList} />
         <GatsbyImage
           image={getRefinedImage(heroImage?.childImageSharp?.gatsbyImageData)}
