@@ -1,5 +1,5 @@
-import React from 'react'
 import clsx from 'clsx'
+
 import * as styles from './Title.module.css'
 
 type TitleProps = {

@@ -1,9 +1,6 @@
 import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
-  flags: {
-    DEV_SSR: true,
-  },
   siteMetadata: {
     title: `hustle-dev blog`,
     description: `hustle-dev의 기술 블로그 입니다.`,
@@ -12,6 +9,7 @@ const config: GatsbyConfig = {
     heroImage: './src/images/blogImage.png',
   },
   graphqlTypegen: true,
+  jsxRuntime: 'automatic',
   plugins: [
     {
       resolve: `gatsby-plugin-google-gtag`,

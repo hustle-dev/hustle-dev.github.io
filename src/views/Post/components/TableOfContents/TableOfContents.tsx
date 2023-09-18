@@ -1,9 +1,10 @@
-import React from 'react'
 import clsx from 'clsx'
+
 import Pen from '@/images/pen.svg'
-import * as styles from './TableOfContents.module.css'
 import * as typo from '@/styles/typography.module.css'
+
 import { useTocStyleObserver } from './hooks'
+import * as styles from './TableOfContents.module.css'
 
 type TableOfContentsProps = {
   html: string

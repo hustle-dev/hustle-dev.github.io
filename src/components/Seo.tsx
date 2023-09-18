@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import React, { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 
 type SeoProps = {
   title?: string

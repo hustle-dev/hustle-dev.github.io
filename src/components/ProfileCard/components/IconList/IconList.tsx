@@ -1,9 +1,9 @@
-import React from 'react'
-import { IconWrapper } from '../IconWrapper'
-import Mail from '@/images/mail.svg'
 import Facebook from '@/images/facebook.svg'
-import Linkedin from '@/images/linkedin.svg'
 import Github from '@/images/github.svg'
+import Linkedin from '@/images/linkedin.svg'
+import Mail from '@/images/mail.svg'
+
+import { IconWrapper } from '../IconWrapper'
 
 export const IconList = () => (
   <>

@@ -1,6 +1,7 @@
-import React from 'react'
 import clsx from 'clsx'
+
 import { Tag } from '@/components'
+
 import * as styles from './TagList.module.css'
 
 type TagListProps = {

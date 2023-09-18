@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
+
 import { Theme, useTheme } from '@/contexts'
 
 export const Giscus = () => {

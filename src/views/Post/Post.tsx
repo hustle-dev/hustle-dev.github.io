@@ -1,12 +1,13 @@
-import type { PageProps, HeadProps } from 'gatsby'
-import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
-import React from 'react'
 import clsx from 'clsx'
-import { TableOfContents, TagList } from './components'
+import type { HeadProps, PageProps } from 'gatsby'
+import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
+
 import { Giscus, ProfileCard, Seo } from '@/components'
-import { getRefinedImage, getRefinedStringValue } from '@/utils'
-import * as styles from './Post.module.css'
 import * as typo from '@/styles/typography.module.css'
+import { getRefinedImage, getRefinedStringValue } from '@/utils'
+
+import { TableOfContents, TagList } from './components'
+import * as styles from './Post.module.css'
 
 // TODO: pageContext 값을 이용한 prev, next 컴포넌트 생성
 const Post = ({ data, pageContext, location: { pathname } }: PageProps<Queries.PostQuery>) => {

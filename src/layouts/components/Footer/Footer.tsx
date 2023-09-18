@@ -1,7 +1,8 @@
-import React from 'react'
 import clsx from 'clsx'
-import * as styles from './Footer.module.css'
+
 import * as typo from '@/styles/typography.module.css'
+
+import * as styles from './Footer.module.css'
 
 export const Footer = () => (
   <footer className={clsx(styles.footer, typo.D1)}>

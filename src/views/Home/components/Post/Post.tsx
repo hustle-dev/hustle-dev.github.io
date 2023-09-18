@@ -1,12 +1,13 @@
+import clsx from 'clsx'
 import { Link } from 'gatsby'
 import { GatsbyImage, type IGatsbyImageData } from 'gatsby-plugin-image'
-import React from 'react'
-import clsx from 'clsx'
 import { match } from 'ts-pattern'
+
+import * as typo from '@/styles/typography.module.css'
 import { getRefinedImage } from '@/utils'
+
 import { Date, Description, TagList, Title } from './components'
 import * as styles from './Post.module.css'
-import * as typo from '@/styles/typography.module.css'
 
 type PostProps = {
   variants: 'card' | 'item'

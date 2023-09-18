@@ -1,8 +1,9 @@
-import React from 'react'
 import clsx from 'clsx'
+
+import * as typo from '@/styles/typography.module.css'
+
 import { Post } from '../Post'
 import * as styles from './RecentPost.module.css'
-import * as typo from '@/styles/typography.module.css'
 
 type RecentPostProps = {
   posts: Queries.HomeQuery['allMarkdownRemark']['nodes']

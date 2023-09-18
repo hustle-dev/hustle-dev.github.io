@@ -1,14 +1,15 @@
-import { Link } from 'gatsby'
-import React from 'react'
 import clsx from 'clsx'
+import { Link } from 'gatsby'
 import { match } from 'ts-pattern'
+
 import { useTheme } from '@/contexts'
-import { useScrollIndicator } from './hooks'
-import { reactCss } from '@/utils'
+import DarkMode from '@/images/darkmode.svg'
 import Logo from '@/images/logo.svg'
 import Rss from '@/images/rss.svg'
-import DarkMode from '@/images/darkmode.svg'
+import { reactCss } from '@/utils'
+
 import * as styles from './Header.module.css'
+import { useScrollIndicator } from './hooks'
 
 type HeaderProps = {
   pathname: string

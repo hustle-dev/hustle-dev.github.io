@@ -1,10 +1,11 @@
-import type { PageProps, HeadProps } from 'gatsby'
-import React from 'react'
-import { PostList, RecentPost, TagList } from './components'
-import { usePostInfiniteScroll, useTag } from './hooks'
+import type { HeadProps, PageProps } from 'gatsby'
+
 import { FloatingButton, ProfileCard, Seo } from '@/components'
 import { getRefinedStringValue } from '@/utils'
+
+import { PostList, RecentPost, TagList } from './components'
 import * as styles from './Home.module.css'
+import { usePostInfiniteScroll, useTag } from './hooks'
 
 const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) => {
   const { nodes: allPosts, totalCount, group } = data.allMarkdownRemark

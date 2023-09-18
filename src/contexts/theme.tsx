@@ -1,5 +1,6 @@
-import React, { useState, useCallback, useContext, createContext } from 'react'
 import type { ReactNode } from 'react'
+import { createContext, useCallback, useContext, useState } from 'react'
+
 import { isBrowser } from '@/utils'
 
 export enum Theme {

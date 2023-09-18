@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+
 import { optimizedScroll } from '@/utils'
 
 export const useScrollIndicator = (pathname: string) => {

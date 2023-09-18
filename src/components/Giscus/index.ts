@@ -1,1 +1,1 @@
-export * from './Giscus';
+export * from './Giscus'

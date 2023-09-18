@@ -7,6 +7,9 @@
     "gatsby"
   ],
   "scripts": {
+    "lint:pt": "prettier --write \"${*}**/*.{ts,tsx,json}\"",
+    "lint:es": "eslint --ext .ts,.tsx,.js --fix .",
+    "lint": "yarn lint:pt && yarn lint:es",
     "start": "gatsby develop",
     "build": "gatsby build && cp googlefa45382bebc74ed3.html public/",
     "serve": "gatsby serve",
@@ -14,13 +17,15 @@
     "deploy": "yarn clean && yarn build && gh-pages -d public",
     "convert": "node scripts/issue-to-md.js",
     "typecheck": "tsc --noEmit",
-    "postinstall": "husky install",
-    "lint": "lint-staged"
+    "postinstall": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "*.json": [
+      "prettier --cache --write"
+    ],
+    "*.{js,ts,tsx}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --config ./.prettierrc --cache --write"
     ]
   },
   "dependencies": {
@@ -62,6 +67,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "gh-pages": "^5.0.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.2.2",

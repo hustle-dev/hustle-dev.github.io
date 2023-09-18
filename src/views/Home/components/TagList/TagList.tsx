@@ -1,8 +1,9 @@
-import React from 'react'
-import type { KeyboardEvent, MouseEvent } from 'react'
 import clsx from 'clsx'
-import { TagButtonWithCount } from '../TagButtonWithCount'
+import type { KeyboardEvent, MouseEvent } from 'react'
+
 import { getRefinedStringValue } from '@/utils'
+
+import { TagButtonWithCount } from '../TagButtonWithCount'
 import * as styles from './TagList.module.css'
 
 type TagListProps = {

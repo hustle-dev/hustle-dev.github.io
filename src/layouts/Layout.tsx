@@ -1,6 +1,7 @@
-import React, { type ReactNode } from 'react'
-import { Footer, Header } from './components'
 import { PageProps } from 'gatsby'
+import { type ReactNode } from 'react'
+
+import { Footer, Header } from './components'
 
 type LayoutProps = {
   children: ReactNode

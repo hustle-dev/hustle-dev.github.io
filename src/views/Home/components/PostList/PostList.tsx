@@ -1,5 +1,5 @@
-import React from 'react'
 import clsx from 'clsx'
+
 import { Post } from '../Post'
 import * as styles from './PostList.module.css'
 

@@ -1,5 +1,5 @@
-import React from 'react'
 import clsx from 'clsx'
+
 import * as styles from './Description.module.css'
 
 type DescriptionProps = {

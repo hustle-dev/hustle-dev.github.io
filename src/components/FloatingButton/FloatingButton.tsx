@@ -1,8 +1,9 @@
-import React from 'react'
 import clsx from 'clsx'
-import { useFloatingButton } from './hooks'
+
 import Arrow from '@/images/arrow.svg'
+
 import * as styles from './FloatingButton.module.css'
+import { useFloatingButton } from './hooks'
 
 export const FloatingButton = () => {
   const { isVisible, scrollToTop } = useFloatingButton()
