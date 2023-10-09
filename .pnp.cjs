@@ -66,7 +66,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
             ["svg-react-loader", "npm:0.4.6"],\
-            ["ts-pattern", "npm:4.3.0"],\
+            ["ts-pattern", "npm:5.0.5"],\
             ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
           ],\
           "linkType": "SOFT"\
@@ -12833,7 +12833,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
             ["svg-react-loader", "npm:0.4.6"],\
-            ["ts-pattern", "npm:4.3.0"],\
+            ["ts-pattern", "npm:5.0.5"],\
             ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
           ],\
           "linkType": "SOFT"\
@@ -19924,10 +19924,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["ts-pattern", [\
-        ["npm:4.3.0", {\
-          "packageLocation": "./.yarn/cache/ts-pattern-npm-4.3.0-0f6c90aeac-f5167f6f72.zip/node_modules/ts-pattern/",\
+        ["npm:5.0.5", {\
+          "packageLocation": "./.yarn/cache/ts-pattern-npm-5.0.5-0b6de45345-9eef9fe24e.zip/node_modules/ts-pattern/",\
           "packageDependencies": [\
-            ["ts-pattern", "npm:4.3.0"]\
+            ["ts-pattern", "npm:5.0.5"]\
           ],\
           "linkType": "HARD"\
         }]\
