@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "gatsby": "^5.8.0",
     "gatsby-plugin-feed": "^5.8.0",
     "gatsby-plugin-google-gtag": "^5.8.0",

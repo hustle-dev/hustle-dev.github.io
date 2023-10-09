@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
             ["axios", "npm:1.5.1"],\
-            ["clsx", "npm:1.2.1"],\
+            ["clsx", "npm:2.0.0"],\
             ["eslint", "npm:8.51.0"],\
             ["eslint-config-prettier", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:9.0.0"],\
             ["eslint-plugin-import", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:2.28.1"],\
@@ -7833,10 +7833,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["clsx", [\
-        ["npm:1.2.1", {\
-          "packageLocation": "./.yarn/cache/clsx-npm-1.2.1-77792dc182-30befca801.zip/node_modules/clsx/",\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/clsx-npm-2.0.0-afafbbe44a-a2cfb2351b.zip/node_modules/clsx/",\
           "packageDependencies": [\
-            ["clsx", "npm:1.2.1"]\
+            ["clsx", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13350,7 +13350,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
             ["axios", "npm:1.5.1"],\
-            ["clsx", "npm:1.2.1"],\
+            ["clsx", "npm:2.0.0"],\
             ["eslint", "npm:8.51.0"],\
             ["eslint-config-prettier", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:9.0.0"],\
             ["eslint-plugin-import", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:2.28.1"],\
