@@ -33,7 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.2.11"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.59.7"],\
             ["@typescript-eslint/parser", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.59.7"],\
-            ["axios", "npm:1.4.0"],\
+            ["axios", "npm:1.5.1"],\
             ["clsx", "npm:1.2.1"],\
             ["eslint", "npm:8.51.0"],\
             ["eslint-config-prettier", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:8.10.0"],\
@@ -6531,15 +6531,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/axios-npm-0.21.4-e278873748-44245f24ac.zip/node_modules/axios/",\
           "packageDependencies": [\
             ["axios", "npm:0.21.4"],\
-            ["follow-redirects", "virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2"]\
+            ["follow-redirects", "virtual:6bc68e7d25b7055a51c269c1fa5648c8246286db1b7949168396e2ffbde7ed58cf742783c99b4e376ba9a3e96fcc4d029f96bd1b532b606b5055545461060ec6#npm:1.15.2"]\
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:1.4.0", {\
-          "packageLocation": "./.yarn/cache/axios-npm-1.4.0-4d7ce8ca3e-7fb6a4313b.zip/node_modules/axios/",\
+        ["npm:1.5.1", {\
+          "packageLocation": "./.yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/",\
           "packageDependencies": [\
-            ["axios", "npm:1.4.0"],\
-            ["follow-redirects", "virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2"],\
+            ["axios", "npm:1.5.1"],\
+            ["follow-redirects", "virtual:6bc68e7d25b7055a51c269c1fa5648c8246286db1b7949168396e2ffbde7ed58cf742783c99b4e376ba9a3e96fcc4d029f96bd1b532b606b5055545461060ec6#npm:1.15.2"],\
             ["form-data", "npm:4.0.0"],\
             ["proxy-from-env", "npm:1.1.0"]\
           ],\
@@ -10839,10 +10839,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2", {\
-          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-359bc4c55c/0/cache/follow-redirects-npm-1.15.2-1ec1dd82be-faa66059b6.zip/node_modules/follow-redirects/",\
+        ["virtual:6bc68e7d25b7055a51c269c1fa5648c8246286db1b7949168396e2ffbde7ed58cf742783c99b4e376ba9a3e96fcc4d029f96bd1b532b606b5055545461060ec6#npm:1.15.2", {\
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-ec65af1aae/0/cache/follow-redirects-npm-1.15.2-1ec1dd82be-faa66059b6.zip/node_modules/follow-redirects/",\
           "packageDependencies": [\
-            ["follow-redirects", "virtual:4d7ce8ca3e1e44d82523fba2ad95e1be18c4e9f8dec6d551377587540da3ed75bd8bd3e812280309a3b90cfdb0560f076f3552a20839f7f15665207a4fbd588a#npm:1.15.2"],\
+            ["follow-redirects", "virtual:6bc68e7d25b7055a51c269c1fa5648c8246286db1b7949168396e2ffbde7ed58cf742783c99b4e376ba9a3e96fcc4d029f96bd1b532b606b5055545461060ec6#npm:1.15.2"],\
             ["@types/debug", null],\
             ["debug", null]\
           ],\
@@ -13243,7 +13243,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.2.11"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.59.7"],\
             ["@typescript-eslint/parser", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.59.7"],\
-            ["axios", "npm:1.4.0"],\
+            ["axios", "npm:1.5.1"],\
             ["clsx", "npm:1.2.1"],\
             ["eslint", "npm:8.51.0"],\
             ["eslint-config-prettier", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:8.10.0"],\
