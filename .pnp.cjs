@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.18.6"],\
+            ["@types/node", "npm:20.8.7"],\
             ["@types/react", "npm:18.2.29"],\
             ["@types/react-dom", "npm:18.2.14"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
@@ -5019,13 +5019,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-17.0.45-fdb38d1624-aa04366b91.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:17.0.45"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:18.18.6", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.18.6-67880ca2e3-a847639b84.zip/node_modules/@types/node/",\
-          "packageDependencies": [\
-            ["@types/node", "npm:18.18.6"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -12796,7 +12789,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hustle-dev-blog", "workspace:."],\
-            ["@types/node", "npm:18.18.6"],\
+            ["@types/node", "npm:20.8.7"],\
             ["@types/react", "npm:18.2.29"],\
             ["@types/react-dom", "npm:18.2.14"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
