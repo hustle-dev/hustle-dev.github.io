@@ -1,6 +1,6 @@
 ---
 title: Yarn 4.0 릴리즈를 읽어보면서
-description: Release: Yarn 4.0을 읽어보면서 모르는 개념을 같이 학습한 글입니다.
+description: 이번에 릴리즈된 Yarn 4.0을 읽어보면서 모르는 개념을 같이 학습한 글입니다.
 date: 2023-10-26
 slug: /release-yarn4
 tags: [Yarn]
