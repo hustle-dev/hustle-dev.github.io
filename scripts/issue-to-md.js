@@ -20,7 +20,7 @@ const downloadImage = async (url, localPath) => {
 
 const processMarkdown = async (markdownFile) => {
   let markdown = fs.readFileSync(markdownFile, 'utf8')
-  const imgRegex = /!\[.*?\]\((.*?)\)|<img.*?src="(.*?)"/g
+  const imgRegex = /!\[.*?\]\((.*?)\)|<img.*?src="(.*?)">/g
   const match = imgRegex.exec(markdown)
 
   if (!match) {
