@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.18.7"],\
+            ["@types/node", "npm:18.18.8"],\
             ["@types/react", "npm:18.2.33"],\
             ["@types/react-dom", "npm:18.2.14"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
@@ -4796,7 +4796,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cacheable-request", "npm:6.0.3"],\
             ["@types/http-cache-semantics", "npm:4.0.2"],\
             ["@types/keyv", "npm:3.1.4"],\
-            ["@types/node", "npm:20.8.9"],\
+            ["@types/node", "npm:20.8.10"],\
             ["@types/responselike", "npm:1.0.1"]\
           ],\
           "linkType": "HARD"\
@@ -4834,7 +4834,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.14-28a22a5678-119b8ea576.zip/node_modules/@types/cors/",\
           "packageDependencies": [\
             ["@types/cors", "npm:2.8.14"],\
-            ["@types/node", "npm:20.8.9"]\
+            ["@types/node", "npm:20.8.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4903,7 +4903,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/glob", "npm:5.0.38"],\
             ["@types/minimatch", "npm:5.1.2"],\
-            ["@types/node", "npm:20.8.9"]\
+            ["@types/node", "npm:20.8.10"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -4912,7 +4912,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/glob", "npm:8.1.0"],\
             ["@types/minimatch", "npm:5.1.2"],\
-            ["@types/node", "npm:20.8.9"]\
+            ["@types/node", "npm:20.8.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4941,7 +4941,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-http-proxy-npm-1.17.12-8f995cbfc8-89700c8e3c.zip/node_modules/@types/http-proxy/",\
           "packageDependencies": [\
             ["@types/http-proxy", "npm:1.17.12"],\
-            ["@types/node", "npm:20.8.9"]\
+            ["@types/node", "npm:20.8.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4969,7 +4969,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-keyv-npm-3.1.4-a8082ea56b-e009a2bfb5.zip/node_modules/@types/keyv/",\
           "packageDependencies": [\
             ["@types/keyv", "npm:3.1.4"],\
-            ["@types/node", "npm:20.8.9"]\
+            ["@types/node", "npm:20.8.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5016,7 +5016,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-mkdirp-npm-0.5.2-8180a91a82-21e6681ee1.zip/node_modules/@types/mkdirp/",\
           "packageDependencies": [\
             ["@types/mkdirp", "npm:0.5.2"],\
-            ["@types/node", "npm:20.8.9"]\
+            ["@types/node", "npm:20.8.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5029,18 +5029,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:18.18.7", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.18.7-c7916bed57-972f8b214f.zip/node_modules/@types/node/",\
+        ["npm:18.18.8", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.18.8-5aef4defda-d6a82bfc28.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.18.7"],\
+            ["@types/node", "npm:18.18.8"],\
             ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:20.8.9", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-20.8.9-9c9903a005-0c05f3502a.zip/node_modules/@types/node/",\
+        ["npm:20.8.10", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.8.10-29d985f3e4-7c61190e43.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:20.8.9"],\
+            ["@types/node", "npm:20.8.10"],\
             ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
@@ -5058,7 +5058,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-fetch-npm-2.6.6-233a89ea2a-ac66389d9d.zip/node_modules/@types/node-fetch/",\
           "packageDependencies": [\
             ["@types/node-fetch", "npm:2.6.6"],\
-            ["@types/node", "npm:20.8.9"],\
+            ["@types/node", "npm:20.8.10"],\
             ["form-data", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -5137,7 +5137,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-responselike-npm-1.0.1-f495d21276-ae8c36c935.zip/node_modules/@types/responselike/",\
           "packageDependencies": [\
             ["@types/responselike", "npm:1.0.1"],\
-            ["@types/node", "npm:20.8.9"]\
+            ["@types/node", "npm:20.8.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5148,7 +5148,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/rimraf", "npm:2.0.5"],\
             ["@types/glob", "npm:8.1.0"],\
-            ["@types/node", "npm:20.8.9"]\
+            ["@types/node", "npm:20.8.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5158,7 +5158,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-sax-npm-1.2.5-f4d70f1fbf-a4bf27d7eb.zip/node_modules/@types/sax/",\
           "packageDependencies": [\
             ["@types/sax", "npm:1.2.5"],\
-            ["@types/node", "npm:20.8.9"]\
+            ["@types/node", "npm:20.8.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8958,7 +8958,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["engine.io", "npm:6.5.3"],\
             ["@types/cookie", "npm:0.4.1"],\
             ["@types/cors", "npm:2.8.14"],\
-            ["@types/node", "npm:20.8.9"],\
+            ["@types/node", "npm:20.8.10"],\
             ["accepts", "npm:1.3.8"],\
             ["base64id", "npm:2.0.0"],\
             ["cookie", "npm:0.4.2"],\
@@ -12831,7 +12831,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hustle-dev-blog", "workspace:."],\
-            ["@types/node", "npm:18.18.7"],\
+            ["@types/node", "npm:18.18.8"],\
             ["@types/react", "npm:18.2.33"],\
             ["@types/react-dom", "npm:18.2.14"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
@@ -13812,7 +13812,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/jest-worker-npm-26.6.2-46cbcd449f-f9afa3b88e.zip/node_modules/jest-worker/",\
           "packageDependencies": [\
             ["jest-worker", "npm:26.6.2"],\
-            ["@types/node", "npm:20.8.9"],\
+            ["@types/node", "npm:20.8.10"],\
             ["merge-stream", "npm:2.0.0"],\
             ["supports-color", "npm:7.2.0"]\
           ],\
@@ -13822,7 +13822,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/jest-worker-npm-27.5.1-1c110b5894-98cd68b696.zip/node_modules/jest-worker/",\
           "packageDependencies": [\
             ["jest-worker", "npm:27.5.1"],\
-            ["@types/node", "npm:20.8.9"],\
+            ["@types/node", "npm:20.8.10"],\
             ["merge-stream", "npm:2.0.0"],\
             ["supports-color", "npm:8.1.1"]\
           ],\
