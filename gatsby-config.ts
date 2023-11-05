@@ -41,7 +41,7 @@ const config: GatsbyConfig = {
             options: {
               maxWidth: 680,
               linkImagesToOriginal: false,
-              wrapperStyle: 'border-radius: 10px; overflow: hidden;',
+              wrapperStyle: 'border-radius: 5px; overflow: hidden;',
             },
           },
           {

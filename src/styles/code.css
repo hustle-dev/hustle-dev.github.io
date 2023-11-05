@@ -20,7 +20,7 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  border-radius: 11px;
+  border-radius: 5px;
 }
 
 pre[class*='language-']::selection,
@@ -41,7 +41,7 @@ code[class*='language-'] ::selection {
 /* Code blocks */
 pre[class*='language-'] {
   padding: 1em;
-  margin: 0.5em 0;
+  margin-bottom: 16px;
   overflow: auto;
 }
 
@@ -58,6 +58,7 @@ pre[class*='language-'] {
   border: 1px solid var(--primary-c1);
   color: var(--primary-c1);
   white-space: normal;
+  vertical-align: middle;
 }
 
 :not(pre) > code[class*='language-']::selection {

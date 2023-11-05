@@ -31,7 +31,6 @@ const Post = ({ data, pageContext, location: { pathname } }: PageProps<Queries.P
           <section className={styles.mainText} dangerouslySetInnerHTML={{ __html: getRefinedStringValue(html) }} />
           <TableOfContents html={getRefinedStringValue(tableOfContents)} />
         </div>
-        <hr className={styles.divider} />
         <section className={styles.bio}>
           <ProfileCard pathname={pathname} />
         </section>

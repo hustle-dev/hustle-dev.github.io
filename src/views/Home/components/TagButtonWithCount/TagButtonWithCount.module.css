@@ -3,7 +3,7 @@
   background-color: transparent;
   color: var(--gray-2);
   border: 1px solid var(--gray-2);
-  border-radius: 30px;
+  border-radius: 5px;
   cursor: pointer;
   transition: 0.1s;
 }

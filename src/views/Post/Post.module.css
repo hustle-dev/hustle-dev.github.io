@@ -29,7 +29,7 @@
 }
 
 .heroImage img {
-  border-radius: 11px;
+  border-radius: 5px;
 }
 
 .contentWrapper {
@@ -48,15 +48,13 @@
 }
 
 .mainText {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   margin-top: 30px;
   max-width: 680px;
   min-width: 300px;
   color: var(--gray-5);
   word-break: break-all;
   font-size: calc(18 / 16 * 1rem);
+  line-height: 1.5;
 
   --blockquote-bgColor: var(--article-background);
   --blockquote-color: var(--icon-color);
@@ -69,6 +67,10 @@
   transition: 0.1s;
 }
 
+.mainText img {
+  border-radius: 5px;
+}
+
 .mainText a:hover {
   text-decoration-color: var(--primary-c1);
 }
@@ -77,14 +79,14 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 24px;
+  margin-bottom: 24px;
   padding: 20px 15px;
   padding-right: 18px;
   background-color: var(--blockquote-bgColor);
   color: var(--blockquote-color);
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
-  border-radius: 11px;
+  border-radius: 10px;
 }
 
 .mainText blockquote::before {
@@ -103,30 +105,33 @@
   font-style: normal;
   font-weight: 600;
   font-size: calc(16 / 16 * 1rem);
-  line-height: 1.6;
   word-break: break-all;
 }
 
 .mainText p {
   display: block;
-  margin-block-start: 0.4em;
-  margin-block-end: 0.4em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .mainText h1 {
-  margin-top: 1.8em;
+  margin-top: 28px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eee;
 }
 
 .mainText h2 {
-  margin-top: 1.5em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.mainText h2 code[class*='language-'] {
+  padding: 0;
 }
 
 .mainText h3 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .mainText h1,
@@ -146,17 +151,13 @@
   margin-bottom: 0.3em;
 }
 
-.mainText ol > li,
-.mainText ul > li {
-  line-height: 1.6;
-}
-
 .mainText table {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   min-width: 40%;
   max-width: 100%;
   border: 1px solid var(--primary-c1);
+  border-radius: 5px;
   border-collapse: collapse;
   font-size: 0.875rem;
 }
@@ -174,10 +175,6 @@
 
 .mainText tr > th {
   border-bottom: 3px solid var(--primary-c1);
-}
-
-.divider {
-  margin-top: 60px;
 }
 
 .bio {
