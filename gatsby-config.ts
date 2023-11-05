@@ -12,6 +12,12 @@ const config: GatsbyConfig = {
   jsxRuntime: 'automatic',
   plugins: [
     {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-8944903075236867`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ['G-LDKTNNPSGB'],
