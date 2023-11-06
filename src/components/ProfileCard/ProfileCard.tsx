@@ -2,7 +2,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { match } from 'ts-pattern'
 
 import { Description, Heading, IconList } from './components'
-import * as styles from './ProfileCard.module.css'
+import * as styles from './ProfileCard.module.scss'
 
 type ProfileCardProps = {
   pathname: string

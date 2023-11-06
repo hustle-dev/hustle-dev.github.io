@@ -1,3 +1,5 @@
+@use '@/styles/abstracts' as *;
+
 .floatingButton {
   display: flex;
   justify-content: center;
@@ -17,20 +19,18 @@
   opacity: 0;
   pointer-events: none;
   z-index: 10;
-}
 
-.floatingButton:hover {
-  background-color: rgb(21, 188, 124);
-}
+  &:hover {
+    background-color: rgb(21, 188, 124);
+  }
 
-.floatingButton.visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
-@media screen and (min-width: 62.5rem) {
-  .floatingButton {
+  @include desktopAndUp {
     width: 64px;
     height: 64px;
   }

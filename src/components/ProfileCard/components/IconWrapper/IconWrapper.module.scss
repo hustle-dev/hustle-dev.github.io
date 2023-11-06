@@ -1,3 +1,5 @@
+@use '@/styles/abstracts' as *;
+
 .profileIcon {
   display: flex;
   justify-content: center;
@@ -6,8 +8,8 @@
   height: 30px;
   border-radius: 30%;
   transition: 0.1s;
-}
 
-.profileIcon:hover {
-  background-color: rgba(21, 175, 115, 0.1);
+  &:hover {
+    background-color: rgba(21, 175, 115, 0.1);
+  }
 }

@@ -1,0 +1,54 @@
+@use '@/styles/abstracts' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 260px;
+  gap: 20px;
+
+  @include mobileAndUp {
+    flex-direction: row;
+  }
+
+  .postProfileImage {
+    display: block;
+    flex-shrink: 0;
+    margin: 0;
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+
+    & img {
+      border-radius: 50%;
+    }
+  }
+
+  .postDescription {
+    margin-top: 0px;
+    height: 46px;
+  }
+
+  .iconWrapper {
+    display: flex;
+    margin-top: 16px;
+  }
+}
+
+.card {
+  min-width: 260px;
+
+  @include desktopAndUp {
+    max-width: 260px;
+  }
+
+  .info {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-top: 25px;
+
+    .profileImage img {
+      border-radius: 50%;
+    }
+  }
+}

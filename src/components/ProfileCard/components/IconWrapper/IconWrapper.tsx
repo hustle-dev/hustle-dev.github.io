@@ -1,6 +1,6 @@
 import { type ReactNode } from 'react'
 
-import * as styles from './IconWrapper.module.css'
+import * as styles from './IconWrapper.module.scss'
 
 type IconWrapperProps = {
   href: string

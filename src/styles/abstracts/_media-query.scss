@@ -1,0 +1,30 @@
+@use '../utils/' as *;
+
+$mobile: rem(500px);
+$tablet: rem(780px);
+$desktop: rem(1000px);
+$widescreen: rem(1300px);
+
+@mixin mobileAndUp {
+  @media screen and (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tabletAndUp {
+  @media screen and (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktopAndUp {
+  @media screen and (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin widescreenAndUp {
+  @media screen and (min-width: #{$widescreen}) {
+    @content;
+  }
+}
