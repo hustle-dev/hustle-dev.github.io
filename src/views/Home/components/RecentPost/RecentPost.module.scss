@@ -1,18 +1,20 @@
+@use '@/styles/abstracts' as *;
+
 .heading {
   display: none;
+
+  @include typo-t2;
+
+  @include tabletAndUp {
+    display: block;
+    color: var(--gray-5);
+  }
 }
 
 .recentPostList {
   display: none;
-}
 
-@media screen and (min-width: 48.75rem) {
-  .heading {
-    display: block;
-    color: var(--gray-5);
-  }
-
-  .recentPostList {
+  @include tabletAndUp {
     margin-top: 25px;
     list-style: none;
     display: flex;

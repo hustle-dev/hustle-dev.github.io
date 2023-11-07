@@ -1,0 +1,49 @@
+@use '../utils/' as *;
+@use './media-query' as *;
+
+@mixin typo-d1 {
+  font-family: 'Tenada';
+  font-weight: 800;
+  font-size: rem(35px);
+}
+
+@mixin typo-d2 {
+  font-weight: 700;
+  font-size: rem(27px);
+}
+
+@mixin typo-h1 {
+  font-weight: 700;
+  font-size: rem(22px);
+}
+
+@mixin typo-t1 {
+  font-weight: 700;
+  font-size: rem(19px);
+}
+
+@mixin typo-t2 {
+  font-weight: 600;
+  font-size: rem(18px);
+}
+
+@mixin typo-b3 {
+  font-weight: 600;
+  font-size: rem(15px);
+}
+
+@mixin typo-b5 {
+  font-weight: 600;
+  font-size: rem(14px);
+  line-height: rem(20px);
+}
+
+@mixin typo-b6 {
+  font-weight: 500;
+  font-size: rem(13px);
+}
+
+@mixin typo-b7 {
+  font-weight: 600;
+  font-size: rem(13px);
+}

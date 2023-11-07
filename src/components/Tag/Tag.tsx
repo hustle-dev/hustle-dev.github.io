@@ -1,8 +1,6 @@
 import clsx from 'clsx'
 
-import * as typo from '@/styles/typography.module.css'
-
-import * as styles from './Tag.module.css'
+import * as styles from './Tag.module.scss'
 
 type TagProps = {
   name: string
@@ -11,6 +9,6 @@ type TagProps = {
 
 export const Tag = ({ name, className }: TagProps) => (
   <div className={clsx(styles.tag, className)}>
-    <span className={typo.B7}>{name}</span>
+    <span>{name}</span>
   </div>
 )

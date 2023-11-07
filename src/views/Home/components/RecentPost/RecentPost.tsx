@@ -1,9 +1,5 @@
-import clsx from 'clsx'
-
-import * as typo from '@/styles/typography.module.css'
-
 import { Post } from '../Post'
-import * as styles from './RecentPost.module.css'
+import * as styles from './RecentPost.module.scss'
 
 type RecentPostProps = {
   posts: Queries.HomeQuery['allMarkdownRemark']['nodes']
@@ -11,7 +7,7 @@ type RecentPostProps = {
 
 export const RecentPost = ({ posts }: RecentPostProps) => (
   <>
-    <h2 className={clsx(styles.heading, typo.T2)}>New posts 📑</h2>
+    <h2 className={styles.heading}>New posts 📑</h2>
     <ul className={styles.recentPostList}>
       {posts.map(({ frontmatter: { title, description, date, tags, slug, heroImage, heroImageAlt }, id }) => (
         <Post

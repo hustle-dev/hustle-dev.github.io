@@ -2,7 +2,7 @@ import clsx from 'clsx'
 
 import Arrow from '@/images/arrow.svg'
 
-import * as styles from './FloatingButton.module.css'
+import * as styles from './FloatingButton.module.scss'
 import { useFloatingButton } from './hooks'
 
 export const FloatingButton = () => {

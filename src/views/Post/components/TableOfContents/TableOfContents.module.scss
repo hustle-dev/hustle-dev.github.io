@@ -1,0 +1,72 @@
+@use '@/styles/abstracts' as *;
+
+.wrapper {
+  display: none;
+  position: sticky;
+  top: 90px;
+  max-width: 320px;
+  max-height: calc(100vh - 180px);
+  margin-right: -80px;
+  overflow-y: auto;
+  padding: 0px 10px;
+  border-left: 2px solid var(--gray-2);
+
+  @include widescreenAndUp {
+    display: block;
+  }
+
+  .pen {
+    margin-bottom: 6px;
+  }
+
+  .tableOfContents {
+    @include typo-b7;
+
+    & > ul {
+      width: 240px;
+      margin-left: auto;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul ul {
+      padding-left: 10px;
+    }
+
+    li {
+      margin-bottom: 3px;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--gray-3);
+      transition: 0.1s;
+
+      &:hover {
+        color: var(--primary-c1);
+      }
+
+      &.active {
+        display: inline-block;
+        color: var(--primary-c1);
+      }
+    }
+
+    a,
+    p,
+    code {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    code[class*='language-'] {
+      all: unset;
+    }
+  }
+}

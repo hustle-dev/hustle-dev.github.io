@@ -1,0 +1,156 @@
+@use '@/styles/abstracts' as *;
+
+.articleLink {
+  text-decoration: none;
+
+  .cardTitle,
+  .itemTitle,
+  .cardDescription,
+  .itemDescription,
+  .cardDate,
+  .itemDate {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.1s;
+  }
+
+  &:hover,
+  &:focus {
+    .cardTitle,
+    .itemTitle,
+    .cardDescription,
+    .itemDescription,
+    .cardDate,
+    .itemDate {
+      text-decoration-color: var(--gray-5);
+    }
+  }
+
+  /* card */
+
+  .card {
+    flex: 1 1 420px;
+    overflow: hidden;
+    max-width: 420px;
+    min-width: 325px;
+    height: 420px;
+    border-radius: 10px;
+
+    background-color: var(--article-background);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+
+    .cardImage {
+      height: 208px;
+
+      img {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+    }
+
+    .cardCaption {
+      position: relative;
+      padding: 0px 20px 28px;
+
+      .cardDate {
+        position: absolute;
+        display: inline-block;
+        top: 4px;
+        right: 20px;
+
+        @include typo-b7;
+      }
+
+      .cardTagList {
+        width: 80%;
+        margin-top: 23px;
+      }
+
+      .cardTitle {
+        margin-top: 20px;
+        margin-left: 4px;
+
+        @include typo-h1;
+      }
+
+      .cardDescription {
+        margin-top: 20px;
+        margin-left: 4px;
+        width: 90%;
+        height: 2.5rem;
+
+        @include typo-b5;
+      }
+    }
+  }
+
+  /* item */
+
+  .item {
+    position: relative;
+    flex: 1;
+    min-height: 165px;
+    min-width: 300px;
+    padding: 20px;
+    background-color: var(--article-background);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    .itemFigure {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .itemImage {
+        display: none !important;
+        width: 190px;
+        height: 120px;
+        min-width: 190px;
+
+        @include tabletAndUp {
+          display: block !important;
+        }
+
+        img {
+          border-radius: 10px;
+        }
+      }
+
+      .itemCaption {
+        flex: 1;
+        width: 100%;
+        flex-shrink: 100000;
+        order: -1;
+
+        .itemTitle {
+          margin-top: 7px;
+          margin-left: 4px;
+          width: 80%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          overflow: hidden;
+
+          @include typo-t1;
+        }
+
+        .itemDescription {
+          margin-top: 1px;
+          margin-left: 4px;
+          width: 80%;
+          height: 2.5rem;
+
+          @include typo-b5;
+        }
+
+        .itemDate {
+          position: absolute;
+          bottom: 20px;
+          margin-left: 4px;
+
+          @include typo-b6;
+        }
+      }
+    }
+  }
+}

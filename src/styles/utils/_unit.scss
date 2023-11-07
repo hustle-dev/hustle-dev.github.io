@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+/// 루트 요소 기본 단위
+$rootUnit: 16px !default;
+
+/// 단위 제거 함수
+/// @param {Number} $value - 단위를 제거할 값(ex: 1px, 16px ...)
+@function removeUnit($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+/// px을 rem단위로 변경하는 함수
+/// @param {Number} $value - rem 단위로 변경할 값
+@function rem($value, $base: $rootUnit) {
+  @return (removeUnit(math.div($value, $base))) * 1rem;
+}

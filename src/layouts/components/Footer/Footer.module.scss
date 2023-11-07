@@ -1,0 +1,30 @@
+@use '@/styles/abstracts' as *;
+
+.footer {
+  margin: 0 auto;
+  max-width: 1400px;
+  min-width: 260px;
+  padding: 20px 20px;
+  padding-top: 50px;
+  text-align: center;
+
+  @include typo-d1;
+
+  @include mobileAndUp {
+    padding: 20px 60px;
+    padding-top: 50px;
+  }
+
+  .copyRight {
+    font-size: 1rem;
+    color: var(--gray-3);
+  }
+
+  .designedBy {
+    display: block;
+    text-align: right;
+    font-size: 0.5rem;
+    transition: 0.1s;
+    color: var(--gray-2);
+  }
+}

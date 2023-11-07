@@ -1,7 +1,11 @@
+@use '@/styles/abstracts' as *;
+
 .tag {
   padding: 0px 12px 2px;
   border: 1px solid var(--primary-c1);
   border-radius: 5px;
   background-color: var(--tag-background);
   color: var(--primary-c1);
+
+  @include typo-b7;
 }

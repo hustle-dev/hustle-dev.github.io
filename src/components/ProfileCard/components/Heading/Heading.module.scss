@@ -1,0 +1,7 @@
+@use '@/styles/abstracts' as *;
+
+.name {
+  color: var(--primary-c1);
+
+  @include typo-d1;
+}
