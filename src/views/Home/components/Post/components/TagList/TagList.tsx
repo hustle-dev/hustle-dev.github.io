@@ -2,7 +2,7 @@ import clsx from 'clsx'
 
 import { Tag } from '@/components'
 
-import * as styles from './TagList.module.css'
+import * as styles from './TagList.module.scss'
 
 type TagListProps = {
   tags: readonly string[]

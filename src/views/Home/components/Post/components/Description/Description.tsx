@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import * as styles from './Description.module.css'
+import * as styles from './Description.module.scss'
 
 type DescriptionProps = {
   description: string

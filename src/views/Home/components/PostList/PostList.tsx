@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 import { Post } from '../Post'
-import * as styles from './PostList.module.css'
+import * as styles from './PostList.module.scss'
 
 type PostListProps = {
   posts: Queries.HomeQuery['allMarkdownRemark']['nodes']

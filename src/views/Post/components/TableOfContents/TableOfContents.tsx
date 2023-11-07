@@ -1,10 +1,7 @@
-import clsx from 'clsx'
-
 import Pen from '@/images/pen.svg'
-import * as typo from '@/styles/typography.module.css'
 
 import { useTocStyleObserver } from './hooks'
-import * as styles from './TableOfContents.module.css'
+import * as styles from './TableOfContents.module.scss'
 
 type TableOfContentsProps = {
   html: string
@@ -16,7 +13,7 @@ export const TableOfContents = ({ html }: TableOfContentsProps) => {
   return (
     <div className={styles.wrapper}>
       <Pen className={styles.pen} />
-      <div ref={ref} className={clsx(styles.tableOfContents, typo.B7)} dangerouslySetInnerHTML={{ __html: html }}></div>
+      <div ref={ref} className={styles.tableOfContents} dangerouslySetInnerHTML={{ __html: html }}></div>
     </div>
   )
 }

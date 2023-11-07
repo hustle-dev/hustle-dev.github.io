@@ -1,0 +1,70 @@
+@use '@/styles/abstracts' as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px;
+  max-width: 1400px;
+
+  @include desktopAndUp {
+    flex-direction: row;
+    padding: 0px 60px;
+  }
+
+  .aside {
+    @include mobileAndUp {
+      padding: 0px 40px;
+    }
+
+    @include desktopAndUp {
+      margin-top: 150px;
+      padding: 0px;
+    }
+  }
+
+  .shrinkSpace {
+    @include tabletAndUp {
+      height: 30px;
+    }
+
+    @include desktopAndUp {
+      display: block;
+      flex: 1;
+      min-width: 20px;
+      max-width: 150px;
+    }
+  }
+
+  .wrapper {
+    flex: 1;
+
+    @include mobileAndUp {
+      padding: 0px 40px;
+    }
+
+    @include desktopAndUp {
+      padding: 0px;
+    }
+
+    .divider {
+      display: none;
+
+      @include tabletAndUp {
+        display: block;
+        margin-top: 45px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .tagList {
+      margin-top: 20px;
+    }
+
+    .postList {
+      margin-top: 35px;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import type { KeyboardEvent, MouseEvent } from 'react'
 import { getRefinedStringValue } from '@/utils'
 
 import { TagButtonWithCount } from '../TagButtonWithCount'
-import * as styles from './TagList.module.css'
+import * as styles from './TagList.module.scss'
 
 type TagListProps = {
   tags: { fieldValue: string | null; totalCount: number }[]

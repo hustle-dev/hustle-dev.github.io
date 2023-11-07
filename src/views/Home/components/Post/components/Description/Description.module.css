@@ -1,9 +1,0 @@
-.description {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  -webkit-line-clamp: 2;
-  color: var(--gray-3);
-}

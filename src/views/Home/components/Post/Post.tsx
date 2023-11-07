@@ -1,13 +1,11 @@
-import clsx from 'clsx'
 import { Link } from 'gatsby'
 import { GatsbyImage, type IGatsbyImageData } from 'gatsby-plugin-image'
 import { match } from 'ts-pattern'
 
-import * as typo from '@/styles/typography.module.css'
 import { getRefinedImage } from '@/utils'
 
 import { Date, Description, TagList, Title } from './components'
-import * as styles from './Post.module.css'
+import * as styles from './Post.module.scss'
 
 type PostProps = {
   variants: 'card' | 'item'
@@ -31,10 +29,10 @@ export const Post = ({ variants, title, description, date, tags, slug, heroImage
             <figure>
               <GatsbyImage image={image} alt={heroImageAlt} className={styles.cardImage} />
               <figcaption className={styles.cardCaption}>
-                <Date date={date} className={clsx(styles.cardDate, typo.B7)} />
+                <Date date={date} className={styles.cardDate} />
                 <TagList tags={tags} className={styles.cardTagList} />
-                <Title title={title} className={clsx(styles.cardTitle, typo.H1)} />
-                <Description description={description} className={clsx(styles.cardDescription, typo.B5)} />
+                <Title title={title} className={styles.cardTitle} />
+                <Description description={description} className={styles.cardDescription} />
               </figcaption>
             </figure>
           </article>
@@ -45,9 +43,9 @@ export const Post = ({ variants, title, description, date, tags, slug, heroImage
               <GatsbyImage image={image} alt={heroImageAlt} className={styles.itemImage} />
               <figcaption className={styles.itemCaption}>
                 <TagList tags={tags} />
-                <Title title={title} className={clsx(styles.itemTitle, typo.T1)} />
-                <Description description={description} className={clsx(styles.itemDescription, typo.B5)} />
-                <Date date={date} className={clsx(styles.itemDate, typo.B6)} />
+                <Title title={title} className={styles.itemTitle} />
+                <Description description={description} className={styles.itemDescription} />
+                <Date date={date} className={styles.itemDate} />
               </figcaption>
             </figure>
           </article>

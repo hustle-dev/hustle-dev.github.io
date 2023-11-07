@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import * as styles from './Date.module.css'
+import * as styles from './Date.module.scss'
 
 type DateProps = {
   date: string

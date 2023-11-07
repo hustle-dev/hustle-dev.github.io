@@ -4,7 +4,7 @@ import { FloatingButton, ProfileCard, Seo } from '@/components'
 import { getRefinedStringValue } from '@/utils'
 
 import { PostList, RecentPost, TagList } from './components'
-import * as styles from './Home.module.css'
+import * as styles from './Home.module.scss'
 import { usePostInfiniteScroll, useTag } from './hooks'
 
 const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) => {

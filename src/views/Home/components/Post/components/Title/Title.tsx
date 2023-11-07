@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import * as styles from './Title.module.css'
+import * as styles from './Title.module.scss'
 
 type TitleProps = {
   title: string

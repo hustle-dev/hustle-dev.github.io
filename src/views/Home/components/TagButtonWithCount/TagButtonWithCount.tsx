@@ -1,8 +1,6 @@
 import clsx from 'clsx'
 
-import * as typo from '@/styles/typography.module.css'
-
-import * as styles from './TagButtonWithCount.module.css'
+import * as styles from './TagButtonWithCount.module.scss'
 
 type TagButtonWithCountProps = {
   name: string
@@ -13,7 +11,7 @@ type TagButtonWithCountProps = {
 
 export const TagButtonWithCount = ({ name, count, isSelected, onClick }: TagButtonWithCountProps) => (
   <button onClick={onClick} className={clsx(styles.tagButton, { [styles.active]: isSelected })}>
-    <span className={typo.B5}>
+    <span>
       {name} ({count})
     </span>
   </button>

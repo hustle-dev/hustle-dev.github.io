@@ -1,0 +1,25 @@
+@use '@/styles/abstracts' as *;
+
+.tagButton {
+  padding: 3px 12.5px 4px;
+  background-color: transparent;
+  color: var(--gray-2);
+  border: 1px solid var(--gray-2);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+
+  &.active {
+    border-color: var(--primary-c1);
+    color: var(--primary-c1);
+  }
+
+  &:hover {
+    border-color: var(--primary-c1);
+    color: var(--primary-c1);
+  }
+
+  span {
+    @include typo-b5;
+  }
+}
