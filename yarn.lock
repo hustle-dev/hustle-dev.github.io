@@ -8593,9 +8593,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gh-pages@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "gh-pages@npm:6.0.0"
+"gh-pages@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "gh-pages@npm:6.1.0"
   dependencies:
     async: "npm:^3.2.4"
     commander: "npm:^11.0.0"
@@ -8607,7 +8607,7 @@ __metadata:
   bin:
     gh-pages: bin/gh-pages.js
     gh-pages-clean: bin/gh-pages-clean.js
-  checksum: 8b168b31219b5fc41142b820f8fad570f8e64f58a6ac7add6ad9385d21cbbbea8899b36a31415152648398075daa55eccdfa9423047c63983a3299b7000c487c
+  checksum: ef61f856e1627c3a93f0d9057096db695cc52b199e9d622562fd25b8eb513a782ec6ec3f2d97c0b8d7be6bb9b9ba28a141b5199e2e93785d20cfa8d2c3541b00
   languageName: node
   linkType: hard
 
@@ -9310,7 +9310,7 @@ __metadata:
     gatsby-source-filesystem: "npm:^5.8.0"
     gatsby-transformer-remark: "npm:^6.8.0"
     gatsby-transformer-sharp: "npm:^5.8.0"
-    gh-pages: "npm:^6.0.0"
+    gh-pages: "npm:^6.1.0"
     husky: "npm:^8.0.0"
     lint-staged: "npm:^14.0.0"
     prettier: "npm:^2.8.8"
