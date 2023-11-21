@@ -1,7 +1,7 @@
 @use '@/styles/abstracts' as *;
 
 .wrapper {
-  max-width: 800px;
+  max-width: 900px;
   min-width: 300px;
   margin: 0 auto;
   margin-top: 30px;
@@ -39,7 +39,7 @@
     margin-top: 20px;
     width: 100%;
     min-width: 300px;
-    max-height: 400px;
+    max-height: 500px;
 
     img {
       border-radius: 5px;
@@ -50,17 +50,16 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: auto;
     min-width: 300px;
 
     @include widescreenAndUp {
       width: auto;
-      width: 1050px;
+      width: 1010px;
     }
 
     .content {
       margin-top: 30px;
-      max-width: 680px;
+      max-width: 780px;
       min-width: 300px;
       color: var(--gray-5);
       word-break: break-all;

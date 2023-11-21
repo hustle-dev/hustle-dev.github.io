@@ -3,7 +3,7 @@
 $mobile: rem(500px);
 $tablet: rem(780px);
 $desktop: rem(1000px);
-$widescreen: rem(1300px);
+$widescreen: rem(1400px);
 
 @mixin mobileAndUp {
   @media screen and (min-width: #{$mobile}) {
