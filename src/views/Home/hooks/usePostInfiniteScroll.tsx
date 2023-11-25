@@ -27,7 +27,7 @@ export const usePostInfiniteScroll = (
           observer.disconnect()
         }
       },
-      { threshold: 0 }
+      { rootMargin: '400px 0px', threshold: 0 }
     )
     observer.observe($<HTMLElement>('footer'))
     return () => observer.disconnect()
