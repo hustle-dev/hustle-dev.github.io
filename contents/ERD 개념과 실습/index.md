@@ -5,7 +5,7 @@ date: 2023-11-24
 slug: /erd-concept-and-practice
 tags: [데이터베이스]
 heroImage: ./heroImage.png
-heroImageAlt: <!-- ex) 타입스크립트 -->
+heroImageAlt: E-R Diagram example
 ---
 
 <!-- 썸네일 -->
