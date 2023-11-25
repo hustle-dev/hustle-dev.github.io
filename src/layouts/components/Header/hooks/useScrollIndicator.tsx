@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { optimizedScroll } from '@/utils'
 
 export const useScrollIndicator = (pathname: string) => {
-  const isHome = pathname === '/'
+  const isPost = pathname.includes('/posts/')
   const [progressWidth, setProgressWidth] = useState<number>(0)
 
   const updateProgress = useCallback(() => {
@@ -15,11 +15,11 @@ export const useScrollIndicator = (pathname: string) => {
   }, [])
 
   useEffect(() => {
-    if (isHome) return
+    if (isPost) return
 
     window.addEventListener('scroll', optimizedScroll(updateProgress))
     return () => window.removeEventListener('scroll', optimizedScroll(updateProgress))
-  }, [isHome, updateProgress])
+  }, [isPost, updateProgress])
 
-  return { isHome, progressWidth }
+  return { isPost, progressWidth }
 }
