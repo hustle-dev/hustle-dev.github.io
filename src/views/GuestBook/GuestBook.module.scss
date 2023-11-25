@@ -30,5 +30,6 @@
     white-space: pre-line;
     @include typo-b6;
     font-size: rem(14px);
+    color: var(--gray-5);
   }
 }

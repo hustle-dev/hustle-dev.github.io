@@ -18,10 +18,10 @@ type HeaderProps = {
 
 export const Header = ({ pathname }: HeaderProps) => {
   const { toggleDarkMode } = useTheme()
-  const { isHome, progressWidth } = useScrollIndicator(pathname)
+  const { isPost, progressWidth } = useScrollIndicator(pathname)
 
   return (
-    <header className={clsx(styles.header, { [styles.fixed]: !isHome })}>
+    <header className={clsx(styles.header, { [styles.fixed]: !isPost })}>
       <div className={styles.wrapper}>
         <Link to="/" className={styles.headingLink}>
           <h1 className={styles.headingWrapper}>
@@ -41,7 +41,7 @@ export const Header = ({ pathname }: HeaderProps) => {
           </button>
         </div>
       </div>
-      {match(isHome)
+      {match(isPost)
         .with(false, () => (
           <div style={reactCss({ '--progress-width': `${progressWidth}%` })} className={styles.progressBar} />
         ))
