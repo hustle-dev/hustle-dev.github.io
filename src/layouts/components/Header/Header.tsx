@@ -21,7 +21,7 @@ export const Header = ({ pathname }: HeaderProps) => {
   const { isPost, progressWidth } = useScrollIndicator(pathname)
 
   return (
-    <header className={clsx(styles.header, { [styles.fixed]: !isPost })}>
+    <header className={clsx(styles.header, { [styles.fixed]: isPost })}>
       <div className={styles.wrapper}>
         <Link to="/" className={styles.headingLink}>
           <h1 className={styles.headingWrapper}>
@@ -42,7 +42,7 @@ export const Header = ({ pathname }: HeaderProps) => {
         </div>
       </div>
       {match(isPost)
-        .with(false, () => (
+        .with(true, () => (
           <div style={reactCss({ '--progress-width': `${progressWidth}%` })} className={styles.progressBar} />
         ))
         .otherwise(() => null)}
