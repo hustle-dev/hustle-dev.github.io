@@ -4,6 +4,7 @@ import { match } from 'ts-pattern'
 
 import { useTheme } from '@/contexts'
 import DarkMode from '@/images/darkmode.svg'
+import GuestBook from '@/images/guestbook.svg'
 import Logo from '@/images/logo.svg'
 import Rss from '@/images/rss.svg'
 import { reactCss } from '@/utils'
@@ -29,6 +30,9 @@ export const Header = ({ pathname }: HeaderProps) => {
           </h1>
         </Link>
         <div className={styles.headerButtons}>
+          <Link to="/guestbook/">
+            <GuestBook className={styles.icon} />
+          </Link>
           <a href="/rss.xml" rel="noopener noreferrer">
             <Rss className={styles.icon} />
           </a>

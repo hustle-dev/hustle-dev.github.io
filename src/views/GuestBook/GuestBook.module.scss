@@ -1,0 +1,34 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.wrapper {
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0px 20px;
+
+  @include mobileAndUp {
+    margin-top: 60px;
+    padding: 0px 60px;
+  }
+
+  @include tabletAndUp {
+    margin-top: 90px;
+  }
+
+  .title {
+    margin-bottom: 16px;
+    @include typo-d1;
+
+    color: var(--primary-c1);
+    font-size: calc(32 / 16 * 1rem);
+  }
+
+  .description {
+    margin-bottom: 50px;
+    white-space: pre-line;
+    @include typo-b6;
+    font-size: rem(14px);
+  }
+}
