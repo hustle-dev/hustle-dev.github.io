@@ -1,4 +1,232 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hustle-dev Blog RSS Feed]]></title><description><![CDATA[hustle-dev의 기술 블로그 입니다.]]></description><link>https://hustle-dev.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 25 Nov 2023 16:15:39 GMT</lastBuildDate><item><title><![CDATA[ERD 개념과 실습]]></title><description><![CDATA[ERD 개념을 학습하고 실습으로 분석된 요구사항의 ERD를 그려봅니다.]]></description><link>https://hustle-dev.github.io/posts/erd-concept-and-practice</link><guid isPermaLink="false">https://hustle-dev.github.io/posts/erd-concept-and-practice</guid><pubDate>Fri, 24 Nov 2023 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 썸네일 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hustle-dev Blog RSS Feed]]></title><description><![CDATA[hustle-dev의 기술 블로그 입니다.]]></description><link>https://hustle-dev.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 25 Nov 2023 16:19:52 GMT</lastBuildDate><item><title><![CDATA[릴레이션 개념과 실습]]></title><description><![CDATA[릴레이션 개념을 학습하고 실습으로 ERD를 릴레이션 스키마로 변환하며 정리한 내용입니다.]]></description><link>https://hustle-dev.github.io/posts/relation-concept-and-practice</link><guid isPermaLink="false">https://hustle-dev.github.io/posts/relation-concept-and-practice</guid><pubDate>Sun, 26 Nov 2023 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 썸네일 --&gt;
+&lt;!-- 본문 --&gt;
+&lt;h2 id=&quot;개념&quot;&gt;개념&lt;/h2&gt;
+&lt;p&gt;릴레이션은 하나의 개체에 관한 &lt;strong&gt;데이터를 2차원 테이블의 구조&lt;/strong&gt;로 저장한 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/dc121536-6e74-4162-99b4-57bef99ea3db&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;릴레이션은 관계 데이터 모델의 기본 용어중 하나이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;관계 데이터 모델이란 &lt;strong&gt;개념적 구조를 논리적 구조로 표현&lt;/strong&gt;하는 논리적 데이터 모델로, 개념 세계의 데이터를 데이터베이스에 저장하는 구조로 표현하는 작업이다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/0d65448c-1247-4f19-b8ea-97057fe58c04&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;관계데이터-모델의-기본-용어&quot;&gt;관계데이터 모델의 기본 용어&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;릴레이션&lt;/li&gt;
+&lt;li&gt;속성
+&lt;ul&gt;
+&lt;li&gt;릴레이션의 열, 애트리뷰트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;튜플
+&lt;ul&gt;
+&lt;li&gt;릴레이션의 행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;도메인
+&lt;ul&gt;
+&lt;li&gt;하나의 속성이 가질 수 있는 모든 값의 집합&lt;/li&gt;
+&lt;li&gt;속성 값을 입력 및 수정할 때 적합성의 판단의 기준이 됨(ex: Int)&lt;/li&gt;
+&lt;li&gt;일반적으로 속성의 특성을 고려한 데이터 타입으로 정의&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;널(null)
+&lt;ul&gt;
+&lt;li&gt;속성 값을 아직 모르거나 해당되는 값이 없음을 표현&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;차수(degree)
+&lt;ul&gt;
+&lt;li&gt;하나의 릴레이션에서 속성의 전체 개수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;카디널리티
+&lt;ul&gt;
+&lt;li&gt;하나의 릴레이션에서 튜플의 전체 개수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;릴레이션의-구성&quot;&gt;릴레이션의 구성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;릴레이션 스키마(relation schema)
+&lt;ul&gt;
+&lt;li&gt;릴레이션의 논리적 구조&lt;/li&gt;
+&lt;li&gt;릴레이션의 이름과 릴레이션에 포함된 모든 속성 이름으로 정의&lt;/li&gt;
+&lt;li&gt;예) 고객(고객아이디, 고객이름, 나이, 등급, 직업, 적립금)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;릴레이션 인스턴스
+&lt;ul&gt;
+&lt;li&gt;어느 한 시점에 릴레이션에 존재하는 튜플들의 집합&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;릴레이션의-특성&quot;&gt;릴레이션의 특성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;튜플의 유일성
+&lt;ul&gt;
+&lt;li&gt;하나의 릴레이션에 동일한 튜플이 존재할 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;튜플의 무순서
+&lt;ul&gt;
+&lt;li&gt;하나의 릴레이션에 튜플 사이의 순서는 무의미하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;속성의 무순서
+&lt;ul&gt;
+&lt;li&gt;하나의 릴레이션에 속성 사이의 순서는 무의미하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;속성의 원자성
+&lt;ul&gt;
+&lt;li&gt;속성 값으로 원자 값만 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;키&quot;&gt;키&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;릴레이션에서 튜플들을 &lt;strong&gt;유일하게 구별&lt;/strong&gt;하는 속성 또는 속성들의 집합&lt;/li&gt;
+&lt;li&gt;특성
+&lt;ul&gt;
+&lt;li&gt;유일성: 하나의 릴레이션에서 모든 튜플은 서로 다른 키 값을 가져야 함&lt;/li&gt;
+&lt;li&gt;최소성: 최소한의 속성들로만 키를 구성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;종류
+&lt;ul&gt;
+&lt;li&gt;슈퍼키: &lt;strong&gt;유일성을 만족&lt;/strong&gt;하는 속성 또는 속성들의 집합&lt;/li&gt;
+&lt;li&gt;후보키: &lt;strong&gt;유일성과 최소성을 만족&lt;/strong&gt;하는 속성 또는 속성들의 집합&lt;/li&gt;
+&lt;li&gt;기본키: &lt;strong&gt;후보키 중에서 기본적으로 사용&lt;/strong&gt;하기 위해 선택한 키
+&lt;ul&gt;
+&lt;li&gt;널값을 가질 수 있는 속성이 포함된 후보키는 부적합&lt;/li&gt;
+&lt;li&gt;값이 자주 변경될 수 있는 속성이 포함된 후보키는 부적합&lt;/li&gt;
+&lt;li&gt;단순한 후보키를 선택&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;대체키: 기본키로 선택되지 못한 후보키&lt;/li&gt;
+&lt;li&gt;외래키: 다른 릴레이션의 기본키를 참조하는 속성 또는 속성들의 집합
+&lt;ul&gt;
+&lt;li&gt;하나의 릴레이션에 외래키가 여러개 존재할 수 있고, 외래키를 기본키로 사용할 수 있다.&lt;/li&gt;
+&lt;li&gt;같은 릴레이션의 기본키를 참조하는 외래키도 정의할 수 있다. 외래키 속성은 널 값을 가질 수도 있다.(ex: 하나의 릴레이션에 고객아이디를 기반으로 한 추천고객 속성)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/1bb48d5d-6969-4082-b533-901d19b5f0c3&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;무결성-제약조건&quot;&gt;무결성 제약조건&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터의 무결성을 보장하고 일관된 상태로 유지하기 위한 규칙&lt;/li&gt;
+&lt;li&gt;무결성: 데이터를 결함이 없는 상태, 즉 정확하고 유효하게 유지&lt;/li&gt;
+&lt;li&gt;제약조건
+&lt;ul&gt;
+&lt;li&gt;개체 무결성 제약조건
+&lt;ul&gt;
+&lt;li&gt;기본키를 구성하는 모든 속성은 널 값을 가질 수 없다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;참조 무결성 제약조건
+&lt;ul&gt;
+&lt;li&gt;외래키는 참조할 수 없는 값을 가질 수 없다.&lt;/li&gt;
+&lt;li&gt;외래키 속성이 널 값을 가진다고 해서 참조 무결성 제약 조건을 위반하는 것은 아님(ex: 회원의 계정이 삭제되어 다른 릴레이션에서 NULL 값을 가지고 있는 경우)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;실습&quot;&gt;실습&lt;/h2&gt;
+&lt;p&gt;ERD를 릴레이션 스키마로 변환하는 규칙이 존재한다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;모든 개체는 릴레이션으로 변환&lt;/li&gt;
+&lt;li&gt;다대다 관계는 릴레이션으로 변환&lt;/li&gt;
+&lt;li&gt;일대다 관계는 외래키로 표현&lt;/li&gt;
+&lt;li&gt;일대일 관계는 외래키로 표현&lt;/li&gt;
+&lt;li&gt;다중 값 속성은 릴레이션으로 변환&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;모든-개체는-릴레이션으로-변환한다&quot;&gt;모든 개체는 릴레이션으로 변환한다.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;개체의 이름 → 릴레이션의 이름&lt;/li&gt;
+&lt;li&gt;개체의 속성 → 릴레이션의 속성&lt;/li&gt;
+&lt;li&gt;개체의 키 속성 → 릴레이션의 기본키&lt;/li&gt;
+&lt;li&gt;개체의 속성이 복합 속성인 경우에는 복합 속성을 구성하고 있는 단순 속성만 릴레이션의 속성으로 변환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;예시&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ERD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/f947681d-a219-41dc-b6fc-0d2dffa8cbee&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;릴레이션 스키마&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/6027ac12-4dbf-4519-8cea-ac17491b19a9&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;지난 &lt;a href=&quot;https://hustle-dev.github.io/posts/erd-concept-and-practice/&quot;&gt;ERD 개념과 실습&lt;/a&gt;에서 만든 ERD를 릴레이션 스키마로 변환해보자. 이 규칙을 적용해 아래와 같이 만들 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/019f59b8-d3aa-4c9a-9f1f-7cc3edbcd48f&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;다대다-관계는-릴레이션으로-변환한다&quot;&gt;다대다 관계는 릴레이션으로 변환한다.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;관계의 이름 → 릴레이션 이름&lt;/li&gt;
+&lt;li&gt;관계의 속성 → 릴레이션 속성&lt;/li&gt;
+&lt;li&gt;관계에 참여하는 개체를 규칙 1에 따라 릴레이션으로 변환하고, 이 릴레이션의 기본키를 관계 릴레이션에 포함시켜 외래키로 지정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 규칙에 따라 변환하면 상품과 회원 사이의 주문 관계를 릴레이션으로 만들 수 있다. 주문 릴레이션의 기본키는 주문번호가 될수 있고, 회원아이디와 상품번호를 외래키로 삼아 기본키를 만들 수 있다.&lt;/p&gt;
+&lt;p&gt;여기서는 회원 아이디와 상품번호를 외래키로 지정한다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/47e5330d-3376-4708-9d2d-a9dfa52b661d&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;일대다-관계는-외래키로-표현한다&quot;&gt;일대다 관계는 외래키로 표현한다.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;일대다 관계에서 1측 개체 릴레이션의 &lt;strong&gt;기본키를 n측 개체의 릴레이션에 포함시켜 외래키로 지정&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;관계의 속성들도 n측 개체 릴레이션에 포함시킴&lt;/li&gt;
+&lt;li&gt;약한 개체가 참여한다면 외래키를 포함해 기본키를 지정한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/11d479e2-3ae8-424b-815b-a3997a9a8f3b&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;일대일-관계는-외래키로-표현한다&quot;&gt;일대일 관계는 외래키로 표현한다.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;일반적인 일대일 관계는 외래키를 서로 주고 받는다.
+&lt;ul&gt;
+&lt;li&gt;관계에 참여하는 개체 릴레이션들이 서로의 기본키를 주고 받아 외래키로 지정&lt;/li&gt;
+&lt;li&gt;관계의 속성들도 모든 개체 릴레이션에 포함시킴&lt;/li&gt;
+&lt;li&gt;불필요한 데이터 중복이 발생할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;필수적으로 참여하는 개체 릴레이션만 외래키를 받는다.
+&lt;ul&gt;
+&lt;li&gt;관계에 필수적으로 참여하는 개체 릴레이션에만 외래키를 포함시킴&lt;/li&gt;
+&lt;li&gt;관계의 속성들은 관계에 필수적으로 참여하는 개체 릴레이션에 포함시킴&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;모든 개체가 필수적으로 참여하면 릴레이션을 하나로 합친다.
+&lt;ul&gt;
+&lt;li&gt;관계에 참여하는 개체 릴레이션들을 하나의 릴레이션으로 합쳐서 표현&lt;/li&gt;
+&lt;li&gt;관계의 이름을 릴레이션 이름으로 사용하고 관계에 참여하는 두 개체의 속성들을 관계 릴레이션에 모두 포함시킴&lt;/li&gt;
+&lt;li&gt;두 개체 릴레이션의 키 속성을 조합하여 관계 릴레이션의 기본키로 지정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;현재 ERD에는 이런 관계가 존재하지 않음.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;다중-값-속성은-릴레이션으로-변환한다&quot;&gt;다중 값 속성은 릴레이션으로 변환한다.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;다중 값 속성과 함께 그 속성을 가지고 있던 개체 릴레이션의 기본키를 외래키로 가져와 새로운 릴레이션에 포함시킴&lt;/li&gt;
+&lt;li&gt;새로운 릴레이션의 기본키는 다중 값 속성과 외래키를 조합하여 지정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;마찬가지로 현재 ERD에 적용할 사항 없음.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;기타-고려-사항&quot;&gt;기타 고려 사항&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 관계를 독립적인 릴레이션으로 변환할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;속성이 많은 관계는 유형에 상관없이 릴레이션으로의 변환을 고려할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;개체가 자기 자신과 관계를 맺는 순환 관계도 기본 규칙을 그대로 적용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;릴레이션-스키마-변환-규칙을-이용해-erd를-릴레이션으로-변환한-결과&quot;&gt;릴레이션 스키마 변환 규칙을 이용해 ERD를 릴레이션으로 변환한 결과&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/b9e88fff-de5e-4f17-b615-d8d85eef66ba&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/hustle-dev/hustle-dev.github.io/assets/53992007/b272bbee-d757-438f-b09d-ecdafd75737a&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;참고자료&quot;&gt;참고자료&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kocw.net/home/search/kemView.do?kemId=1163794&quot;&gt;데이터베이스의 원리와 응용&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.erdcloud.com/&quot;&gt;ERD Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[ERD 개념과 실습]]></title><description><![CDATA[ERD 개념을 학습하고 실습으로 분석된 요구사항의 ERD를 그려봅니다.]]></description><link>https://hustle-dev.github.io/posts/erd-concept-and-practice</link><guid isPermaLink="false">https://hustle-dev.github.io/posts/erd-concept-and-practice</guid><pubDate>Fri, 24 Nov 2023 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 썸네일 --&gt;
 &lt;!-- 본문 --&gt;
 &lt;h2 id=&quot;개념&quot;&gt;개념&lt;/h2&gt;
 &lt;p&gt;ERD는 &lt;strong&gt;개체 - 관계 모델&lt;/strong&gt;을 이용해 &lt;strong&gt;현실 세계를 개념적으로 모델링한 결과물을 그림으로 표현&lt;/strong&gt;한 것이다.&lt;/p&gt;
