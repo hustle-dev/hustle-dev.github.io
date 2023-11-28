@@ -1,4 +1,177 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hustle-dev Blog RSS Feed]]></title><description><![CDATA[hustle-dev의 기술 블로그 입니다.]]></description><link>https://hustle-dev.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 27 Nov 2023 09:35:59 GMT</lastBuildDate><item><title><![CDATA[릴레이션 개념과 실습]]></title><description><![CDATA[릴레이션 개념을 학습하고 실습으로 ERD를 릴레이션 스키마로 변환하며 정리한 내용입니다.]]></description><link>https://hustle-dev.github.io/posts/relation-concept-and-practice</link><guid isPermaLink="false">https://hustle-dev.github.io/posts/relation-concept-and-practice</guid><pubDate>Sun, 26 Nov 2023 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 썸네일 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hustle-dev Blog RSS Feed]]></title><description><![CDATA[hustle-dev의 기술 블로그 입니다.]]></description><link>https://hustle-dev.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Nov 2023 09:02:01 GMT</lastBuildDate><item><title><![CDATA[정규화와 정규형]]></title><description><![CDATA[정규화, 이상현상, 정규형의 개념을 학습하고, 예제로 릴레이션을 제 3정규형을 만족하도록 분해합니다.]]></description><link>https://hustle-dev.github.io/posts/normalization-and-normal-form</link><guid isPermaLink="false">https://hustle-dev.github.io/posts/normalization-and-normal-form</guid><pubDate>Tue, 28 Nov 2023 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 썸네일 --&gt;
+&lt;!-- 본문 --&gt;
+&lt;h2 id=&quot;이상-현상과-정규화&quot;&gt;이상 현상과 정규화&lt;/h2&gt;
+&lt;h3 id=&quot;이상-현상&quot;&gt;이상 현상&lt;/h3&gt;
+&lt;p&gt;이상 현상이란 &lt;strong&gt;불필요한 데이터 중복&lt;/strong&gt;으로 인해 릴레이션에 대한 데이터 삽입, 수정, 삭제 연산을 수행할 때 발생할 수 있는 부작용이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;이상 현상의 종류&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;삽입 이상
+&lt;ul&gt;
+&lt;li&gt;릴레이션에 새 데이터를 삽입하려면 불필요한 데이터도 함께 삽입해야하는 문제&lt;/li&gt;
+&lt;li&gt;ex) 아직 이벤트에 참여하지 않은 아이디를 이벤트 참여 릴레이션에 삽입하는 경우 실제로 참여하지 않은 임시 이벤트 번호를 삽입해야함.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;갱신 이상
+&lt;ul&gt;
+&lt;li&gt;릴레이션의 중복된 튜플들 중 일부만 수정하여 데이터가 불일치하게 되는 모순이 발생&lt;/li&gt;
+&lt;li&gt;ex) 아이디가 &apos;apple&apos;인 고객의 등급이 &apos;gold&apos;에서 &apos;vip&apos;로 변경되었는데, 일부 튜플에 대해서만 등급이 수정된다면 &apos;apple&apos; 고객이 서로 다른 등급을 가지는 모순이 발생&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;삭제 이상
+&lt;ul&gt;
+&lt;li&gt;릴레이션에서 튜플을 삭제하면 꼭 필요한 데이터까지 손실되는 연쇄 삭제 현상이 발생하는 문제&lt;/li&gt;
+&lt;li&gt;ex) 아이디가 &apos;orange&apos;인 고객이 이벤트 참여를 취소해 관련 튜플을 삭제하게 되면 이벤트 참여와 관련이 없는 고객아이디, 고객이름, 등급 데이터까지 손실됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;정규화&quot;&gt;정규화&lt;/h3&gt;
+&lt;p&gt;정규화란 이상 현상을 제거하면서 데이터베이스를 올바르게 설계해 나가는 과정이다. 즉, 릴레이션을 &lt;strong&gt;관련 있는 속성들로만 구성&lt;/strong&gt;하기 위해 &lt;strong&gt;릴레이션을 분해&lt;/strong&gt;하는 과정이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;함수적 종속성&lt;/strong&gt;을 판단해 정규화를 수행하는데 이는 속성들 간의 관련성을 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;함수 종속&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;X가 Y를 함수적으로 결정한다
+&lt;ul&gt;
+&lt;li&gt;릴레이션 내의 모든 튜플을 대상으로 하나의 X 값에 대한 Y 값이 항상 하나임&lt;/li&gt;
+&lt;li&gt;X와 Y는 하나의 릴레이션을 구성하는 속성들의 부분 집합&lt;/li&gt;
+&lt;li&gt;&quot;Y가 X에 함수적으로 종속되어 있다&quot;와 같은 의미&lt;/li&gt;
+&lt;li&gt;X → Y로 표현(X는 결정자, Y는 종속자)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;종속 관계 판단 시 유의사항&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;속성 자체의 특성과 의미를 기반으로 함수 종속성을 판단해야함
+&lt;ul&gt;
+&lt;li&gt;속성 값은 계속 변할 수 있으므로 현재 릴레이션에 포함된 속성 값만으로 판단하면 안됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;일반적으로 기본키와 후보키는 릴레이션의 다른 모든 속성들을 함수적으로 결정함&lt;/li&gt;
+&lt;li&gt;기본키나 후보키가 아니어도 다른 속성 값을 유일하게 결정하는 속성은 함수 종속 관계에서 결정자가 될 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;완전 함수 종속&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;릴레이션에서 속성 집합 Y가 속성 집합 X에 함수적으로 종속되어 있지만, 속성 집합 X의 전체가 아닌 일부분에는 종속되지 않음을 의미&lt;/li&gt;
+&lt;li&gt;일반적으로 함수 종속은 완전 함수 종속을 의미함&lt;/li&gt;
+&lt;li&gt;예) 당첨여부는 {고객 아이디, 이벤트번호}에 완전 함수 종속됨(당첨여부는 두 속성에 전체에 종속되기 때문)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;부분 함수 종속&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;릴레이션에서 속성 집합 Y가 속성 집합 X의 전체가 아닌 일부분에도 함수적으로 종속됨을 의미&lt;/li&gt;
+&lt;li&gt;예) 고객이름은 {고객 아이디, 이벤트번호}에 부분 함수 종속됨(고객 아이디로만 판단 가능)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이행적 함수 종속&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;릴레이션을 구성하는 세 개의 속성 집합 X,Y,Z에 대해 함수 종속 관게 X → Y와 Y → Z가 존재하면 논리적으로 X → Z가 성립되는데, 이것을 Z가 X에 이행적으로 함수 종속되었다고 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;정규형&quot;&gt;정규형&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;릴레이션이 정규화된 정도&lt;/li&gt;
+&lt;li&gt;각 정규형마다 제약조건이 존재
+&lt;ul&gt;
+&lt;li&gt;정규형의 차수가 높아질수록 요구되는 제약조건이 많아지고 엄격해짐&lt;/li&gt;
+&lt;li&gt;정규형의 차수가 높아질수록 데이터 중복이 줄어 이상 현상이 발생하지 않는 바람직한 릴레이션이 됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;릴레이션의 특성을 고려하여 적합한 정규형을 선택&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;기본 정규형&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;제 1 정규형&lt;/li&gt;
+&lt;li&gt;제 2 정규형&lt;/li&gt;
+&lt;li&gt;제 3 정규형&lt;/li&gt;
+&lt;li&gt;보이스/코드 정규형&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;고급 정규형&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;제 4 정규형&lt;/li&gt;
+&lt;li&gt;제 5 정규형&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;제-1-정규형&quot;&gt;제 1 정규형&lt;/h3&gt;
+&lt;p&gt;릴레이션의 모든 속성이 &lt;strong&gt;더는 분해되지 않는 원자 값&lt;/strong&gt;만 가지면 제 1정규형을 만족한다. 제 1 정규형을 만족해야 관계 데이터베이스의 릴레이션이 될 자격이 있다.&lt;/p&gt;
+&lt;p&gt;제 1정규형을 만족하지만 데이터의 중복으로 인한 이상 현상이 발생할 수 있다. 아래와 같은 예시를 살펴보자.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;고객아이디&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;이벤트번호&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;당첨여부&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;등급&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;할인율&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;고객아이디와 이벤트번호가 기본키이고 아래와 같이 함수 종속관계가 있다고 가정하자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;고객아이디 → 등급
+고객아이디 → 할인율
+등급 → 할인율
+{고객아이디, 이벤트번호} → 당첨여부&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 경우 기본키인 {고객아이디, 이벤트번호}에 완전 함수 종속되지 못하고 일부분인 고객아이디에 종속되는 등급과 할인율 속성이 존재해 부분 함수 종속이 존재해 이상현상이 발생한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;부분 함수 종속이 제거되도록 이벤트 참여 릴레이션을 분해 → 분해된 릴레이션은 제 2 정규형에 속하게 됨&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;제-2-정규형&quot;&gt;제 2 정규형&lt;/h3&gt;
+&lt;p&gt;릴레이션이 제 1 정규형에 속하고, 기본키가 아닌 모든 속성이 기본키에 완전 함수 종속되면 제 2 정규형을 만족함&lt;/p&gt;
+&lt;p&gt;위 예제의 부분 함수 종속을 제거하면 아래와 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// 고객 릴레이션
+
+|고객아이디 | 등급 | 할인율 |
+
+
+// 이벤트 참여 릴레이션
+
+|고객아이디 | 이벤트 번호 | 당첨여부 |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그러나 제 2정규형을 만족하지만 이행적 함수 종속이 존재하기 때문에 이상 현상이 발생할 수 있다.&lt;/p&gt;
+&lt;h3 id=&quot;제-3-정규형&quot;&gt;제 3 정규형&lt;/h3&gt;
+&lt;p&gt;릴레이션이 제 2 정규형에 속하고, 기본키가 아닌 모든 속성이 기본키에 이행적 함수 종속되지 않으면 제 3정규형을 만족함&lt;/p&gt;
+&lt;p&gt;이를 분해하면 아래와 같이 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// 고객 릴레이션
+
+|고객아이디 | 등급 |
+
+// 고객등급 릴레이션
+
+|고객아이디 | 할인율 |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;예제&quot;&gt;예제&lt;/h3&gt;
+&lt;p&gt;아래와 같은 릴레이션이 존재하고 제 2 정규형 → 제 3 정규형으로 순차적으로 분해해보자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// _{}_ 밑줄 사이에 존재하는 것이 기본키
+- (_학번_, 이름, 지도교수, 학과이름, 학과전화번호, _과목번호_, 성적, 시간, 회장이름, 동아리이름, 방번호)
+- 함수종속
+  - 학번 → 이름, 지도교수, 학과이름, 회장이름, 동아리이름, 방번호
+  - 학과이름 → 학과전화번호
+  - 과목번호 → 시간
+  - 학번, 과목번호 → 성적
+  - 회장이름, 동아리이름 → 방번호&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;먼저 제 2 정규형을 만족하도록 분해하려면 완전 함수 종속이어야한다. 따라서 아래와 같이 분해할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// 현재 학번과 과목번호가 PK로, 학번과 과목번호에 따라 부분 함수 종속인 것을 분해할 수 있다.
+
+| _학번_ | 이름 | 지도교수 | 학과이름 | 학과전화번호 | 회장이름 | 동아리이름 | 방번호 |
+
+| _과목번호_ | 시간 |
+
+// 또한 성적은 학번과 과목번호로 결정된다.
+
+| _학번_ | _과목번호_ | 성적 |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;제 3 정규형을 만족하도록 분해하려면 이행적 함수 종속을 제거한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// 학과 이름은 학과전화번호를 결정하고, 회장이름과 동아리이름은 방번호를 결정한다.
+// 이를 나누면 아래와 같다.
+
+// 학생
+
+| _학번_ | 이름 | 지도교수 | 학과이름 | 회장이름 | 동아리이름 |
+
+
+// 학과
+
+| _학과이름_ | 학과전화번호 |
+
+
+// 동아리
+
+| _회장이름_ | _동아리이름_ | 방번호 |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;참고자료&quot;&gt;참고자료&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kocw.net/home/search/kemView.do?kemId=1163794&quot;&gt;데이터베이스의 원리와 응용&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[릴레이션 개념과 실습]]></title><description><![CDATA[릴레이션 개념을 학습하고 실습으로 ERD를 릴레이션 스키마로 변환하며 정리한 내용입니다.]]></description><link>https://hustle-dev.github.io/posts/relation-concept-and-practice</link><guid isPermaLink="false">https://hustle-dev.github.io/posts/relation-concept-and-practice</guid><pubDate>Sun, 26 Nov 2023 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 썸네일 --&gt;
 &lt;!-- 본문 --&gt;
 &lt;h2 id=&quot;개념&quot;&gt;개념&lt;/h2&gt;
 &lt;p&gt;릴레이션은 하나의 개체에 관한 &lt;strong&gt;데이터를 2차원 테이블의 구조&lt;/strong&gt;로 저장한 것이다.&lt;/p&gt;
