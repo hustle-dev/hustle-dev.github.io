@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@isamrish/gatsby-plugin-google-adsense", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:1.2.0"],\
-          ["@types/node", "npm:18.18.14"],\
+          ["@types/node", "npm:18.19.0"],\
           ["@types/react", "npm:18.2.39"],\
           ["@types/react-dom", "npm:18.2.17"],\
           ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
@@ -5069,10 +5069,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:18.18.14", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-18.18.14-4afa728bfc-10c0.zip/node_modules/@types/node/",\
+      ["npm:18.19.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-18.19.0-f0c7e88ff0-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:18.18.14"],\
+          ["@types/node", "npm:18.19.0"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -12946,7 +12946,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["hustle-dev-blog", "workspace:."],\
           ["@isamrish/gatsby-plugin-google-adsense", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:1.2.0"],\
-          ["@types/node", "npm:18.18.14"],\
+          ["@types/node", "npm:18.19.0"],\
           ["@types/react", "npm:18.2.39"],\
           ["@types/react-dom", "npm:18.2.17"],\
           ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
