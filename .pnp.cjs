@@ -61,7 +61,7 @@ const RAW_RUNTIME_STATE =
           ["gh-pages", "npm:6.1.0"],\
           ["husky", "npm:8.0.3"],\
           ["lint-staged", "npm:14.0.1"],\
-          ["prettier", "npm:2.8.8"],\
+          ["prettier", "npm:3.1.0"],\
           ["prismjs", "npm:1.29.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
@@ -9833,7 +9833,7 @@ const RAW_RUNTIME_STATE =
           ["@types/prettier", null],\
           ["eslint", "npm:8.55.0"],\
           ["eslint-config-prettier", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:9.1.0"],\
-          ["prettier", "npm:2.8.8"],\
+          ["prettier", "npm:3.1.0"],\
           ["prettier-linter-helpers", "npm:1.0.0"],\
           ["synckit", "npm:0.8.5"]\
         ],\
@@ -12980,7 +12980,7 @@ const RAW_RUNTIME_STATE =
           ["gh-pages", "npm:6.1.0"],\
           ["husky", "npm:8.0.3"],\
           ["lint-staged", "npm:14.0.1"],\
-          ["prettier", "npm:2.8.8"],\
+          ["prettier", "npm:3.1.0"],\
           ["prismjs", "npm:1.29.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
@@ -17470,10 +17470,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier", [\
-      ["npm:2.8.8", {\
-        "packageLocation": "../../../../cache/others/berry/cache/prettier-npm-2.8.8-430828a36c-10c0.zip/node_modules/prettier/",\
+      ["npm:3.1.0", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.1.0-708d6027b1/node_modules/prettier/",\
         "packageDependencies": [\
-          ["prettier", "npm:2.8.8"]\
+          ["prettier", "npm:3.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
