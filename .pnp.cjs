@@ -67,7 +67,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
           ["sass", "npm:1.69.5"],\
           ["svg-react-loader", "npm:0.4.6"],\
-          ["ts-pattern", "npm:5.0.5"],\
+          ["ts-pattern", "npm:5.0.6"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"]\
         ],\
         "linkType": "SOFT"\
@@ -12986,7 +12986,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
           ["sass", "npm:1.69.5"],\
           ["svg-react-loader", "npm:0.4.6"],\
-          ["ts-pattern", "npm:5.0.5"],\
+          ["ts-pattern", "npm:5.0.6"],\
           ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"]\
         ],\
         "linkType": "SOFT"\
@@ -20219,10 +20219,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ts-pattern", [\
-      ["npm:5.0.5", {\
-        "packageLocation": "../../../../cache/others/berry/cache/ts-pattern-npm-5.0.5-0b6de45345-10c0.zip/node_modules/ts-pattern/",\
+      ["npm:5.0.6", {\
+        "packageLocation": "../../../../cache/others/berry/cache/ts-pattern-npm-5.0.6-266424eb92-10c0.zip/node_modules/ts-pattern/",\
         "packageDependencies": [\
-          ["ts-pattern", "npm:5.0.5"]\
+          ["ts-pattern", "npm:5.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
