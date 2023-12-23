@@ -58,7 +58,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-source-filesystem", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.13.0"],\
           ["gatsby-transformer-remark", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:6.13.0"],\
           ["gatsby-transformer-sharp", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.13.0"],\
-          ["gh-pages", "npm:6.1.0"],\
+          ["gh-pages", "npm:6.1.1"],\
           ["husky", "npm:8.0.3"],\
           ["lint-staged", "npm:14.0.1"],\
           ["prettier", "npm:2.8.8"],\
@@ -12100,10 +12100,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["gh-pages", [\
-      ["npm:6.1.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/gh-pages-npm-6.1.0-bd68a9b948-10c0.zip/node_modules/gh-pages/",\
+      ["npm:6.1.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/gh-pages-npm-6.1.1-7bde86cdf6-10c0.zip/node_modules/gh-pages/",\
         "packageDependencies": [\
-          ["gh-pages", "npm:6.1.0"],\
+          ["gh-pages", "npm:6.1.1"],\
           ["async", "npm:3.2.4"],\
           ["commander", "npm:11.0.0"],\
           ["email-addresses", "npm:5.0.0"],\
@@ -12965,7 +12965,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-source-filesystem", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.13.0"],\
           ["gatsby-transformer-remark", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:6.13.0"],\
           ["gatsby-transformer-sharp", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.13.0"],\
-          ["gh-pages", "npm:6.1.0"],\
+          ["gh-pages", "npm:6.1.1"],\
           ["husky", "npm:8.0.3"],\
           ["lint-staged", "npm:14.0.1"],\
           ["prettier", "npm:2.8.8"],\
