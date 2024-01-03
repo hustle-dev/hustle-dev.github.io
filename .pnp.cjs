@@ -65,7 +65,7 @@ const RAW_RUNTIME_STATE =
           ["prismjs", "npm:1.29.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
-          ["sass", "npm:1.69.6"],\
+          ["sass", "npm:1.69.7"],\
           ["svg-react-loader", "npm:0.4.6"],\
           ["ts-pattern", "npm:5.0.6"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
@@ -11507,7 +11507,7 @@ const RAW_RUNTIME_STATE =
           ["@types/sass", null],\
           ["gatsby", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.13.1"],\
           ["resolve-url-loader", "npm:3.1.5"],\
-          ["sass", "npm:1.69.6"],\
+          ["sass", "npm:1.69.7"],\
           ["sass-loader", "virtual:90b80b97f3ab04fdd7043ffc9124ac4dcded2ddbfa45a9a9514070ffe5f27a71369afb4b712c7e97832b8fde1f76c58c2a3ebc2953feac180cf5b5a27b6b9427#npm:10.4.1"]\
         ],\
         "packagePeers": [\
@@ -12972,7 +12972,7 @@ const RAW_RUNTIME_STATE =
           ["prismjs", "npm:1.29.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:18.2.0"],\
-          ["sass", "npm:1.69.6"],\
+          ["sass", "npm:1.69.7"],\
           ["svg-react-loader", "npm:0.4.6"],\
           ["ts-pattern", "npm:5.0.6"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
@@ -18669,10 +18669,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.69.6", {\
-        "packageLocation": "../../../../cache/others/berry/cache/sass-npm-1.69.6-734850663f-10c0.zip/node_modules/sass/",\
+      ["npm:1.69.7", {\
+        "packageLocation": "../../../../cache/others/berry/cache/sass-npm-1.69.7-ac434a094c-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
-          ["sass", "npm:1.69.6"],\
+          ["sass", "npm:1.69.7"],\
           ["chokidar", "npm:3.5.3"],\
           ["immutable", "npm:4.3.4"],\
           ["source-map-js", "npm:1.0.2"]\
@@ -18701,7 +18701,7 @@ const RAW_RUNTIME_STATE =
           ["loader-utils", "npm:2.0.4"],\
           ["neo-async", "npm:2.6.2"],\
           ["node-sass", null],\
-          ["sass", "npm:1.69.6"],\
+          ["sass", "npm:1.69.7"],\
           ["schema-utils", "npm:3.3.0"],\
           ["semver", "npm:7.5.4"],\
           ["webpack", null]\
