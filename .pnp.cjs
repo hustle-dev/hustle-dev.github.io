@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@isamrish/gatsby-plugin-google-adsense", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:1.2.0"],\
-          ["@types/node", "npm:18.19.6"],\
+          ["@types/node", "npm:20.10.8"],\
           ["@types/react", "npm:18.2.47"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
@@ -5066,14 +5066,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-17.0.45-fdb38d1624-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
           ["@types/node", "npm:17.0.45"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:18.19.6", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-18.19.6-2a8ba8919f-10c0.zip/node_modules/@types/node/",\
-        "packageDependencies": [\
-          ["@types/node", "npm:18.19.6"],\
-          ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -12954,7 +12946,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["hustle-dev-blog", "workspace:."],\
           ["@isamrish/gatsby-plugin-google-adsense", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:1.2.0"],\
-          ["@types/node", "npm:18.19.6"],\
+          ["@types/node", "npm:20.10.8"],\
           ["@types/react", "npm:18.2.47"],\
           ["@types/react-dom", "npm:18.2.18"],\
           ["@typescript-eslint/eslint-plugin", "virtual:0d27da1a5350d27fd9a9b1b16a2caaa43264e684df90ad14c0cdf5b76655b519de6a12ac2314936f382f93d2cca7d31ac0de246bbfd9f892c8b113ae1b9e422c#npm:5.62.0"],\
