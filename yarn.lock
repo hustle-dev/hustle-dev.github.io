@@ -3222,12 +3222,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.15.3":
-  version: 18.19.6
-  resolution: "@types/node@npm:18.19.6"
+"@types/node@npm:^20.11.5":
+  version: 20.11.5
+  resolution: "@types/node@npm:20.11.5"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 6cfffb738124d43bc240d21f3196270c15b9a4137644eee35a7e75460fda8df881630e350d00fcfd66caa37bf1ed80771f2da0d4c7cd0016c9f616934a2377c5
+  checksum: 6d18cec852f5cfbed3ec42b5c01c026e7a3f9da540d6e3d6738d4cee9979fb308cf27b6df7ba40a6553e7bc82e678f0ef53ba6e6ad52e5b86bd97b7783c2a42c
   languageName: node
   linkType: hard
 
@@ -9278,7 +9278,7 @@ __metadata:
   resolution: "hustle-dev-blog@workspace:."
   dependencies:
     "@isamrish/gatsby-plugin-google-adsense": "npm:^1.2.0"
-    "@types/node": "npm:^18.15.3"
+    "@types/node": "npm:^20.11.5"
     "@types/react": "npm:^18.0.28"
     "@types/react-dom": "npm:^18.0.11"
     "@typescript-eslint/eslint-plugin": "npm:^5.59.7"
