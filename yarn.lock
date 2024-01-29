@@ -8129,9 +8129,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-autolink-headers@npm:^6.8.0":
-  version: 6.13.0
-  resolution: "gatsby-remark-autolink-headers@npm:6.13.0"
+"gatsby-remark-autolink-headers@npm:^6.13.1":
+  version: 6.13.1
+  resolution: "gatsby-remark-autolink-headers@npm:6.13.1"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     github-slugger: "npm:^1.5.0"
@@ -8142,7 +8142,7 @@ __metadata:
     gatsby: ^5.0.0-next
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
-  checksum: 69547817ab9c02675e5fd88c555364cda63a9a249ad47af8ee0357c740b4e19747d595ee2a4964ea3188ede0086d01f8847ab8a1370e668f7419989b0252f7d1
+  checksum: c693ab1650f14ccb506a4a416a4899af8244f41accff4f91174ab226be0eb9090f35acb36f65d9a1a8b6987b43ee2835d1754d22f010dc987d16574b9f5ba84d
   languageName: node
   linkType: hard
 
@@ -9303,7 +9303,7 @@ __metadata:
     gatsby-plugin-sass: "npm:^6.12.3"
     gatsby-plugin-sharp: "npm:^5.8.0"
     gatsby-plugin-sitemap: "npm:^6.11.0"
-    gatsby-remark-autolink-headers: "npm:^6.8.0"
+    gatsby-remark-autolink-headers: "npm:^6.13.1"
     gatsby-remark-images: "npm:^7.8.0"
     gatsby-remark-prismjs: "npm:^7.8.0"
     gatsby-source-filesystem: "npm:^5.8.0"
