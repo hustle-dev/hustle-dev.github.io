@@ -1,6 +1,7 @@
 import type { HeadProps, PageProps } from 'gatsby'
 
 import { FloatingButton, ProfileCard, Seo } from '@/components'
+import Layout from '@/layouts'
 import { getRefinedStringValue } from '@/utils'
 
 import { PostList, RecentPost, TagList } from './components'
@@ -14,19 +15,21 @@ const Home = ({ data, location: { pathname } }: PageProps<Queries.HomeQuery>) =>
   const { visiblePosts } = usePostInfiniteScroll(allPosts, selectedTag, totalCount)
 
   return (
-    <main className={styles.main}>
-      <aside className={styles.aside}>
-        <ProfileCard pathname={pathname} />
-      </aside>
-      <div className={styles.shrinkSpace}></div>
-      <section className={styles.wrapper}>
-        <RecentPost posts={recentPosts} />
-        <hr className={styles.divider}></hr>
-        <TagList tags={tags} selectedTag={selectedTag} clickTag={clickTag} className={styles.tagList} />
-        <PostList posts={visiblePosts} className={styles.postList} />
-      </section>
-      <FloatingButton />
-    </main>
+    <Layout pathname={pathname}>
+      <main className={styles.main}>
+        <aside className={styles.aside}>
+          <ProfileCard pathname={pathname} />
+        </aside>
+        <div className={styles.shrinkSpace}></div>
+        <section className={styles.wrapper}>
+          <RecentPost posts={recentPosts} />
+          <hr className={styles.divider}></hr>
+          <TagList tags={tags} selectedTag={selectedTag} clickTag={clickTag} className={styles.tagList} />
+          <PostList posts={visiblePosts} className={styles.postList} />
+        </section>
+        <FloatingButton />
+      </main>
+    </Layout>
   )
 }
 

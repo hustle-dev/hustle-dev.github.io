@@ -1,16 +1,13 @@
-import { PageProps } from 'gatsby'
-import { type ReactNode } from 'react'
+import type { PropsWithChildren } from 'react'
 
 import { Footer, Header } from './components'
 
-type LayoutProps = {
-  children: ReactNode
-}
+type LayoutProps = PropsWithChildren<{ pathname: string }>
 
-const Layout = ({ location, children }: Omit<PageProps, 'children'> & LayoutProps) => {
+const Layout = ({ pathname, children }: LayoutProps) => {
   return (
     <>
-      <Header pathname={location.pathname} />
+      <Header pathname={pathname} />
       {children}
       <Footer />
     </>

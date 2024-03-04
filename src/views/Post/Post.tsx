@@ -2,6 +2,7 @@ import type { HeadProps, PageProps } from 'gatsby'
 import { GatsbyImage, getSrc } from 'gatsby-plugin-image'
 
 import { Giscus, ProfileCard, Seo } from '@/components'
+import Layout from '@/layouts'
 import { getRefinedImage, getRefinedStringValue } from '@/utils'
 
 import { TableOfContents, TagList } from './components'
@@ -14,25 +15,27 @@ const Post = ({ data, pageContext, location: { pathname } }: PageProps<Queries.P
   const { title, date, tags, heroImage, heroImageAlt } = frontmatter
 
   return (
-    <main className={styles.wrapper}>
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.date}>{date}</p>
-      <TagList tags={tags} className={styles.tagList} />
-      <GatsbyImage
-        image={getRefinedImage(heroImage?.childImageSharp?.gatsbyImageData)}
-        alt={heroImageAlt}
-        className={styles.heroImage}
-        objectFit="contain"
-      />
-      <div className={styles.contentWrapper}>
-        <section className={styles.content} dangerouslySetInnerHTML={{ __html: getRefinedStringValue(html) }} />
-        <TableOfContents html={getRefinedStringValue(tableOfContents)} />
-      </div>
-      <section className={styles.bio}>
-        <ProfileCard pathname={pathname} />
-      </section>
-      <Giscus />
-    </main>
+    <Layout pathname={pathname}>
+      <main className={styles.wrapper}>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.date}>{date}</p>
+        <TagList tags={tags} className={styles.tagList} />
+        <GatsbyImage
+          image={getRefinedImage(heroImage?.childImageSharp?.gatsbyImageData)}
+          alt={heroImageAlt}
+          className={styles.heroImage}
+          objectFit="contain"
+        />
+        <div className={styles.contentWrapper}>
+          <section className={styles.content} dangerouslySetInnerHTML={{ __html: getRefinedStringValue(html) }} />
+          <TableOfContents html={getRefinedStringValue(tableOfContents)} />
+        </div>
+        <section className={styles.bio}>
+          <ProfileCard pathname={pathname} />
+        </section>
+        <Giscus />
+      </main>
+    </Layout>
   )
 }
 
