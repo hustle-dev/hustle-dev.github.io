@@ -1536,6 +1536,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:7.14.0":
+  version: 7.14.0
+  resolution: "@babel/runtime@npm:7.14.0"
+  dependencies:
+    regenerator-runtime: "npm:^0.13.4"
+  checksum: 27ba256f339682dae407ee76736e2e5854dbebb2eaef18e2a443b1a7554ab47aef6dea41cbe3957750e898d64cc08426d1730d94cf173a0da5ff559e103bd51f
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.17.9, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.23.1
   resolution: "@babel/runtime@npm:7.23.1"
@@ -3215,13 +3224,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^17.0.5":
-  version: 17.0.45
-  resolution: "@types/node@npm:17.0.45"
-  checksum: 0db377133d709b33a47892581a21a41cd7958f22723a3cc6c71d55ac018121382de42fbfc7970d5ae3e7819dbe5f40e1c6a5174aedf7e7964e9cb8fa72b580b0
-  languageName: node
-  linkType: hard
-
 "@types/node@npm:^18.15.3":
   version: 18.19.6
   resolution: "@types/node@npm:18.19.6"
@@ -3311,15 +3313,6 @@ __metadata:
     "@types/glob": "npm:*"
     "@types/node": "npm:*"
   checksum: f1b11100374be4a554fc9bf7c8bd33aef0dc0481007bc55b83451bb2dbe30626be82e3cf16612ba7e4c96ce3982d8bab07cd0e951b9c98d2518d981cf6f2e4b2
-  languageName: node
-  linkType: hard
-
-"@types/sax@npm:^1.2.1":
-  version: 1.2.5
-  resolution: "@types/sax@npm:1.2.5"
-  dependencies:
-    "@types/node": "npm:*"
-  checksum: 702118d174d7ad611a2e3fb983dfb2caddb7cc62719a7864802551329dcf065d24eee481cf67fd4a3251e44097aeace46c49e52f7bbff4b7b449dc3741c03cb4
   languageName: node
   linkType: hard
 
@@ -3964,13 +3957,6 @@ __metadata:
     delegates: "npm:^1.0.0"
     readable-stream: "npm:^3.6.0"
   checksum: 8373f289ba42e4b5ec713bb585acdac14b5702c75f2a458dc985b9e4fa5762bc5b46b40a21b72418a3ed0cfb5e35bdc317ef1ae132f3035f633d581dd03168c3
-  languageName: node
-  linkType: hard
-
-"arg@npm:^5.0.0":
-  version: 5.0.2
-  resolution: "arg@npm:5.0.2"
-  checksum: ccaf86f4e05d342af6666c569f844bec426595c567d32a8289715087825c2ca7edd8a3d204e4d2fb2aa4602e09a57d0c13ea8c9eea75aac3dbb4af5514e6800e
   languageName: node
   linkType: hard
 
@@ -7641,6 +7627,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:10.1.0":
+  version: 10.1.0
+  resolution: "fs-extra@npm:10.1.0"
+  dependencies:
+    graceful-fs: "npm:^4.2.0"
+    jsonfile: "npm:^6.0.1"
+    universalify: "npm:^2.0.0"
+  checksum: 5f579466e7109719d162a9249abbeffe7f426eb133ea486e020b89bc6d67a741134076bf439983f2eb79276ceaf6bd7b7c1e43c3fd67fe889863e69072fb0a5e
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^11.1.1":
   version: 11.1.1
   resolution: "fs-extra@npm:11.1.1"
@@ -7900,6 +7897,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-advanced-sitemap-v5@npm:^2.1.12":
+  version: 2.1.12
+  resolution: "gatsby-plugin-advanced-sitemap-v5@npm:2.1.12"
+  dependencies:
+    "@babel/runtime": "npm:7.14.0"
+    fs-extra: "npm:10.1.0"
+    lodash: "npm:4.17.21"
+    moment: "npm:2.29.4"
+    pify: "npm:5.0.0"
+    xml: "npm:^1.0.1"
+  peerDependencies:
+    gatsby: ^3.0.0 || ^4.0.0 || ^5.0.0
+  checksum: 0e03bcfc9b7275928ec4dcfcadffd4b359b52a641131bd5fd0917799df44e7d5556a7bc1287c8c5eaa7a176b388ca18b1d3754705b4f6fc37d778a1a6f9e4f59
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-feed@npm:^5.8.0":
   version: 5.13.0
   resolution: "gatsby-plugin-feed@npm:5.13.0"
@@ -8059,22 +8072,6 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
   checksum: cf5e1b5f455f08470d7a5fb8f2174acaf72b3e554f6ef0acd6cb2874a9b850227137febf37ca4456bf8ee52f28fab3357105bd163726d9b3fd9033f9980dea62
-  languageName: node
-  linkType: hard
-
-"gatsby-plugin-sitemap@npm:^6.11.0":
-  version: 6.13.0
-  resolution: "gatsby-plugin-sitemap@npm:6.13.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.20.13"
-    common-tags: "npm:^1.8.2"
-    minimatch: "npm:^3.1.2"
-    sitemap: "npm:^7.1.1"
-  peerDependencies:
-    gatsby: ^5.0.0-next
-    react: ^18.0.0 || ^0.0.0
-    react-dom: ^18.0.0 || ^0.0.0
-  checksum: 3902817ca733dc802b6978e13daec1a3059a3455650c6529e590815e8819a4e4adad2b6d645cdfa9fbbc1266c7786dc4908afcb61eabec489b2af9e8af86fe93
   languageName: node
   linkType: hard
 
@@ -9294,6 +9291,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-simple-import-sort: "npm:^10.0.0"
     gatsby: "npm:^5.8.0"
+    gatsby-plugin-advanced-sitemap-v5: "npm:^2.1.12"
     gatsby-plugin-feed: "npm:^5.8.0"
     gatsby-plugin-google-gtag: "npm:^5.8.0"
     gatsby-plugin-image: "npm:^3.8.0"
@@ -9302,7 +9300,6 @@ __metadata:
     gatsby-plugin-robots-txt: "npm:^1.8.0"
     gatsby-plugin-sass: "npm:^6.12.3"
     gatsby-plugin-sharp: "npm:^5.8.0"
-    gatsby-plugin-sitemap: "npm:^6.11.0"
     gatsby-remark-autolink-headers: "npm:^6.8.0"
     gatsby-remark-images: "npm:^7.8.0"
     gatsby-remark-prismjs: "npm:^7.8.0"
@@ -10694,7 +10691,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.0.0, lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:~4.17.0":
+"lodash@npm:4.17.21, lodash@npm:^4.0.0, lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:~4.17.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -11507,7 +11504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment@npm:^2.29.4":
+"moment@npm:2.29.4, moment@npm:^2.29.4":
   version: 2.29.4
   resolution: "moment@npm:2.29.4"
   checksum: 844c6f3ce42862ac9467c8ca4f5e48a00750078682cc5bda1bc0e50cc7ca88e2115a0f932d65a06e4a90e26cb78892be9b3ca3dd6546ca2c4d994cebb787fc2b
@@ -12527,6 +12524,13 @@ __metadata:
   bin:
     pidtree: bin/pidtree.js
   checksum: 0829ec4e9209e230f74ebf4265f5ccc9ebfb488334b525cb13f86ff801dca44b362c41252cd43ae4d7653a10a5c6ab3be39d2c79064d6895e0d78dc50a5ed6e9
+  languageName: node
+  linkType: hard
+
+"pify@npm:5.0.0":
+  version: 5.0.0
+  resolution: "pify@npm:5.0.0"
+  checksum: 9f6f3cd1f159652692f514383efe401a06473af35a699962230ad1c4c9796df5999961461fc1a3b81eed8e3e74adb8bd032474fb3f93eb6bdbd9f33328da1ed2
   languageName: node
   linkType: hard
 
@@ -13564,7 +13568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.7":
+"regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
   version: 0.13.11
   resolution: "regenerator-runtime@npm:0.13.11"
   checksum: 12b069dc774001fbb0014f6a28f11c09ebfe3c0d984d88c9bced77fdb6fedbacbca434d24da9ae9371bfbf23f754869307fb51a4c98a8b8b18e5ef748677ca24
@@ -14442,20 +14446,6 @@ __metadata:
   version: 1.0.5
   resolution: "sisteransi@npm:1.0.5"
   checksum: 230ac975cca485b7f6fe2b96a711aa62a6a26ead3e6fb8ba17c5a00d61b8bed0d7adc21f5626b70d7c33c62ff4e63933017a6462942c719d1980bb0b1207ad46
-  languageName: node
-  linkType: hard
-
-"sitemap@npm:^7.1.1":
-  version: 7.1.1
-  resolution: "sitemap@npm:7.1.1"
-  dependencies:
-    "@types/node": "npm:^17.0.5"
-    "@types/sax": "npm:^1.2.1"
-    arg: "npm:^5.0.0"
-    sax: "npm:^1.2.4"
-  bin:
-    sitemap: dist/cli.js
-  checksum: d25abe5c78f08e6014792e0f4d59353042a5a795788decdd87cb03bda736d248426a618e5028e18325f04b3e9d0ecb02d126ed6177365aa2703fa77df8f4f4e0
   languageName: node
   linkType: hard
 
@@ -16395,7 +16385,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xml@npm:1.0.1":
+"xml@npm:1.0.1, xml@npm:^1.0.1":
   version: 1.0.1
   resolution: "xml@npm:1.0.1"
   checksum: 04bcc9b8b5e7b49392072fbd9c6b0f0958bd8e8f8606fee460318e43991349a68cbc5384038d179ff15aef7d222285f69ca0f067f53d071084eb14c7fdb30411
