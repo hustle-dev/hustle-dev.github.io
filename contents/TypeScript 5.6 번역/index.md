@@ -1,4 +1,3 @@
-<!-- frontmatter -->
 ---
 title: TypeScript 5.6 번역
 description: TypeScript 5.6 Release를 번역하면서 어떤 기능들이 나왔는지 학습합니다.
