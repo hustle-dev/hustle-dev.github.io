@@ -89,7 +89,7 @@ TypeScript 5.8에서는 새로운 안정적인 `--module node18` 플래그를 �
 | CommonJS에서 ESM require() | ❌ (불가능) | ✅ (가능) |
 | import 어설션 (import assertions) 지원 | ✅ (가능) | ❌ (불가능, import 속성으로 대체됨) |
 
-## ``--erasableSyntaxOnly` 옵션
+## `--erasableSyntaxOnly` 옵션
 
 최근 Node.js 23.6에선 TypeScript 파일을 직접 실행할 수 있도록 하는 실험적 기능이 플래그 없이 제공되었다. 하지만 이 모드에서는 특정 TypeScript 문법만 지원한다. 
 
