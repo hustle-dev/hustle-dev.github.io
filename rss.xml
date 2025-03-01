@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hustle-dev Blog RSS Feed]]></title><description><![CDATA[hustle-dev의 기술 블로그 입니다.]]></description><link>https://hustle-dev.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 01 Mar 2025 11:58:39 GMT</lastBuildDate><item><title><![CDATA[TypeScript 5.8 번역]]></title><description><![CDATA[TypeScript 5.8 Release를 번역하면서 어떤 기능들이 나왔는지 학습합니다.]]></description><link>https://hustle-dev.github.io/posts/translate-ts-5-8</link><guid isPermaLink="false">https://hustle-dev.github.io/posts/translate-ts-5-8</guid><pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 썸네일 --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hustle-dev Blog RSS Feed]]></title><description><![CDATA[hustle-dev의 기술 블로그 입니다.]]></description><link>https://hustle-dev.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 01 Mar 2025 12:03:32 GMT</lastBuildDate><item><title><![CDATA[TypeScript 5.8 번역]]></title><description><![CDATA[TypeScript 5.8 Release를 번역하면서 어떤 기능들이 나왔는지 학습합니다.]]></description><link>https://hustle-dev.github.io/posts/translate-ts-5-8</link><guid isPermaLink="false">https://hustle-dev.github.io/posts/translate-ts-5-8</guid><pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;!-- 썸네일 --&gt;
 &lt;!-- 본문 --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;TypeScript 5.8에서 중요하다고 생각되는 부분을 번역했습니다. 더 자세한 글은 아래 원글 링크를 참고해주세요.
@@ -78,7 +78,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;--erasablesyntaxonly-옵션&quot;&gt;``--erasableSyntaxOnly` 옵션&lt;/h2&gt;
+&lt;h2 id=&quot;--erasablesyntaxonly-옵션&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;--erasableSyntaxOnly&lt;/code&gt; 옵션&lt;/h2&gt;
 &lt;p&gt;최근 Node.js 23.6에선 TypeScript 파일을 직접 실행할 수 있도록 하는 실험적 기능이 플래그 없이 제공되었다. 하지만 이 모드에서는 특정 TypeScript 문법만 지원한다.&lt;/p&gt;
 &lt;p&gt;Node.js에서는 &lt;code class=&quot;language-text&quot;&gt;--experimental-strip-types&lt;/code&gt; 모드를 도입했는데, 이 ㅁ드에서는 TypeScript 전용 문법이 런타임 동작을 가지면 안된다. 즉 TypeScript 문법을 지워도 유효한 JS 코드가 남아있어야 한다.&lt;/p&gt;
 &lt;p&gt;아래와 같은 런타임에서 의미를 가지는 TypeScript 문법은 지원되지 않는다.&lt;/p&gt;
